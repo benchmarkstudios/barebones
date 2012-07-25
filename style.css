@@ -1,6 +1,6 @@
 /*
 Theme Name: Bare Bones
-Theme URI: http: //github.com/mikefrancis/barebones
+Theme URI: http://github.com/mikefrancis/barebones
 Description: A barebones theme for WordPress 3.3+
 Version: 0.1
 Author:  Mike Francis
@@ -46,6 +46,5 @@ abbr, acronym {
 }
 
 html {
-	color: #000;
-	background: #FFF;
+	background-color: #fff;
 }
