@@ -1,0 +1,355 @@
+/*
+Theme Name: Bare Bones
+Theme URI: http://github.com/mikefrancis/barebones
+Description: A barebones theme for WordPress 3.3+
+Version: 0.1
+Author:  Mike Francis
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img { 
+	border: 0;
+}
+
+address, caption, cite, dfn, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+caption, th {
+	text-align: left;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	border: 0;
+}
+
+html {
+	background-color: #fff;
+	font: 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, address, table, pre, blockquote {
+	margin-bottom: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.375em;
+  line-height: 1.0909em;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.333em;
+}
+
+h5, h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+ul, ol, cite {
+	margin-left: 20px;
+}
+
+blockquote {
+	padding-left: 15px;
+	border-left: solid 5px #ddd;
+}
+
+cite {
+	font-weight: bold;
+}
+
+a {
+	color: #222;
+	text-decoration: none;
+}
+
+label {
+	display: inline-block;
+}
+
+.control-label {
+	float: left;
+	width: 160px;
+}
+
+.controls {
+	margin-left: 160px;
+}
+
+input, select, textarea {
+	display: inline-block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+	border: solid 1px #afc300;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+	padding: 4px;
+	color: #999;
+	width: 220px;
+}
+
+input, textarea {
+	-webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+	   -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+	     -o-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+	        box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	     -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	        transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+select {
+	height: 18px;
+	line-height: 18px;
+	width: 220px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #afc300;
+	border: solid 1px #afc300;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	     -o-border-radius: 5px;
+	        border-radius: 5px;
+	box-shadow: none;
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 4px 18px;
+	width: auto;
+}
+
+.btn:hover {
+	border-color: #666;
+}
+
+/* =Ulility Classes
+-------------------------------------------------------------- */
+
+.alignleft {
+	float: left;
+}
+
+img.alignleft {
+	margin: 0 20px 24px 0;
+}
+
+.alignright {
+	float: right;
+}
+
+img.alignright {
+	margin: 0 0 24px 20px;
+}
+
+/* =Scaffolding
+-------------------------------------------------------------- */
+
+.row {
+	margin-left: -20px;
+	*zoom: 1;
+}
+
+.row:before, .row:after {
+	display: table;
+	content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="span"] {
+	float: left;
+	margin-left: 20px;
+}
+
+/* IE 6/7 fix */
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+	float: left;
+	display: inline;
+	margin-left: 20px;
+}
+
+.span12 { width: 940px; }
+.span11 { width: 860px; }
+.span10 { width: 780px; }
+.span9  { width: 700px; }
+.span8  { width: 620px; }
+.span7  { width: 540px; }
+.span6  { width: 460px; }
+.span5  { width: 380px; }
+.span4  { width: 300px; }
+.span3  { width: 220px; }
+.span2  { width: 140px; }
+.span1  { width: 60px; }
+
+.offset12 {	margin-left: 980px; }
+.offset11 {	margin-left: 900px; }
+.offset10 {	margin-left: 820px; }
+.offset9  {	margin-left: 740px; }
+.offset8  {	margin-left: 660px; }
+.offset7  {	margin-left: 580px; }
+.offset6  {	margin-left: 500px; }
+.offset5  {	margin-left: 420px; }
+.offset4  {	margin-left: 340px; }
+.offset3  {	margin-left: 260px; }
+.offset2  {	margin-left: 180px; }
+.offset1  {	margin-left: 100px; }
+
+.row-fluid {
+	width: 100%;
+	*zoom: 1;
+}
+
+.row-fluid:before, .row-fluid:after {
+	display: table;
+	content: "";
+}
+
+.row-fluid:after {
+	clear: both;
+}
+
+.row-fluid > [class*="span"] {
+  float: left;
+  margin-left: 2.127659574%;
+}
+
+.row-fluid > [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.row-fluid > .span12 {
+  width: 99.99999998999999%;
+}
+.row-fluid > .span11 {
+  width: 91.489361693%;
+}
+.row-fluid > .span10 {
+  width: 82.97872339599999%;
+}
+.row-fluid > .span9 {
+  width: 74.468085099%;
+}
+.row-fluid > .span8 {
+  width: 65.95744680199999%;
+}
+.row-fluid > .span7 {
+  width: 57.446808505%;
+}
+.row-fluid > .span6 {
+  width: 48.93617020799999%;
+}
+.row-fluid > .span5 {
+  width: 40.425531911%;
+}
+.row-fluid > .span4 {
+  width: 31.914893614%;
+}
+.row-fluid > .span3 {
+  width: 23.404255317%;
+}
+.row-fluid > .span2 {
+  width: 14.89361702%;
+}
+.row-fluid > .span1 {
+  width: 6.382978723%;
+}
+
+.container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+	padding: 0 20px;
+	*zoom: 1;
+}
+.container:before, .container:after {
+	display: table;
+	content: "";
+}
+
+.container:after {
+	clear: both;
+}
+
+.container-fluid {
+	padding-left: 20px;
+	padding-right: 20px;
+	*zoom: 1;
+}
+
+.container-fluid:before,
+.container-fluid:after {
+	display: table;
+	content: "";
+}
+
+.container-fluid:after {
+	clear: both;
+}
+
+/* =Layout
+-------------------------------------------------------------- */
