@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<<<<<<< HEAD
 <div class="content container">
 
 	<div class="main">
@@ -32,5 +33,10 @@
     </aside>
 
 </div>
+=======
+<?php while ( have_posts() ) : the_post(); ?>
+
+<?php endwhile; ?>
+>>>>>>> e5b0a5f1e5b29ff6247673f4f848f03a9d4209f2
 
 <?php get_footer(); ?>
