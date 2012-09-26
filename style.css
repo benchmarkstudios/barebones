@@ -116,8 +116,8 @@ input, select, textarea {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	font-weight: normal;
-	line-height: 18px;
-	border: solid 1px #afc300;
+	line-height: 24px;
+	border: solid 1px #999;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
 	     -o-border-radius: 3px;
@@ -140,8 +140,8 @@ input, textarea {
 }
 
 select {
-	height: 18px;
-	line-height: 18px;
+	height: 24px;
+	line-height: 24px;
 	width: 220px;
 }
 
@@ -170,8 +170,8 @@ select:focus {
 
 .btn {
 	display: inline-block;
-	background-color: #afc300;
-	border: solid 1px #afc300;
+	background-color: #999;
+	border: solid 1px #999;
 	-webkit-border-radius: 5px;
 	   -moz-border-radius: 5px;
 	     -o-border-radius: 5px;
@@ -183,10 +183,6 @@ select:focus {
 	font-weight: bold;
 	padding: 4px 18px;
 	width: auto;
-}
-
-.btn:hover {
-	border-color: #666;
 }
 
 /* =Ulility Classes
@@ -222,7 +218,7 @@ img.alignright {
 }
 
 .row:after {
-  clear: both;
+	clear: both;
 }
 
 [class*="span"] {
@@ -278,50 +274,26 @@ img.alignright {
 }
 
 .row-fluid > [class*="span"] {
-  float: left;
-  margin-left: 2.127659574%;
+	float: left;
+	margin-left: 2.127659574%;
 }
 
 .row-fluid > [class*="span"]:first-child {
-  margin-left: 0;
+	margin-left: 0;
 }
 
-.row-fluid > .span12 {
-  width: 99.99999998999999%;
-}
-.row-fluid > .span11 {
-  width: 91.489361693%;
-}
-.row-fluid > .span10 {
-  width: 82.97872339599999%;
-}
-.row-fluid > .span9 {
-  width: 74.468085099%;
-}
-.row-fluid > .span8 {
-  width: 65.95744680199999%;
-}
-.row-fluid > .span7 {
-  width: 57.446808505%;
-}
-.row-fluid > .span6 {
-  width: 48.93617020799999%;
-}
-.row-fluid > .span5 {
-  width: 40.425531911%;
-}
-.row-fluid > .span4 {
-  width: 31.914893614%;
-}
-.row-fluid > .span3 {
-  width: 23.404255317%;
-}
-.row-fluid > .span2 {
-  width: 14.89361702%;
-}
-.row-fluid > .span1 {
-  width: 6.382978723%;
-}
+.row-fluid > .span12 { width: 99.99999998999999%; }
+.row-fluid > .span11 { width: 91.489361693%; }
+.row-fluid > .span10 { width: 82.97872339599999%; }
+.row-fluid > .span9  { width: 74.468085099%; }
+.row-fluid > .span8  { width: 65.95744680199999%; }
+.row-fluid > .span7  { width: 57.446808505%; }
+.row-fluid > .span6  { width: 48.93617020799999%; }
+.row-fluid > .span5  { width: 40.425531911%; }
+.row-fluid > .span4  { width: 31.914893614%; }
+.row-fluid > .span3  { width: 23.404255317%; }
+.row-fluid > .span2  { width: 14.89361702%; }
+.row-fluid > .span1  { width: 6.382978723%; }
 
 .container {
 	position: relative;
