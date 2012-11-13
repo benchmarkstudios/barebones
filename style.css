@@ -51,10 +51,6 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, address, table, pre, blockquote {
 	margin-bottom: 24px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-}
-
 h1 {
   font-size: 1.5em;
   line-height: 1em;
@@ -114,16 +110,16 @@ label {
 input, select, textarea {
 	display: inline-block;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 1em;
 	font-weight: normal;
-	line-height: 24px;
-	border: solid 1px #999;
+	line-height: 1.5em;
+	border: solid 1px #000;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
 	     -o-border-radius: 3px;
 	        border-radius: 3px;
 	padding: 4px;
-	color: #999;
+	color: #000;
 	width: 220px;
 }
 
