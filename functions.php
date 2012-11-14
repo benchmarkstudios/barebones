@@ -29,5 +29,3 @@ add_filter( 'post_comments_feed_link', 'remove_comments_rss' );
 
 if ( function_exists( 'register_sidebar' ) )
 	register_sidebar();
-
-?>
