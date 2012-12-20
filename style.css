@@ -1,8 +1,6 @@
 /*
 Theme Name: Bare Bones
 Theme URI: http://github.com/mikefrancis/barebones
-Description: A barebones theme for WordPress 3.3+
-Version: 0.1
 Author:  Mike Francis
 */
 
@@ -97,17 +95,11 @@ a {
 	text-decoration: none;
 }
 
+/* =Forms
+-------------------------------------------------------------- */
+
 label {
 	display: inline-block;
-}
-
-.control-label {
-	float: left;
-	width: 160px;
-}
-
-.controls {
-	margin-left: 160px;
 }
 
 input, select, textarea {
@@ -126,6 +118,15 @@ select {
 	height: 24px;
 	line-height: 24px;
 	width: 220px;
+}
+
+.control-label {
+	float: left;
+	width: 160px;
+}
+
+.controls {
+	margin-left: 160px;
 }
 
 .btn {
