@@ -16,7 +16,7 @@
 				<h1><a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<nav role="navigation">
 					<ul class="nav">
-					<?php wp_list_pages( 'title_li=' ); ?>
+						<?php wp_list_pages( 'title_li=' ); ?>
 					</ul>
 				</nav>
 			</div>
