@@ -2,13 +2,13 @@
 
 <div class="content container">
 
-	<div class="main">
+	<div class="main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<article <?php post_class(); ?>>
 
-			<header>
+			<header role="heading">
 				<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<p class="date"><time pubdate datetime="<?php echo $post->post_date; ?>"><?php the_time( get_option( 'date_format' ) ); ?></time></p>
 				<p class="comments"><?php comments_popup_link( 'No comments yet', '1 comment', '% comments' ); ?></p>
