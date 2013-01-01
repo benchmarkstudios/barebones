@@ -128,5 +128,3 @@ input, select, textarea, button { display: inline-block; font-family: "Helvetica
 .btn { display: inline-block; background-color: #eeeeee; border: solid 1px #cccccc; padding: 9.5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.1); box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.1); }
 
 .icon { display: inline-block; *display: inline; width: 16px; height: 16px; vertical-align: text-top; background: red; }
-
-body { background: url(http://basehold.it/i/21); }

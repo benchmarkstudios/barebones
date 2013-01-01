@@ -30,4 +30,4 @@ Although barebones now utilises the powerful SASS CSS preprocessor, you don't ha
 
 ## Credits
 
-* [Twitter Bootstrap](http://getbootstrap.com "Twitter Bootstrap") for a modified version of their grid.
+* [Twitter Bootstrap](http://getbootstrap.com "Twitter Bootstrap") for a modified version of their grid

@@ -4,21 +4,19 @@ Theme URI: http://github.com/mikefrancis/barebones
 Author:  Mike Francis
 */
 
-// Variables, Mixins (setup)
+// Variables, Mixins
+
 @import "variables";
 @import "mixins";
 
-// Base (SMCSS)
+// Base
+
 @import "base";
 
 // Main
+
 @import "scaffolding";
 @import "nav";
 @import "tables";
 @import "forms";
 @import "icons";
-
-body {
-	background: url(http://basehold.it/i/#{$marginBottom});
-	//background: url(http://basehold.it/i/21);
-}

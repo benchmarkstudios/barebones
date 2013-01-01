@@ -13,7 +13,7 @@
 	<body <?php body_class(); ?>>
 		<header class="header" role="banner">
 			<div class="container">
-				<h1><a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<a href="<?php echo site_url(); ?>"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 				<nav role="navigation">
 					<ul class="nav">
 						<?php wp_list_pages( 'title_li=' ); ?>
