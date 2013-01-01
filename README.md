@@ -18,7 +18,7 @@ A lightweight, skeletal, responsive WordPress theme for HTML5 and beyond. Great 
 
 ## WordPress Support
 
-Compatible with WordPress 3.5 and below.
+Compatible with WordPress 3.2 and above.
 
 ## Browser Support
 
