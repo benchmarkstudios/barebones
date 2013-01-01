@@ -10,10 +10,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
 	margin-bottom: $marginBottom * 1px;
 }
 
-ul ul, ol ol {
-	margin-bottom: 0;
-}
-
 h1 {
 	font-size: ($h1FontSize / $baseFontSize) * 1em;
 	line-height: ($marginBottom / $h1FontSize ) * 1em;
@@ -46,4 +42,8 @@ h6 {
 
 ul, ol {
 	margin-left: $listMarginLeft * 1px;
+}
+
+ul ul, ol ol {
+	margin-bottom: 0;
 }

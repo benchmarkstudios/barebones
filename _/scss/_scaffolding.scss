@@ -1,29 +1,3 @@
-// Utils
-
-.alignleft {
-	float: left;
-}
-
-img.alignleft {
-	margin-right: $columnGutter * 1px;
-}
-
-.alignright {
-	float: right;
-}
-
-img.alignright {
-	margin-left	: $columnGutter * 1px;
-}
-
-.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-// Grid
-
 .container {
 	width: $containerWidth * 1px;
 	margin-left: auto;

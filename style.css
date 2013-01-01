@@ -23,8 +23,6 @@ html { background-color: white; color: #333333; font-family: "Helvetica Neue", H
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset { margin-bottom: 21px; }
 
-ul ul, ol ol { margin-bottom: 0; }
-
 h1 { font-size: 2em; line-height: 0.75em; }
 
 h2 { font-size: 1.71429em; line-height: 0.875em; }
@@ -38,6 +36,8 @@ h5 { font-size: 1.14286em; line-height: 1.3125em; }
 h6 { font-size: 1.14286em; line-height: 1.3125em; }
 
 ul, ol { margin-left: 24px; }
+
+ul ul, ol ol { margin-bottom: 0; }
 
 .alignleft { float: left; }
 
