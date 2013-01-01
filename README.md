@@ -1,6 +1,6 @@
 # barebones
 
-A lightweight, skeletal, responsive WordPress theme for HTML5 and beyond. Great as a starting point for any project with powerful features to encourage rapid development for most projects.
+A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and beyond. Great as a starting point with powerful features to encourage rapid development for most projects.
 
 ## Features
 
