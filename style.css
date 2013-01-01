@@ -19,7 +19,7 @@ q:before, q:after { content: ''; }
 
 abbr, acronym { border: 0; }
 
-html { background-color: white; color: #222222; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.875em; line-height: 1.5; }
+html { background-color: white; color: #333333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.875em; line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset { margin-bottom: 21px; }
 
@@ -39,8 +39,6 @@ h6 { font-size: 1.14286em; line-height: 1.3125em; }
 
 ul, ol { margin-left: 24px; }
 
-a { text-decoration: none; }
-
 .alignleft { float: left; }
 
 img.alignleft { margin-right: 20px; }
@@ -51,7 +49,7 @@ img.alignright { margin-left: 20px; }
 
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
-.container { width: 1200px; margin-left: auto; margin-right: auto; padding: 0 40px; }
+.container { width: 940px; margin-left: auto; margin-right: auto; padding: 0 40px; }
 @media (max-width: 767px) { .container { width: auto; } }
 
 @media (max-width: 767px) { .container-fluid { padding: 0; } }
@@ -69,29 +67,29 @@ img.alignright { margin-left: 20px; }
 .col img { width: 100%; }
 @media (max-width: 767px) { .col { display: block; float: none; width: 100%; margin-left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } }
 
-.col1 { width: 81.66667px; }
+.col1 { width: 60px; }
 
-.col2 { width: 183.33333px; }
+.col2 { width: 140px; }
 
-.col3 { width: 285px; }
+.col3 { width: 220px; }
 
-.col4 { width: 386.66667px; }
+.col4 { width: 300px; }
 
-.col5 { width: 488.33333px; }
+.col5 { width: 380px; }
 
-.col6 { width: 590px; }
+.col6 { width: 460px; }
 
-.col7 { width: 691.66667px; }
+.col7 { width: 540px; }
 
-.col8 { width: 793.33333px; }
+.col8 { width: 620px; }
 
-.col9 { width: 895px; }
+.col9 { width: 700px; }
 
-.col10 { width: 996.66667px; }
+.col10 { width: 780px; }
 
-.col11 { width: 1098.33333px; }
+.col11 { width: 860px; }
 
-.col12 { width: 1200px; }
+.col12 { width: 940px; }
 
 .nav { list-style: none; margin-left: 0; }
 
