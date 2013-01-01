@@ -1,0 +1,96 @@
+// Utils
+
+.alignleft {
+	float: left;
+}
+
+img.alignleft {
+	margin-right: $columnGutter * 1px;
+}
+
+.alignright {
+	float: right;
+}
+
+img.alignright {
+	margin-left	: $columnGutter * 1px;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Grid
+
+.container {
+	width: $containerWidth * 1px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 $containerPadding * 1px;
+	@media (max-width: 767px) {
+		width: auto;
+	}
+}
+
+.container-fluid {
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+}
+
+.row {
+	margin-left: -$columnGutter * 1px;
+	*zoom: 1;
+	@media (max-width: 767px) {
+	 margin-left: 0;
+	}
+}
+
+.row:before,
+.row:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.row:after {
+	clear: both;
+}
+
+.row-fluid {
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+}
+
+.col {
+	display: inline-block;
+	*display: inline;
+	float: left;
+	margin-left: $columnGutter * 1px;
+	img {
+		width: 100%;
+	}
+	@media (max-width: 767px) {
+		display: block;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    @include box-sizing(border-box);
+	}
+}
+
+.col1  { @include col-width(); }
+.col2  { @include col-width(2); }
+.col3  { @include col-width(3); }
+.col4  { @include col-width(4); }
+.col5  { @include col-width(5); }
+.col6  { @include col-width(6); }
+.col7  { @include col-width(7); }
+.col8  { @include col-width(8); }
+.col9  { @include col-width(9); }
+.col10 { @include col-width(10); }
+.col11 { @include col-width(11); }
+.col12 { @include col-width(12); }

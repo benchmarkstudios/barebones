@@ -1,0 +1,38 @@
+// Base
+
+$color: 									#222;
+$bodyBackgroundColour: 		#fff;
+
+$baseFontStack: 					'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseFontSize: 						14;
+$baseLineHeight: 					1.5;
+$marginBottom: 						($baseFontSize * $baseLineHeight);
+
+$h1FontSize: 							28;
+$h2FontSize: 							24;
+$h3FontSize: 							21;
+$h4FontSize: 							18;
+$h5FontSize: 							16;
+$h6FontSize: 							16;
+
+// Lists
+
+$listMarginLeft:					24;
+
+// Scaffolding
+
+$containerWidth:					1200;
+$containerPadding:				40;
+$columnGutter:						20;
+$columnCount:							12;
+$columnWidth:							( ( $containerWidth + $columnGutter ) - ( $columnGutter * $columnCount ) ) / $columnCount;
+
+// Tables
+
+$tableBorderColour:				#ddd;
+
+// Forms
+$inputBorderColour: 			#ccc;
+$inputBackgroundColour:		#fff;
+$btnBorderColour:					#ccc;
+$btnBackgroundColour:			#eee;

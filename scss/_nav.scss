@@ -1,0 +1,36 @@
+.nav {
+	list-style: none;
+	margin-left: 0;
+}
+
+	.nav > li, .nav > li > a {
+		 display: inline-block;
+		*display: inline;
+	}
+	
+.nav-list {
+	border: solid 1px #ddd;
+	@include border-radius();
+	@include box-shadow();
+}
+
+	.nav-list > li, .nav-list > li > a {
+		display: block;
+	}
+	
+	.nav-list > li {
+		border-bottom: solid 1px #ddd;
+	}
+	
+	.nav-list > li:last-child {
+		border-bottom: none;
+	}
+	
+		.nav-list > li > a {
+			padding: 10px;
+			@include transition();
+		}
+		
+		.nav-list > li > a:hover {
+			background-color: #fafafa;
+		}

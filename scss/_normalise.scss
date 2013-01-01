@@ -1,0 +1,49 @@
+html {
+	background-color: $bodyBackgroundColour;
+	color: $color;
+	font-family: $baseFontStack;
+	font-size: ($baseFontSize / 16) * 1em;
+	line-height: $baseLineHeight;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
+	margin-bottom: $marginBottom * 1px;
+}
+
+ul ul, ol ol {
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: ($h1FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h1FontSize ) * 1em;
+}
+
+h2 {
+	font-size: ($h2FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h2FontSize ) * 1em;
+}
+
+h3 {
+	font-size: ($h3FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h3FontSize ) * 1em;
+}
+
+h4 {
+	font-size: ($h4FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h4FontSize ) * 1em;
+}
+
+h5 {
+	font-size: ($h5FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h5FontSize ) * 1em;
+}
+
+h6 {
+	font-size: ($h6FontSize / $baseFontSize) * 1em;
+	line-height: ($marginBottom / $h6FontSize ) * 1em;
+}
+
+ul, ol {
+	margin-left: $listMarginLeft * 1px;
+}
