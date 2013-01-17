@@ -18,7 +18,6 @@
 }
 
 @mixin col-width ($span: 1) {
-	//width: ((($container-width / $column-count) * $span) - $column-gutter) / $container-width * 100%;
 	width: ((100 / $column-count) * $span) - ($column-gutter / $container-max-width) * 100%;
 }
 

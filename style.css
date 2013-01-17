@@ -5,173 +5,232 @@ Author: Mike Francis
 */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 fieldset, img {
-  border: 0; }
+  border: 0;
+}
 
 address, caption, cite, dfn, th, var {
   font-style: normal;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 caption, th {
-  text-align: left; }
+  text-align: left;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 q:before, q:after {
-  content: ''; }
+  content: '';
+}
 
 abbr, acronym {
-  border: 0; }
+  border: 0;
+}
 
 html {
   background-color: white;
   color: #333333;
-  font: 0.875em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 0.875em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
-  margin-bottom: 21px; }
+  margin-bottom: 21px;
+}
 
 h1 {
   font-size: 2em;
-  line-height: 0.75em; }
+  line-height: 0.75em;
+}
 
 h2 {
   font-size: 1.71429em;
-  line-height: 0.875em; }
+  line-height: 0.875em;
+}
 
 h3 {
   font-size: 1.5em;
-  line-height: 1em; }
+  line-height: 1em;
+}
 
 h4 {
   font-size: 1.28571em;
-  line-height: 1.16667em; }
+  line-height: 1.16667em;
+}
 
 h5 {
   font-size: 1.14286em;
-  line-height: 1.3125em; }
+  line-height: 1.3125em;
+}
 
 h6 {
   font-size: 1.14286em;
-  line-height: 1.3125em; }
+  line-height: 1.3125em;
+}
 
 ul, ol {
-  margin-left: 24px; }
+  margin-left: 24px;
+}
 
 ul ul, ol ol {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 img {
   display: block;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .alignleft {
-  float: left; }
+  float: left;
+}
 
 img.alignleft {
-  margin-right: 20px; }
+  margin-right: 20px;
+}
 
 .alignright {
-  float: right; }
+  float: right;
+}
 
 img.alignright {
-  margin-left: 20px; }
+  margin-left: 20px;
+}
 
 .aligncenter {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .clearfix, .container, .row, .controls {
-  *zoom: 1; }
-  .clearfix:before, .container:before, .row:before, .controls:before, .clearfix:after, .container:after, .row:after, .controls:after {
-    content: " ";
-    display: table; }
-  .clearfix:after, .container:after, .row:after, .controls:after {
-    clear: both; }
+  *zoom: 1;
+}
+.clearfix:before, .container:before, .row:before, .controls:before, .clearfix:after, .container:after, .row:after, .controls:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after, .container:after, .row:after, .controls:after {
+  clear: both;
+}
 
 .container {
   padding: 0 40px;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   .row {
-    margin-left: -1.66667%; } }
+    margin-left: -1.66667%;
+  }
+}
 
 .col {
   display: block;
   float: none;
-  width: auto; }
-  @media (min-width: 768px) {
-    .col {
-      float: left;
-      margin-left: 1.66667%; } }
+  width: auto;
+}
+@media (min-width: 768px) {
+  .col {
+    float: left;
+    margin-left: 1.66667%;
+  }
+}
 
 @media (min-width: 768px) {
   .col1 {
-    width: 6.66667%; } }
+    width: 6.66667%;
+  }
+}
 
 @media (min-width: 768px) {
   .col2 {
-    width: 15.0%; } }
+    width: 15.0%;
+  }
+}
 
 @media (min-width: 768px) {
   .col3 {
-    width: 23.33333%; } }
+    width: 23.33333%;
+  }
+}
 
 @media (min-width: 768px) {
   .col4 {
-    width: 31.66667%; } }
+    width: 31.66667%;
+  }
+}
 
 @media (min-width: 768px) {
   .col5 {
-    width: 40.0%; } }
+    width: 40.0%;
+  }
+}
 
 @media (min-width: 768px) {
   .col6 {
-    width: 48.33333%; } }
+    width: 48.33333%;
+  }
+}
 
 @media (min-width: 768px) {
   .col7 {
-    width: 56.66667%; } }
+    width: 56.66667%;
+  }
+}
 
 @media (min-width: 768px) {
   .col8 {
-    width: 65%; } }
+    width: 65%;
+  }
+}
 
 @media (min-width: 768px) {
   .col9 {
-    width: 73.33333%; } }
+    width: 73.33333%;
+  }
+}
 
 @media (min-width: 768px) {
   .col10 {
-    width: 81.66667%; } }
+    width: 81.66667%;
+  }
+}
 
 @media (min-width: 768px) {
   .col11 {
-    width: 90%; } }
+    width: 90%;
+  }
+}
 
 @media (min-width: 768px) {
   .col12 {
-    width: 98.33333%; } }
+    width: 98.33333%;
+  }
+}
 
 .nav {
   list-style: none;
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 .nav > li, .nav > li > a {
   display: inline-block;
-  *display: inline; }
+  *display: inline;
+}
 
 .nav-list {
   border: solid 1px #dddddd;
@@ -181,43 +240,53 @@ img.alignright {
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
 
 .nav-list > li, .nav-list > li > a {
-  display: block; }
+  display: block;
+}
 
 .nav-list > li {
-  border-bottom: solid 1px #dddddd; }
+  border-bottom: solid 1px #dddddd;
+}
 
 .nav-list > li:last-child {
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 .nav-list > li > a {
   padding: 10px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out; }
+  transition: all 0.2s ease-out;
+}
 
 .nav-list > li > a:hover {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+}
 
 .table {
   width: 100%;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+}
 
 .table th,
 .table td {
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #dddddd;
-  padding: 10.5px 10px; }
+  padding: 10.5px 10px;
+}
 
 .table th {
   font-weight: bold;
-  border-top: 0; }
+  border-top: 0;
+}
 
 .table thead th {
-  vertical-align: bottom; }
+  vertical-align: bottom;
+}
 
 input, select, textarea, button {
   display: inline-block;
@@ -234,17 +303,21 @@ input, select, textarea, button {
   border-radius: 3px;
   margin-right: 5px;
   margin-bottom: -1px;
-  width: 208px; }
+  width: 208px;
+}
 
 .control-group {
-  margin-bottom: 21px; }
+  margin-bottom: 21px;
+}
 
 .control-label {
   float: left;
-  width: 140px; }
+  width: 140px;
+}
 
 .controls {
-  margin-left: 160px; }
+  margin-left: 160px;
+}
 
 .btn {
   cursor: pointer;
@@ -261,10 +334,12 @@ input, select, textarea, button {
   background-image: -webkit-linear-gradient(white, #eeeeee);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#eeeeee));
   background-image: -moz-linear-gradient(white, #eeeeee);
-  background-image: -o-linear-gradient(white, #eeeeee); }
-  .btn:hover {
-    background-color: #eeeeee;
-    background-image: -webkit-linear-gradient(#eeeeee, white);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eeeeee), to(white));
-    background-image: -moz-linear-gradient(#eeeeee, white);
-    background-image: -o-linear-gradient(#eeeeee, white); }
+  background-image: -o-linear-gradient(white, #eeeeee);
+}
+.btn:hover {
+  background-color: #eeeeee;
+  background-image: -webkit-linear-gradient(#eeeeee, white);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eeeeee), to(white));
+  background-image: -moz-linear-gradient(#eeeeee, white);
+  background-image: -o-linear-gradient(#eeeeee, white);
+}

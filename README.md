@@ -5,7 +5,7 @@ A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and be
 ## Features
 
 * Reset, normalisation and base font/form styles
-* Responsive elements, mobile/tablet ready
+* Build for mobile first, expanding to 1200px (can be extended further)
 * Built using SASS - semantically named files all compiled into a single file
 * Includes Google HTML5 shiv
 * Semantic use of HTML5 elements
