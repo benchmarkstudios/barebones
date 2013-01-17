@@ -1,0 +1,29 @@
+.container {
+	padding: 0 ($column-gutter * 2) * 1px;
+	max-width: $container-max-width * 1px;
+	margin: 0 auto;
+	@extend .clearfix;
+}
+
+.row {
+	@include breakpoint(tablet-portrait) { margin-left: -($column-gutter / $container-max-width) * 100%; }
+	@extend .clearfix;
+}
+
+.col {
+	display: block;
+	float: none;
+	width: auto;
+	@include breakpoint(tablet-portrait) { 
+		float: left;
+		margin-left: ($column-gutter / $container-max-width) * 100%;
+	}
+}
+
+@for $i from 1 through $column-count {
+  .col#{$i} { 
+		@include breakpoint(tablet-portrait) { 
+			@include col-width($i); 
+		}
+	}
+}

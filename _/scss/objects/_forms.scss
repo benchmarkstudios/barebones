@@ -1,0 +1,42 @@
+input, select, textarea, button {
+	display: inline-block;
+	font-family: $base-font-stack;
+	font-size: 1em;
+	line-height: $base-margin-bottom + px;
+	padding: 2.5px 5px;
+	color: $base-colour;
+	background: $input-background;
+	border: $input-border;
+	@include border-radius(3px);
+	margin-right: 5px;
+	margin-bottom: -1px;
+	width: 208px;
+}
+
+.control-group {
+	margin-bottom: $base-margin-bottom + px;
+}
+
+.control-label {
+	float: left;
+	width: 140px;
+}
+
+.controls {
+	margin-left: 160px;
+	@extend .clearfix;
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	background: $btn-background;
+	color: $btn-color;
+	line-height: $base-margin-bottom + px;
+	border: $btn-border;
+	@include border-radius(3px);
+	@include gradient(#fff, #eee);
+	&:hover {
+		@include gradient(#eee, #fff);
+	}
+}

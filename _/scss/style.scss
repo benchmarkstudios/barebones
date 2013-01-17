@@ -1,24 +1,23 @@
 /*
 Theme Name: Bare Bones
 Theme URI: http://github.com/mikefrancis/barebones
-Author:  Mike Francis
+Author: Mike Francis
 */
 
 // Variables, Mixins
 
-@import "variables";
-@import "mixins";
+@import 'vars';
+@import 'generic/mixins';
 
-// Base
+// Generic
 
-@import "reset";
-@import "normalise";
-@import "utilities";
+@import 'generic/reset';
+@import 'generic/normalise';
+@import 'generic/utilities';
 
-// Main
+// Objects
 
-@import "scaffolding";
-@import "nav";
-@import "tables";
-@import "forms";
-//@import "icons"; Still in development
+@import 'objects/scaffolding';
+@import 'objects/nav';
+@import 'objects/tables';
+@import 'objects/forms';

@@ -7,8 +7,8 @@
 	.table td {
 		text-align: left;
 		vertical-align: top;
-		border-top: 1px solid $tableBorderColour;
-		padding: ($marginBottom / 2) * 1px 10px;
+		border-top: 1px solid $table-border-colour;
+		padding: ($base-margin-bottom / 2) * 1px 10px;
 	}
 	
 	.table th {

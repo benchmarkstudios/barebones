@@ -1,0 +1,53 @@
+html {
+	background-color: $base-background-colour;
+	color: $base-colour;
+	font: #{(($base-font-size / 16) * 1em)}/#{$base-line-height} $base-font-stack;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
+	margin-bottom: $base-margin-bottom * 1px;
+}
+
+h1 {
+	font-size: ($h1-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h1-font-size ) * 1em;
+}
+
+h2 {
+	font-size: ($h2-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h2-font-size ) * 1em;
+}
+
+h3 {
+	font-size: ($h3-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h3-font-size ) * 1em;
+}
+
+h4 {
+	font-size: ($h4-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h4-font-size ) * 1em;
+}
+
+h5 {
+	font-size: ($h5-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h5-font-size ) * 1em;
+}
+
+h6 {
+	font-size: ($h6-font-size / $base-font-size) * 1em;
+	line-height: ($base-margin-bottom / $h6-font-size ) * 1em;
+}
+
+ul, ol {
+	margin-left: $list-margin-left * 1px;
+}
+
+ul ul, ol ol {
+	margin-bottom: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
