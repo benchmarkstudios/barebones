@@ -10,7 +10,7 @@ A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and be
 * Includes Google HTML5 shiv
 * Semantic use of HTML5 elements
 * WAI-ARIA role ready
-* Proprietary baseline and horizontal 960 responsive grid
+* Proprietary baseline grid, adjustable via SASS
 * Comes pre-bundled with latest CDN version of jQuery and fallback
 * index.php Loop template
 * Customised functions.php adding theme support for high customisation
