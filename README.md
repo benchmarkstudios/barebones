@@ -7,14 +7,13 @@ A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and be
 * Reset, normalisation and base font/form styles
 * Built for mobile first, expanding to 1200px (can be extended further)
 * SASS powered - semantically named files all compiled into a single file
-* Includes Google HTML5 shiv
-* Semantic use of HTML5 elements
+* Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
 * Proprietary baseline grid, adjustable via SASS
 * Comes pre-bundled with latest CDN version of jQuery and fallback
 * index.php Loop template
 * Customised functions.php adding theme support for high customisation
-* Minimised HTTP requests for high Web Performance
+* Web Performance optimised
 
 ## WordPress Support
 
