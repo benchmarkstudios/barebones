@@ -1,12 +1,12 @@
 @mixin breakpoint($point) {
   @if $point == desktop {
-    @media (min-width: 1200px) { @content; }
+    @media screen and (min-width: 1200px) { @content; }
   }
   @else if $point == tablet-landscape {
-    @media (min-width: 1024px) { @content; }
+    @media screen and (min-width: 1024px) { @content; }
   }
   @else if $point == tablet-portrait {
-    @media (min-width: 768px)  { @content; }
+    @media screen and (min-width: 768px)  { @content; }
   }
 }
 
