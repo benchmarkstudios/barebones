@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="HandheldFriendly" content="true" />
 		<title><?php wp_title( ' &ndash; ', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<?php wp_head(); ?>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="<?php bloginfo( 'template_url' ); ?>/_/js/libs/respond.min.js"></script>
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>

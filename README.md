@@ -7,10 +7,9 @@ A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and be
 * Reset, normalisation and base font/form styles
 * Built for mobile first, expanding to 1200px (can be extended further)
 * SASS powered - semantically named files all compiled into a single file
-* Includes Google HTML5 shiv
-* Semantic use of HTML5 elements
+* Semantic use of HTML5 elements, includes Google HTML5 shiv and respond.js for IE8 Media Queries
 * WAI-ARIA role ready
-* Proprietary baseline and horizontal 960 responsive grid
+* Proprietary baseline and customisable, SASS generated horizontal grid
 * Comes pre-bundled with latest CDN version of jQuery and fallback
 * index.php Loop template
 * Customised functions.php adding theme support for high customisation
@@ -30,4 +29,4 @@ Although barebones now utilises the powerful SASS CSS preprocessor, you don't ha
 
 ## Credits
 
-* [Twitter Bootstrap](http://getbootstrap.com "Twitter Bootstrap") for a modified version of their grid
+* [Twitter Bootstrap](http://getbootstrap.com "Twitter Bootstrap")
