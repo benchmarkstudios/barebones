@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
 		<meta name="HandheldFriendly" content="true" />
 		<title><?php wp_title( ' &ndash; ', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />

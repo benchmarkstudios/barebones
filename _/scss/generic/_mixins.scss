@@ -1,12 +1,15 @@
 @mixin breakpoint($point) {
-  @if $point == desktop {
-    @media screen and (min-width: 1200px) { @content; }
-  }
-  @else if $point == tablet-landscape {
-    @media screen and (min-width: 1024px) { @content; }
+  @if $point == mobile {
+    @media screen and (max-width: 640px)  { @content; }
   }
   @else if $point == tablet-portrait {
-    @media screen and (min-width: 768px)  { @content; }
+    @media screen and (max-width: 768px)  { @content; }
+  }
+  @else if $point == tablet-landscape {
+    @media screen and (max-width: 1024px) { @content; }
+  }
+  @else if $point == desktop {
+    @media screen and (max-width: 1200px) { @content; }
   }
 }
 
@@ -15,10 +18,6 @@
 	   -moz-border-radius: $radius;
 	     -o-border-radius: $radius;
 	        border-radius: $radius;
-}
-
-@mixin col-width ($span: 1) {
-	width: ((100 / $column-count) * $span) - ($column-gutter / $container-max-width) * 100%;
 }
 
 @mixin box-sizing ($box-model: 'border-box') {
