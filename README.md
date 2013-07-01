@@ -26,7 +26,3 @@ The basic features are all tested from IE7+. Yet to be tested in any other brows
 ## Preprocessors
 
 Although barebones now utilises the powerful Sass CSS preprocessor, you don't have to use it. The main style.css file is not compressed so can be easily changed in a Text Editor.
-
-## Credits
-
-* [Twitter Bootstrap](http://getbootstrap.com "Twitter Bootstrap")
