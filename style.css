@@ -144,6 +144,10 @@ input, select, textarea, button {
   width: 208px;
 }
 
+textarea {
+  min-height: 84px;
+}
+
 .control-group {
   margin-bottom: 21px;
 }

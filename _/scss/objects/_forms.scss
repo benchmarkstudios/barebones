@@ -13,6 +13,10 @@ input, select, textarea, button {
 	width: 208px;
 }
 
+textarea {
+	min-height: ($base-margin-bottom * 4) + px;
+}
+
 .control-group {
 	margin-bottom: $base-margin-bottom + px;
 }
