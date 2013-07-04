@@ -1,7 +1,14 @@
 html {
 	background-color: $base-background-colour;
 	color: $base-colour;
-	font: #{(($base-font-size / 16) * 1em)}/#{$base-line-height} $base-font-stack;
+	font-size: 62.5%;
+}
+
+body {
+	//font: #{(($base-font-size / 16) * 1em)}/#{$base-line-height} $base-font-stack;
+	font-family: $base-font-stack;
+	@include font-size($base-font-size);
+	line-height: $base-line-height;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
@@ -9,8 +16,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
 }
 
 h1 {
-	font-size: ($h1-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h1-font-size ) * 1em;
+	@include font-size($h1-font-size);
 }
 
 h2 {

@@ -45,3 +45,13 @@
   background-image: -moz-linear-gradient($from, $to);
 	background-image: -o-linear-gradient($from, $to);	
 }
+
+@function calculate-rem($size) {
+  $remSize: $size / 10;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size + px; //Fallback in px
+  font-size: calculate-rem($size);
+}
