@@ -3,13 +3,11 @@ input, select, textarea, button {
 	font-family: $base-font-stack;
 	font-size: 1em;
 	line-height: $base-margin-bottom + px;
-	padding: 2.5px 5px;
+	padding: 4px 8px;
 	color: $base-colour;
 	background: $input-background;
 	border: $input-border;
 	@include border-radius(3px);
-	margin-right: 5px;
-	margin-bottom: -1px;
 	width: 208px;
 }
 
@@ -31,16 +29,21 @@ textarea {
 	@extend .clearfix;
 }
 
+	.checkbox input {
+		width: auto;
+	}
+
 .btn {
-	cursor: pointer;
-	display: inline-block;
 	background: $btn-background;
-	color: $btn-color;
-	line-height: $base-margin-bottom + px;
 	border: $btn-border;
 	@include border-radius(3px);
-	@include gradient(#fff, #eee);
+	color: $btn-color;
+	cursor: pointer;
+	display: inline-block;
+	line-height: $base-margin-bottom + px;
+	padding: 5px 20px;
+	width: auto;
 	&:hover {
-		@include gradient(#eee, #fff);
+		background: $btn-background-hover;
 	}
 }

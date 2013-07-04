@@ -42,7 +42,14 @@ abbr, acronym {
 html {
   background-color: white;
   color: #333333;
-  font: 0.875em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
@@ -50,8 +57,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
 }
 
 h1 {
-  font-size: 2em;
-  line-height: 0.75em;
+  font-size: 28px;
+  font-size: 2.8rem;
 }
 
 h2 {
@@ -131,7 +138,7 @@ input, select, textarea, button {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 21px;
-  padding: 2.5px 5px;
+  padding: 4px 8px;
   color: #333333;
   background: white;
   border: solid 1px #cccccc;
@@ -139,8 +146,6 @@ input, select, textarea, button {
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  margin-right: 5px;
-  margin-bottom: -1px;
   width: 208px;
 }
 
@@ -161,29 +166,26 @@ textarea {
   margin-left: 160px;
 }
 
+.checkbox input {
+  width: auto;
+}
+
 .btn {
-  cursor: pointer;
-  display: inline-block;
   background: #eeeeee;
-  color: #333333;
-  line-height: 21px;
   border: solid 1px #cccccc;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  background-color: white;
-  background-image: -webkit-linear-gradient(white, #eeeeee);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#eeeeee));
-  background-image: -moz-linear-gradient(white, #eeeeee);
-  background-image: -o-linear-gradient(white, #eeeeee);
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 21px;
+  padding: 5px 20px;
+  width: auto;
 }
 .btn:hover {
-  background-color: #eeeeee;
-  background-image: -webkit-linear-gradient(#eeeeee, white);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eeeeee), to(white));
-  background-image: -moz-linear-gradient(#eeeeee, white);
-  background-image: -o-linear-gradient(#eeeeee, white);
+  background: #dddddd;
 }
 
 .container {
