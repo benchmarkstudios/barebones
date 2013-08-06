@@ -6,7 +6,6 @@
 		<meta name="HandheldFriendly" content="true" />
 		<title><?php wp_title( ' / ', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-		<link rel="stylesheet" href="http://basehold.it/21" />
 		<?php wp_head(); ?>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
