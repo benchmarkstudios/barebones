@@ -10,7 +10,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 * Semantic use of HTML5 elements, includes Google HTML5 shiv and respond.js for IE8 Media Queries
 * WAI-ARIA role ready
 * Proprietary baseline and customisable, Sass generated horizontal grid
-* Comes pre-bundled with latest CDN version of jQuery and fallback
+* Comes pre-bundled with cached CDN version of jQuery (enqueued, so plugin friendly)
 * index.php Loop template
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
