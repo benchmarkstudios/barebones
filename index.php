@@ -10,7 +10,7 @@
 
 			<header role="heading">
 				<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<p class="date"><time pubdate datetime="<?php echo $post->post_date; ?>"><?php the_time( get_option( 'date_format' ) ); ?></time></p>
+				<p class="date"><time pubDate datetime="<?php echo $post->post_date; ?>"><?php echo human_time_diff( strtotime( $post->post_date ) ); ?></time></p>
 				<p class="comments"><?php comments_popup_link( 'No comments yet', '1 comment', '% comments' ); ?></p>
 			</header>
 
