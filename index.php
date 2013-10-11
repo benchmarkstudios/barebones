@@ -11,7 +11,7 @@
 			<header role="heading">
 				<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<p class="date"><time pubDate datetime="<?php echo $post->post_date; ?>"><?php echo human_time_diff( strtotime( $post->post_date ) ); ?></time></p>
-				<p class="comments"><?php comments_popup_link( 'No comments yet', '1 comment', '% comments' ); ?></p>
+				<p class="comments"><?php comments_popup_link( __( 'No comments yet' ), __( '1 comment' ), __( '% comments' ) ); ?></p>
 			</header>
 
 			<?php the_content( __( 'Read More' ) ); ?>
@@ -21,8 +21,8 @@
 		<?php endwhile; ?>
 
 		<div class="pagination">
-			<div class="alignleft"><?php previous_posts_link( 'Previous Entries' ) ?></div>
-			<div class="alignright"><?php next_posts_link( 'Next Entries','' ) ?></div>
+			<div class="alignleft"><?php previous_posts_link( __( 'Previous Entries' ) ) ?></div>
+			<div class="alignright"><?php next_posts_link( __( 'Next Entries' ) ) ?></div>
 		</div>
 
 	</div>
