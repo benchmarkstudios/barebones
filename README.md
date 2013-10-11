@@ -15,6 +15,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 * Basic index.php Loop template
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
+* Localised strings for multiple language support
 
 ## WordPress Support
 
