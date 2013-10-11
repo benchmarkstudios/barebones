@@ -11,7 +11,8 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 * WAI-ARIA role ready
 * Proprietary baseline and customisable, Sass generated horizontal grid
 * Comes pre-bundled with cached CDN version of jQuery (enqueued, so plugin friendly)
-* index.php Loop template
+* jQuery plugin agnostic
+* Basic index.php Loop template
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 
