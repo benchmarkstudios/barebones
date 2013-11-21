@@ -10,7 +10,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 * Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
 * Proprietary baseline and customisable, Sass generated horizontal grid
-* Comes pre-bundled with cached CDN version of jQuery (enqueued, so plugin friendly)
+* Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
 * Basic index.php Loop template
 * Customised functions.php adding theme support for high customisation
@@ -23,7 +23,11 @@ Compatible with WordPress 3.2 and above.
 
 ## Browser Support
 
-The basic features are all tested from IE7+. Yet to be tested in any other browsers than modern Mozilla, Opera and WebKit builds. Also tested on Safari and Chrome on iOS 5+ and Chrome on Android 3+.
+Internet Explorer 7.0+
+Firefox 3.0+
+Safari 4.0+
+Chrome 14.0+
+Opera 10.0+
 
 ## Preprocessors
 
