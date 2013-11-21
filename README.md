@@ -23,11 +23,11 @@ Compatible with WordPress 3.2 and above.
 
 ## Browser Support
 
-Internet Explorer 7.0+
-Firefox 3.0+
-Safari 4.0+
-Chrome 14.0+
-Opera 10.0+
+* Internet Explorer 7.0+
+* Firefox 3.0+
+* Safari 4.0+
+* Chrome 14.0+
+* Opera 10.0+
 
 ## Preprocessors
 
