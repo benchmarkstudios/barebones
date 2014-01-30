@@ -1,0 +1,13 @@
+.nav {
+	list-style: none;
+	margin-left: 0;
+}
+
+	.nav > li {
+		 display: inline-block;
+		*display: inline;
+	}
+
+		.nav > li > a {
+			display: block;
+		}

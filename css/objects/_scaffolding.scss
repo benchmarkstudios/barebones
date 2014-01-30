@@ -1,0 +1,51 @@
+.container {
+  margin: 0 auto;
+  max-width: ($container-max-width - $column-gutter) * 1px;
+  padding: 0 20px;
+  @extend .clearfix;
+}
+
+.container-fluid {
+  width: 100%;
+  @extend .clearfix;
+}
+
+.row {
+  margin-left: -($column-gutter / $container-max-width) * 100%;
+  _overflow: hidden;
+  @extend .clearfix;
+  @include breakpoint(mobile) { 
+    margin-left: 0; 
+  }
+}
+
+.column {
+  display: inline;
+  float: left;
+  margin-left: ($column-gutter / $container-max-width) * 100%;
+  vertical-align: top;
+  @include breakpoint(mobile) { 
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: auto !important;
+  }
+}
+
+@for $i from 1 through $column-count {
+  .column-span-#{$i} { 
+    width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) * 1%;
+    *width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) - .02 * 1%;
+  }
+}
+
+.row-no-gutters .column {
+  margin-left: 0;
+}
+
+@for $i from 1 through $column-count {
+  .row-no-gutters .column-span-#{$i} { 
+    width: ((100 / $column-count) * $i) * 1%;
+    *width: ((100 / $column-count) * $i) - .02 * 1%;
+  }
+}
