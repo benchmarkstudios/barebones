@@ -16,6 +16,18 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
+* Grunt.js integration - automatic image optimisation, Sass compiling and watching, and css minification
+
+## Installation
+
+### Dependancies
+
+* Node.js
+* Grunt.js
+
+Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory, then open /barebones/ in the command line and run `npm install` to install all of Grunt's dependancies.
+
+Then run `grunt` to watch your Sass files.
 
 ## WordPress Support
 
@@ -28,7 +40,3 @@ Compatible with WordPress 3.2 and above.
 * Safari 4.0+
 * Chrome 14.0+
 * Opera 10.0+
-
-## Preprocessors
-
-Although barebones now utilises the powerful Sass CSS preprocessor, you don't have to use it. The main style.css file is not compressed so can be easily changed in a Text Editor.
