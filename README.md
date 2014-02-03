@@ -20,7 +20,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. Gre
 
 ## Installation
 
-### Dependancies
+### Dependencies
 
 * Node.js
 * Grunt.js
@@ -40,3 +40,9 @@ Compatible with WordPress 3.2 and above.
 * Safari 4.0+
 * Chrome 14.0+
 * Opera 10.0+
+
+
+## Roadmap
+
+* Phase out Internet Explorer 7 support
+* Refactor CSS using `box-sizing: border-box`
