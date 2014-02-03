@@ -33,7 +33,7 @@
 }
 
 @for $i from 1 through $column-count {
-  .column-span-#{$i} { 
+  .col-span-#{$i} { 
     width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) * 1%;
     *width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) - .02 * 1%;
   }

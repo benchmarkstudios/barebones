@@ -1,17 +1,15 @@
 html {
 	background-color: $base-background-colour;
 	color: $base-colour;
-	font-size: 62.5%;
+	font: #{($base-font-size * 6.25) * 1%}/#{$base-line-height} $base-font-stack;
 }
 
-body {
-	//font: #{(($base-font-size / 16) * 1em)}/#{$base-line-height} $base-font-stack;
-	font-family: $base-font-stack;
-	@include font-size($base-font-size);
-	line-height: $base-line-height;
+a {
+	color: $base-colour;
+	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, fieldset {
+h1, h2, h3, h4, h5, h6, p, ul, ol {
 	margin-bottom: $base-margin-bottom * 1px;
 }
 
@@ -20,32 +18,27 @@ h1 {
 }
 
 h2 {
-	font-size: ($h2-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h2-font-size ) * 1em;
+	@include font-size($h2-font-size);
 }
 
 h3 {
-	font-size: ($h3-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h3-font-size ) * 1em;
+	@include font-size($h3-font-size);
 }
 
 h4 {
-	font-size: ($h4-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h4-font-size ) * 1em;
+	@include font-size($h4-font-size);
 }
 
 h5 {
-	font-size: ($h5-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h5-font-size ) * 1em;
+	@include font-size($h5-font-size);
 }
 
 h6 {
-	font-size: ($h6-font-size / $base-font-size) * 1em;
-	line-height: ($base-margin-bottom / $h6-font-size ) * 1em;
+	@include font-size($h6-font-size);
 }
 
 ul, ol {
-	margin-left: $list-margin-left * 1px;
+	margin-left: $base-margin-bottom * 1px;
 }
 
 ul ul, ol ol {

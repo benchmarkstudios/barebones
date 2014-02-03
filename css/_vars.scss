@@ -1,12 +1,12 @@
 // Base
 
-$base-colour: 							#333;
+$base-colour: 							#444;
 $base-background-colour: 		#fff;
 
 $base-font-stack: 					'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size: 						14;
+$base-font-size: 						16;
 $base-line-height: 					1.5;
-$base-margin-bottom: 				($base-font-size * $base-line-height);
+$base-margin-bottom: 				$base-font-size * $base-line-height;
 
 $h1-font-size: 							28;
 $h2-font-size: 							24;
@@ -19,19 +19,11 @@ $h6-font-size: 							16;
 
 $mobile:                    640px;
 
-// Lists
-
-$list-margin-left:					24;
-
 // Scaffolding
 
 $container-max-width: 			960;
 $column-count:				 			12;
 $column-gutter:				 			20;
-
-// Tables
-
-$table-border-colour:				#ddd;
 
 // Forms
 $input-border: 							solid 1px #ccc;

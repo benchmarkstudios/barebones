@@ -1,13 +1,15 @@
 @mixin media($size) {
-  @media screen and (max-width: $size)  { @content; }
+  @media screen and (max-width: $size) { 
+    @content; 
+  }
 }
 
-@function calculate-rem($size) {
-  $remSize: $size / $base-font-size;
-  @return #{$remSize}rem;
+@function calculate-rem($px, $base: $base-font-size) {
+  $rem: $px / $base;
+  @return #{$rem}rem;
 }
 
-@mixin font-size($size) {
-  font-size: $size + px;
-  font-size: calculate-rem($size);
+@mixin font-size($px) {
+  font-size: $px + px;
+  font-size: calculate-rem($px);
 }

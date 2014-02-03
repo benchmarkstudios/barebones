@@ -1,35 +1,38 @@
-input, select, textarea {
-	display: inline-block;
-	font: inherit;
-	line-height: $base-margin-bottom + px;
-	padding: 4px 8px;
-	color: $base-colour;
+input, 
+select, 
+textarea {
 	background: $input-background;
 	border: $input-border;
+	color: $base-colour;
+	display: inline-block;
+	font: inherit;
+	line-height: $base-margin-bottom * 1px;
+	padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
 	width: 208px;
 }
 
+input[type="checkbox"], 
+input[type="radio"] {
+	background: transparent;
+	border: 0;
+	width: auto;
+}
+
 textarea {
-	min-height: ($base-margin-bottom * 4) + px;
+	min-height: ($base-margin-bottom * 4) * 1px;
 }
 
 .form__group {
-	margin-bottom: $base-margin-bottom + px;
+	margin-bottom: $base-margin-bottom * 1px;
 }
 
 .form__label {
-	float: left;
-	width: 140px;
+	font-weight: bold;
 }
 
 .form__controls {
-	margin-left: 160px;
 	@extend .clearfix;
 }
-
-	.checkbox input {
-		width: auto;
-	}
 
 .btn {
 	background: $btn-background;
@@ -37,9 +40,9 @@ textarea {
 	color: $btn-color;
 	cursor: pointer;
 	display: inline-block;
-	line-height: ($base-margin-bottom * 2) + px;
-	height: ($base-margin-bottom * 2) + px;
-	padding: 0 20px;
+	line-height: ($base-margin-bottom * 2) * 1px;
+	height: ($base-margin-bottom * 2) * 1px;
+	padding: 0 $base-margin-bottom;
 	width: auto;
 	&:hover {
 		background: $btn-background-hover;

@@ -1,4 +1,8 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{
+* {
+	border: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+					box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
@@ -8,17 +12,14 @@ table {
 	border-spacing: 0;
 }
 
-fieldset, img { 
-	border: 0;
+th {
+	font-weight: bold;
+	text-align: left;
 }
 
 address, caption, cite, dfn, th, var {
 	font-style: normal;
 	font-weight: normal;
-}
-
-caption, th {
-	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,8 +29,4 @@ h1, h2, h3, h4, h5, h6 {
 
 q:before, q:after {
 	content: '';
-}
-
-abbr, acronym {
-	border: 0;
 }
