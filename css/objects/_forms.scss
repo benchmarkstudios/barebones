@@ -1,13 +1,11 @@
-input, select, textarea, button {
+input, select, textarea {
 	display: inline-block;
-	font-family: $base-font-stack;
-	font-size: 1em;
+	font: inherit;
 	line-height: $base-margin-bottom + px;
 	padding: 4px 8px;
 	color: $base-colour;
 	background: $input-background;
 	border: $input-border;
-	@include border-radius(3px);
 	width: 208px;
 }
 
@@ -15,16 +13,16 @@ textarea {
 	min-height: ($base-margin-bottom * 4) + px;
 }
 
-.control-group {
+.form__group {
 	margin-bottom: $base-margin-bottom + px;
 }
 
-.control-label {
+.form__label {
 	float: left;
 	width: 140px;
 }
 
-.controls {
+.form__controls {
 	margin-left: 160px;
 	@extend .clearfix;
 }
@@ -36,12 +34,12 @@ textarea {
 .btn {
 	background: $btn-background;
 	border: $btn-border;
-	@include border-radius(3px);
 	color: $btn-color;
 	cursor: pointer;
 	display: inline-block;
-	line-height: $base-margin-bottom + px;
-	padding: 5px 20px;
+	line-height: ($base-margin-bottom * 2) + px;
+	height: ($base-margin-bottom * 2) + px;
+	padding: 0 20px;
 	width: auto;
 	&:hover {
 		background: $btn-background-hover;

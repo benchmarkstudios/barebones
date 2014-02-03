@@ -5,7 +5,7 @@
   @extend .clearfix;
 }
 
-.container-fluid {
+.container--fluid {
   width: 100%;
   @extend .clearfix;
 }
@@ -14,7 +14,7 @@
   margin-left: -($column-gutter / $container-max-width) * 100%;
   _overflow: hidden;
   @extend .clearfix;
-  @include breakpoint(mobile) { 
+  @include media($mobile) { 
     margin-left: 0; 
   }
 }
@@ -24,7 +24,7 @@
   float: left;
   margin-left: ($column-gutter / $container-max-width) * 100%;
   vertical-align: top;
-  @include breakpoint(mobile) { 
+  @include media($mobile) { 
     display: block;
     float: none;
     margin-left: 0;
@@ -39,12 +39,12 @@
   }
 }
 
-.row-no-gutters .column {
+.row--no-gutters .column {
   margin-left: 0;
 }
 
 @for $i from 1 through $column-count {
-  .row-no-gutters .column-span-#{$i} { 
+  .row--no-gutters .column-span-#{$i} { 
     width: ((100 / $column-count) * $i) * 1%;
     *width: ((100 / $column-count) * $i) - .02 * 1%;
   }

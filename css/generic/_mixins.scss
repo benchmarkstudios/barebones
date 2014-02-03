@@ -1,57 +1,13 @@
-@mixin breakpoint($point) {
-  @if $point == mobile {
-    @media screen and (max-width: 640px)  { @content; }
-  }
-  @else if $point == tablet-portrait {
-    @media screen and (max-width: 768px)  { @content; }
-  }
-  @else if $point == tablet-landscape {
-    @media screen and (max-width: 1024px) { @content; }
-  }
-  @else if $point == desktop {
-    @media screen and (max-width: 1200px) { @content; }
-  }
-}
-
-@mixin border-radius ($radius: 5px) {
-	-webkit-border-radius: $radius;
-	   -moz-border-radius: $radius;
-	     -o-border-radius: $radius;
-	        border-radius: $radius;
-}
-
-@mixin box-sizing ($box-model: 'border-box') {
-	-webkit-box-sizing: $box-model;
-     -moz-box-sizing: $box-model;
-          box-sizing: $box-model;
-}
-
-@mixin box-shadow($x-axis: 0, $y-axis: 2px, $blur: 2px, $alpha: 0.1) {
-	-webkit-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-	   -moz-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-	        box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-}
-
-@mixin transition($duration:0.2s, $ease:ease-out) {
-	-webkit-transition: all $duration $ease;
-	   -moz-transition: all $duration $ease;
-	        transition: all $duration $ease;
-}
-
-@mixin gradient($from, $to) {
-  background-color: $from;
-	background-image: -webkit-linear-gradient($from, $to);
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
-  background-image: -moz-linear-gradient($from, $to);
-	background-image: -o-linear-gradient($from, $to);	
+@mixin media($size) {
+  @media screen and (max-width: $size)  { @content; }
 }
 
 @function calculate-rem($size) {
-  $remSize: $size / 10;
+  $remSize: $size / $base-font-size;
   @return #{$remSize}rem;
 }
 
 @mixin font-size($size) {
-  font-size: $size + px; //Fallback in px
+  font-size: $size + px;
   font-size: calculate-rem($size);
 }
