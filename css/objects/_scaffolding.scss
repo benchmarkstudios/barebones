@@ -12,7 +12,6 @@
 
 .row {
   margin-left: -($column-gutter / $container-max-width) * 100%;
-  _overflow: hidden;
   @extend .clearfix;
   @include media($mobile) { 
     margin-left: 0; 
@@ -35,7 +34,6 @@
 @for $i from 1 through $column-count {
   .col-span-#{$i} { 
     width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) * 1%;
-    *width: (((100 / $column-count) * $i) - (($column-gutter / $container-max-width) * 100)) - .02 * 1%;
   }
 }
 
@@ -46,6 +44,5 @@
 @for $i from 1 through $column-count {
   .row--no-gutters .column-span-#{$i} { 
     width: ((100 / $column-count) * $i) * 1%;
-    *width: ((100 / $column-count) * $i) - .02 * 1%;
   }
 }

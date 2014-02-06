@@ -13,30 +13,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 	margin-bottom: $base-margin-bottom * 1px;
 }
 
-h1 {
-	@include font-size($h1-font-size);
-}
-
-h2 {
-	@include font-size($h2-font-size);
-}
-
-h3 {
-	@include font-size($h3-font-size);
-}
-
-h4 {
-	@include font-size($h4-font-size);
-}
-
-h5 {
-	@include font-size($h5-font-size);
-}
-
-h6 {
-	@include font-size($h6-font-size);
-}
-
 ul, ol {
 	margin-left: $base-margin-bottom * 1px;
 }
@@ -47,6 +23,6 @@ ul ul, ol ol {
 
 img {
 	display: block;
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 }

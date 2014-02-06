@@ -1,8 +1,8 @@
 input, 
 select, 
 textarea {
-	background: $input-background;
-	border: $input-border;
+	background-color: $base-background-colour;
+	border: solid 1px $base-colour;
 	color: $base-colour;
 	display: inline-block;
 	font: inherit;
@@ -35,16 +35,13 @@ textarea {
 }
 
 .btn {
-	background: $btn-background;
-	border: $btn-border;
-	color: $btn-color;
+	background-color: $base-background-colour;
+	border: solid 1px $base-colour;
+	color: $base-colour;
 	cursor: pointer;
 	display: inline-block;
-	line-height: ($base-margin-bottom * 2) * 1px;
 	height: ($base-margin-bottom * 2) * 1px;
+	line-height: ($base-margin-bottom * 2) * 1px;
 	padding: 0 $base-margin-bottom;
 	width: auto;
-	&:hover {
-		background: $btn-background-hover;
-	}
 }

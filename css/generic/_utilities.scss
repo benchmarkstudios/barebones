@@ -21,11 +21,11 @@ img.alignright {
 }
 
 .clearfix {
-	*zoom:1;
 	&:before,
 	&:after{
-		content: " ";
+		content: '';
 		display: table;
+		line-height: 0;
 	}
 	&:after{
 		clear: both;
