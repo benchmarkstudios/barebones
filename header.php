@@ -10,8 +10,8 @@
 		<?php wp_head(); ?>
 		<!--[if lt IE 9]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>

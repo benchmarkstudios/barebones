@@ -1,0 +1,14 @@
+{
+  "name": "barebones",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp-rename": "~0.2.2",
+    "gulp": "~3.5.2",
+    "gulp-uglify": "~0.2.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-jshint": "~1.4.0",
+    "gulp-sass": "~0.6.0",
+    "gulp-imagemin": "~0.1.5"
+  }
+}

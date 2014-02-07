@@ -6,7 +6,7 @@ var gulp     = require('gulp'),
     sass     = require('gulp-sass'),
     uglify   = require('gulp-uglify'),
     paths    = {
-      css: './css/**/*.scss',
+      css: './css/*.scss',
       img: './img/**',
       js:  './js/*.js'
     };
@@ -32,11 +32,11 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', function() {
   gulp.src(paths.js)
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('./js/'))
+    .pipe(concat('./js/all.js'))
+    .pipe(gulp.dest('.'))
     .pipe(rename('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('.'));
 });
  
 gulp.task('watch', function() {

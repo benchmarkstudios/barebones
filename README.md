@@ -8,7 +8,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Sass powered - semantically named files all compiled into a single file
 * Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
-* Proprietary baseline and customisable, Sass generated, responsive horizontal grid
+* Uses [bourbon's neat](http://neat.bourbon.io) responsive grid framework
 * Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
 * Basic index.php Loop template
@@ -21,14 +21,27 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 ### Dependencies
 
+* Bourbon gem
+* Neat gem
 * Node.js
 * Gulp.js
 
-Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory, then open /barebones/ in a command line tool, such as Mac Terminal, and run the following to install all of this project's Gulp dependencies:
+Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory, then open /barebones/ in a command line tool, such as Mac Terminal, then first install the bourbon/neat gems if you haven't already:
 
-    npm install gulp-concat gulp-jshint gulp-imagemin gulp-rename gulp-sass gulp-uglify --save-dev
+    $ gem install bourbon
+    $ gem install neat
 
-Then run `gulp` to run all your Gulp tasks. This includes watching the Sass folders.
+Then install bourbon/neat to the theme's css folder
+
+    $ cd css
+    $ bourbon install
+    $ neat install
+
+ and run the following to install all of this project's Gulp dependencies:
+
+    $ npm install --save-dev
+
+Then run `gulp` to run all your Gulp tasks, which includes watching the Sass folders.
 
 ## WordPress Support
 
