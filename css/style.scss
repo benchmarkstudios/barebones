@@ -4,19 +4,30 @@ Theme URI: http://github.com/mikefrancis/barebones
 Author: Mike Francis
 */
 
+// neat.bourbon.io Grid
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
 // Variables, Mixins
 
 @import 'vars';
-@import 'generic/mixins';
+@import 'mixins';
 
 // Generic
 
-@import 'generic/reset';
-@import 'generic/normalise';
-@import 'generic/utilities';
+@import 'reset';
+@import 'normalise';
+@import 'utilities';
 
-// Objects
+// Form, Buttons
 
-@import 'objects/forms';
-@import 'objects/scaffolding';
-@import 'objects/nav';
+@import 'forms';
+
+// Nav abstraction, Navs
+
+@import 'nav';
+
+// Icons
+
+@import '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css';
