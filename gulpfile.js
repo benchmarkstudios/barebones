@@ -13,7 +13,7 @@ var gulp     = require('gulp'),
  
 gulp.task('sass', function() {
   gulp.src(paths.css)
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(gulp.dest('.'));
 });
  
@@ -32,16 +32,16 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', function() {
   gulp.src(paths.js)
-    .pipe(concat('./js/all.js'))
-    .pipe(gulp.dest('.'))
-    .pipe(rename('all.min.js'))
-    .pipe(uglify())
+    .pipe(concat('script.js'))
     .pipe(gulp.dest('.'));
+    // .pipe(rename('all.min.js'))
+    // .pipe(uglify())
+    // .pipe(gulp.dest('.'))
 });
  
 gulp.task('watch', function() {
   gulp.watch(paths.css, ['sass']);
-  gulp.watch(paths.js, ['lint']);
+  gulp.watch(paths.js, ['lint', 'scripts']);
 });
  
 gulp.task('default', ['sass', 'img', 'lint', 'scripts', 'watch']);

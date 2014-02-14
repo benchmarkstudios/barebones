@@ -3,7 +3,7 @@
 }
 
 img.alignleft {
-	margin-right: $column-gutter * 1px;
+	margin-right: $gutter * 1px;
 }
 
 .alignright {
@@ -11,13 +11,15 @@ img.alignleft {
 }
 
 img.alignright {
-	margin-left	: $column-gutter * 1px;
+	margin-left	: $gutter * 1px;
 }
 
 .aligncenter {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: {
+		left: auto;
+		right: auto;
+	}
 }
 
 .clearfix {

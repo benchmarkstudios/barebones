@@ -1,1 +1,132 @@
-* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}* {border:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}table {border-collapse:collapse;border-spacing:0;}th {font-weight:bold;text-align:left;}address ,caption ,cite ,dfn ,th ,var {font-style:normal;font-weight:normal;}h1 ,h2 ,h3 ,h4 ,h5 ,h6 {font-size:100%;font-weight:bold;}q:before ,q:after {content:'';}html {background-color:#fff;color:#444;font:100%/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;}a {color:#444;text-decoration:none;}h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,p ,ul ,ol {margin-bottom:24px;}ul ,ol {margin-left:24px;}ul ul ,ol ol {margin-bottom:0;}img {display:block;height:auto;max-width:100%;}.alignleft {float:left;}img.alignleft {margin-right:20px;}.alignright {float:right;}img.alignright {margin-left:20px;}.aligncenter {display:block;margin-left:auto;margin-right:auto;}.clearfix:before ,.clearfix:after {content:'';display:table;line-height:0;}.clearfix:after {clear:both;}input ,select ,textarea {background-color:#fff;border:solid 1px #444;color:#444;display:inline-block;font:inherit;line-height:24px;padding:6 12;width:208px;}input[type="checkbox"] ,input[type="radio"] {background:transparent;border:0;width:auto;}textarea {min-height:96px;}.form__group {margin-bottom:24px;}.form__label {font-weight:bold;}.btn {background-color:#fff;border:solid 1px #444;color:#444;cursor:pointer;display:inline-block;height:48px;line-height:48px;padding:0 24;width:auto;}.nav {list-style:none;margin:0;}.nav>li {display:inline-block;}.nav > li>a {display:block;}@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+/*
+Theme Name: Bare Bones
+Theme URI: http://github.com/mikefrancis/barebones
+Author: Mike Francis
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+address, caption, cite, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  text-align: left; }
+
+html {
+  background-color: #fff;
+  color: #444;
+  font: 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+a {
+  color: #444;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-bottom: 24px; }
+
+ul, ol {
+  margin-left: 24px; }
+
+ul ul, ol ol {
+  margin-bottom: 0; }
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
+.alignleft {
+  float: left; }
+
+img.alignleft {
+  margin-right: 20px; }
+
+.alignright {
+  float: right; }
+
+img.alignright {
+  margin-left: 20px; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+  line-height: 0; }
+.clearfix:after {
+  clear: both; }
+
+input, select, textarea {
+  background-color: #fff;
+  border: solid 1px #444;
+  color: #444;
+  display: inline-block;
+  font: inherit;
+  line-height: 24px;
+  padding: 6 12;
+  width: 208px; }
+
+input[type="checkbox"], input[type="radio"] {
+  background: transparent;
+  border: 0;
+  width: auto; }
+
+textarea {
+  min-height: 96px; }
+
+.form__group {
+  margin-bottom: 24px; }
+
+.form__label {
+  font-weight: bold; }
+
+
+.btn {
+  background-color: #fff;
+  border: solid 1px #444;
+  color: #444;
+  cursor: pointer;
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24;
+  width: auto; }
+
+.nav {
+  list-style: none;
+  margin: 0; }
+  .nav > li {
+    display: inline-block; }
+    .nav > li > a {
+      display: block; }
+
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
