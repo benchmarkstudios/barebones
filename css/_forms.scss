@@ -6,7 +6,7 @@ textarea {
 	color: $base-colour;
 	display: inline-block;
 	font: inherit;
-	line-height: $base-margin-bottom * 1px;
+	line-height: $base-margin-bottom;
 	padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
 	width: 208px;
 }
@@ -19,11 +19,11 @@ input[type="radio"] {
 }
 
 textarea {
-	min-height: ($base-margin-bottom * 4) * 1px;
+	min-height: ($base-margin-bottom * 4);
 }
 
 .form__group {
-	margin-bottom: $base-margin-bottom * 1px;
+	margin-bottom: $base-margin-bottom;
 }
 
 .form__label {
