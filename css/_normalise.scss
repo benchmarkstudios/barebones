@@ -10,11 +10,11 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin-bottom: $base-margin-bottom * 1px;
+	margin-bottom: $base-margin-bottom;
 }
 
 ul, ol {
-	margin-left: $base-margin-bottom * 1px;
+	margin-left: $base-margin-bottom;
 }
 
 ul ul, ol ol {
