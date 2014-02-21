@@ -15,7 +15,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
-* Gulp.js integration - automatic image optimisation, Sass compiling and watching, and css minification
+* Grunt.js integration - automatic image optimisation, Sass compiling and watching, css minification and live reload support
 
 ## Installation
 
@@ -24,7 +24,11 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Bourbon gem
 * Neat gem
 * Node.js
-* Gulp.js
+* Grunt.js
+
+#### Optional
+
+* [LiveReload Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
 Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory, then open /barebones/ in a command line tool, such as Mac Terminal, then first install the bourbon/neat gems if you haven't already:
 
@@ -37,15 +41,15 @@ Then install bourbon/neat to the theme's css folder
     $ bourbon install
     $ neat install
 
- and run the following to install all of this project's Gulp dependencies:
+ and run the following to install all of this project's Grunt dependencies:
 
     $ npm install --save-dev
 
-Then run `gulp` to run all your Gulp tasks, which includes watching the Sass folders.
+Then run `grunt`:
 
 ## WordPress Support
 
-Compatible with WordPress 3.2 and above.
+Compatible with WordPress 3.2 and above, but always use the latest version.
 
 ## Browser Support
 
@@ -58,5 +62,4 @@ Compatible with WordPress 3.2 and above.
 
 ## Roadmap
 
-* ~~Phase out Internet Explorer 7 support~~
-* ~~Refactor CSS using `box-sizing: border-box`~~
+* Organisation of Sass folders
