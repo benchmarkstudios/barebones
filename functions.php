@@ -33,13 +33,26 @@ function theme_scripts() {
   wp_deregister_script( 'jquery' );
   wp_register_script( 'jquery', ( '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ), false, '1.10.2', true);
   wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/all.min.js', array( 'jquery' ), null, true );
+  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), null, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
-/*=Register bog-standard sidebar
+/*=Nav menus
 ----------------------------------------*/
 
-if ( function_exists( 'register_sidebar' ) )
-	register_sidebar();
+if ( function_exists( 'register_nav_menus' ) )
+  register_nav_menus(array(
+    'main' => 'Main Navigation'
+    // Add more menus here
+  ));
+
+function my_wp_nav_menu_args( $args = '' ) {
+  $args['container']       = false;
+  $args['container_class'] = false;
+  $args['menu_id']         = false;
+  $args['items_wrap']      = '<ul class="%2$s">%3$s</ul>';
+  return $args;
+}
+
+add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );

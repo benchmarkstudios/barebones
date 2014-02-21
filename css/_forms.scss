@@ -34,14 +34,15 @@ textarea {
 	@extend .clearfix;
 }
 
+input[type="submit"],
 .btn {
-	background-color: $base-background-colour;
-	border: solid 1px $base-colour;
-	color: $base-colour;
+	background-color: $base-colour;
+	border: 0;
+	color: $base-background-colour;
 	cursor: pointer;
 	display: inline-block;
-	height: ($base-margin-bottom * 2) * 1px;
-	line-height: ($base-margin-bottom * 2) * 1px;
+	height: ($base-margin-bottom * 1.5);
+	line-height: ($base-margin-bottom * 1.5);
 	padding: 0 $base-margin-bottom;
 	width: auto;
 }
