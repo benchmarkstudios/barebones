@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<meta name="HandheldFriendly" content="true">
 		<meta name="MobileOptimized" content="320">
-		<title><?php wp_title( '' ); ?></title>
+		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?> <?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 		<?php wp_head(); ?>
 		<!--[if lt IE 9]>
