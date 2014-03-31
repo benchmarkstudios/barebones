@@ -18,7 +18,7 @@
 		<header class="header" role="banner">
 			<div class="container">
 				<nav role="navigation">
-					<?php wp_nav_menu( array( 'menu_class' => 'nav' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
 				</nav>
 			</div>
 		</header>

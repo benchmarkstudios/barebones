@@ -9,15 +9,25 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+ul, 
+ol {
 	margin-bottom: $base-margin-bottom;
 }
 
-ul, ol {
+ul, 
+ol {
 	margin-left: $base-margin-bottom;
 }
 
-ul ul, ol ol {
+ul ul, 
+ol ol {
 	margin-bottom: 0;
 }
 

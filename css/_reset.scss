@@ -7,11 +7,27 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section, 
+main {
 	display: block;
 }
 
-address, caption, cite, dfn, th, var {
+address, 
+caption, 
+cite, 
+dfn, 
+th, 
+var {
 	font-style: normal;
 	font-weight: normal;
 }
@@ -20,9 +36,13 @@ blockquote, q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
+blockquote,
+q {
+	&:before,
+	&:after {
+		content: '';
+		content: none;
+	}
 }
 
 table {

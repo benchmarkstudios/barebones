@@ -1,21 +1,21 @@
 // Base
 
-$base-colour: 							#444;
-$base-background-colour: 		#fff;
+$base-colour:            #444;
+$base-background-colour: #fff;
 
-$base-font-stack: 					'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size: 						16;
-$base-line-height: 					1.5;
-$base-margin-bottom: 				($base-font-size * $base-line-height) * 1px;
+$base-font-stack:        'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size:         16;
+$base-line-height:       1.5;
+$base-margin-bottom:     ($base-font-size * $base-line-height) * 1px;
 
 // Media Queries
 
-$mobile:                    640px;
+$mobile:                 640px;
 
 // Scaffolding
 
-$max-width: 			          940px;
-$grid-columns:				 			12;
-$gutter:				 			      20;
+$max-width:              940px;
+$grid-columns:           12;
+$gutter:                 20;
 
 // Custom colours etc.

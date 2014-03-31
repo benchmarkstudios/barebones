@@ -8,7 +8,7 @@ textarea {
 	font: inherit;
 	line-height: $base-margin-bottom;
 	padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
-	width: 208px;
+	width: 300px;
 }
 
 input[type="checkbox"], 
@@ -34,7 +34,6 @@ textarea {
 	@extend .clearfix;
 }
 
-input[type="submit"],
 .btn {
 	background-color: $base-colour;
 	border: 0;
