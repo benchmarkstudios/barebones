@@ -1,35 +1,35 @@
 .alignleft {
-	float: left;
+  float: left;
 }
 
 img.alignleft {
-	margin-right: $gutter * 1px;
+  margin-right: $gutter * 1px;
 }
 
 .alignright {
-	float: right;
+  float: right;
 }
 
 img.alignright {
-	margin-left	: $gutter * 1px;
+  margin-left : $gutter * 1px;
 }
 
 .aligncenter {
-	display: block;
-	margin: {
-		left: auto;
-		right: auto;
-	}
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }
 
 .clearfix {
-	&:before,
-	&:after{
-		content: '';
-		display: table;
-		line-height: 0;
-	}
-	&:after{
-		clear: both;
-	}
+  &:before,
+  &:after{
+    content: '';
+    display: table;
+    line-height: 0;
+  }
+  &:after{
+    clear: both;
+  }
 }

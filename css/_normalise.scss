@@ -1,12 +1,12 @@
 html {
-	background-color: $base-background-colour;
-	color: $base-colour;
-	font: #{($base-font-size * 6.25) * 1%}/#{$base-line-height} $base-font-stack;
+  background-color: $base-background-colour;
+  color: $base-colour;
+  font: #{($base-font-size * 6.25) * 1%}/#{$base-line-height} $base-font-stack;
 }
 
 a {
-	color: $base-colour;
-	text-decoration: none;
+  color: $base-colour;
+  text-decoration: none;
 }
 
 h1, 
@@ -18,26 +18,26 @@ h6,
 p, 
 ul, 
 ol {
-	margin-bottom: $base-margin-bottom;
+  margin-bottom: $base-margin-bottom;
 }
 
 ul, 
 ol {
-	margin-left: $base-margin-bottom;
+  margin-left: $base-margin-bottom;
 }
 
 ul ul, 
 ol ol {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 img {
-	display: block;
-	height: auto;
-	max-width: 100%;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 blockquote {
-	font-style: italic;
-	padding-left: $base-margin-bottom;
+  font-style: italic;
+  padding-left: $base-margin-bottom;
 }

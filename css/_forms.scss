@@ -1,47 +1,47 @@
 input, 
 select, 
 textarea {
-	background-color: $base-background-colour;
-	border: solid 1px $base-colour;
-	color: $base-colour;
-	display: inline-block;
-	font: inherit;
-	line-height: $base-margin-bottom;
-	padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
-	width: 300px;
+  background-color: $base-background-colour;
+  border: solid 1px $base-colour;
+  color: $base-colour;
+  display: inline-block;
+  font: inherit;
+  line-height: $base-margin-bottom;
+  padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
+  width: 300px;
 }
 
 input[type="checkbox"], 
 input[type="radio"] {
-	background: transparent;
-	border: 0;
-	width: auto;
+  background: transparent;
+  border: 0;
+  width: auto;
 }
 
 textarea {
-	min-height: ($base-margin-bottom * 4);
+  min-height: ($base-margin-bottom * 4);
 }
 
 .form__group {
-	margin-bottom: $base-margin-bottom;
+  margin-bottom: $base-margin-bottom;
 }
 
 .form__label {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .form__controls {
-	@extend .clearfix;
+  @extend .clearfix;
 }
 
 .btn {
-	background-color: $base-colour;
-	border: 0;
-	color: $base-background-colour;
-	cursor: pointer;
-	display: inline-block;
-	height: ($base-margin-bottom * 1.5);
-	line-height: ($base-margin-bottom * 1.5);
-	padding: 0 $base-margin-bottom;
-	width: auto;
+  background-color: $base-colour;
+  border: 0;
+  color: $base-background-colour;
+  cursor: pointer;
+  display: inline-block;
+  height: ($base-margin-bottom * 1.5);
+  line-height: ($base-margin-bottom * 1.5);
+  padding: 0 $base-margin-bottom;
+  width: auto;
 }
