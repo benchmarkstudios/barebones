@@ -6,10 +6,12 @@
     <title><?php wp_title( '' ); ?></title>
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
     <?php wp_head(); ?>
+    <!--[if lt IE 10]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+    <![endif]-->
     <!--[if lt IE 9]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
   </head>
   <body <?php body_class(); ?>>
