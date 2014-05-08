@@ -19,6 +19,35 @@ module.exports = function(grunt) {
         files: { 'style.css': 'css/style.scss' }
       }
     },
+    svgmin: {
+      options: {
+        plugins: [{
+          removeViewBox: false
+        }],
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'img/',
+          src: ['*.svg'],
+          dest: 'img/',
+          ext: '.svg'
+        }],
+      }
+    },
+    svg2png: {
+      all: {
+        files: [{ 
+          src: ['img/*.svg'], 
+          dest: 'img/' 
+        }],
+      }
+    },
+    uglify: {
+      all: {
+        files: { 'script.js': 'js/*.js' }
+      }
+    },
     watch: {
       css: {
         files: ['css/*.scss'],
@@ -26,6 +55,10 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      js: {
+        files: ['js/*.js'],
+        tasks: ['uglify']
       }
     }
   });
@@ -33,8 +66,11 @@ module.exports = function(grunt) {
  
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-svg2png');
+  grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
  
-  grunt.registerTask('default', ['imagemin', 'sass', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify']);
  
 };

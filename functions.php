@@ -35,7 +35,7 @@ function theme_scripts() {
   wp_deregister_script( 'jquery' );
   wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true );
   wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), null, true );
+  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/script.js', array( 'jquery' ), null, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );

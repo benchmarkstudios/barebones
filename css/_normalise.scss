@@ -16,9 +16,31 @@ h4,
 h5, 
 h6, 
 p, 
+hr, 
 ul, 
 ol {
   margin-bottom: $base-margin-bottom;
+}
+
+h1 {
+  @include font-size($base-font-size * 2);
+}
+
+h2 {
+  @include font-size($base-font-size * 1.75);
+}
+
+h3 {
+  @include font-size($base-font-size * 1.5);
+}
+
+h4 {
+  @include font-size($base-font-size * 1.25);
+}
+
+h5,
+h6 {
+  @include font-size($base-font-size);
 }
 
 ul, 
@@ -38,6 +60,37 @@ img {
 }
 
 blockquote {
-  font-style: italic;
+  font-family: serif;
   padding-left: $base-margin-bottom;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  background-color: $base-colour;
+  border: 0;
+  color: $base-colour;
+  height: 1px;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+strong,
+th {
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  th,
+  td {
+    padding: ($base-margin-bottom / 4);
+    text-align: left;
+  }
 }

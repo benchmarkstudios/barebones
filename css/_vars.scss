@@ -8,9 +8,11 @@ $base-font-size:         16;
 $base-line-height:       1.5;
 $base-margin-bottom:     ($base-font-size * $base-line-height) * 1px;
 
-// Media Queries
+// Breakpoints
 
-$mobile:                 640px;
+$breakpoint-small:       640px;
+$breakpoint-medium:      768px;
+$breakpoint-large:       1200px;
 
 // Scaffolding
 

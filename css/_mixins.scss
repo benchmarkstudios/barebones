@@ -4,12 +4,7 @@
   }
 }
 
-@function calculate-rem($px, $base: $base-font-size) {
-  $rem: $px / $base;
-  @return #{$rem}rem;
-}
-
 @mixin font-size($px) {
   font-size: $px + px;
-  font-size: calculate-rem($px);
+  font-size: #{$px / $base-font-size}rem;
 }

@@ -1,5 +1,5 @@
 npm-debug.log
-.sass-cache/*
-node_modules/*
-css/bourbon/*
-css/neat/*
+.sass-cache
+node_modules
+css/bourbon
+css/neat
