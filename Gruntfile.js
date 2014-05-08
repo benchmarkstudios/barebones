@@ -43,6 +43,9 @@ module.exports = function(grunt) {
         }],
       }
     },
+    jshint: {
+      all: ['js/*.js']
+    },
     uglify: {
       all: {
         files: { 'script.js': 'js/*.js' }
@@ -58,7 +61,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['js/*.js'],
-        tasks: ['uglify']
+        tasks: ['uglify', 'jshint']
       }
     }
   });
@@ -66,11 +69,13 @@ module.exports = function(grunt) {
  
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
  
-  grunt.registerTask('default', ['imagemin', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify']);
+  grunt.registerTask('default', ['imagemin', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify', 'jshint']);
  
 };
