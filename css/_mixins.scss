@@ -10,32 +10,30 @@
 }
 
 @mixin background-size($size) {
-	-webkit-background-size: $size;
+  -webkit-background-size: $size;
   -moz-background-size: $size;
   -o-background-size: $size;
   background-size: $size;
 }
 
 @mixin font-smoothing {
+  font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @mixin placeholder {
-	::-webkit-input-placeholder {
-	  @content; 
-	}
-
-	:-moz-placeholder {
-	  @content; 
-	}
-
-	::-moz-placeholder {
-	  @content; 
-	}
-
-	:-ms-input-placeholder {  
-	  @content; 
-	}
+  ::-webkit-input-placeholder {
+    @content; 
+  }
+  :-moz-placeholder {
+    @content; 
+  }
+  ::-moz-placeholder {
+    @content; 
+  }
+  :-ms-input-placeholder {  
+    @content; 
+  }
 }
