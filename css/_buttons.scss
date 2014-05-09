@@ -1,0 +1,14 @@
+.btn {
+  background-color: $base-colour;
+  border: 0;
+  color: $base-background-colour;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: bold;
+  height: ($base-margin-bottom * 1.5);
+  line-height: ($base-margin-bottom * 1.5);
+  padding: 0 $base-margin-bottom;
+  text-align: center;
+  width: auto;
+}

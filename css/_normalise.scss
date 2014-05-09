@@ -2,6 +2,7 @@ html {
   background-color: $base-background-colour;
   color: $base-colour;
   font: #{($base-font-size * 6.25) * 1%}/#{$base-line-height} $base-font-stack;
+  min-height: 100%;
 }
 
 a {
@@ -20,6 +21,15 @@ hr,
 ul, 
 ol {
   margin-bottom: $base-margin-bottom;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  line-height: $base-margin-bottom;
 }
 
 h1 {

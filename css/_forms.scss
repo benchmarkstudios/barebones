@@ -7,8 +7,8 @@ textarea {
   display: inline-block;
   font: inherit;
   line-height: $base-margin-bottom;
-  padding: ($base-margin-bottom / 4) ($base-margin-bottom / 2);
-  width: 300px;
+  padding: ($base-margin-bottom / 4);
+  width: 100%;
 }
 
 input[type="checkbox"], 
@@ -18,31 +18,30 @@ input[type="radio"] {
   width: auto;
 }
 
+label {
+  display: block;
+  font-weight: bold;
+}
+
+select {
+  height: ($base-margin-bottom * 1.5);
+}
+
 textarea {
   min-height: ($base-margin-bottom * 4);
 }
 
 .form__group {
   margin-bottom: $base-margin-bottom;
-}
-
-.form__label {
-  font-weight: bold;
-}
-
-.form__controls {
-  @extend .clearfix;
-}
-
-.btn {
-  background-color: $base-colour;
-  border: 0;
-  color: $base-background-colour;
-  cursor: pointer;
-  display: inline-block;
-  height: ($base-margin-bottom * 1.5);
-  line-height: ($base-margin-bottom * 1.5);
-  padding: 0 $base-margin-bottom;
-  text-align: center;
-  width: auto;
+  .form__group__controls {
+    @extend .clearfix;
+    label {
+      font-weight: normal;
+    }
+    &.form__group__controls--inline {
+      label {
+        display: inline-block;
+      }
+    }
+  }
 }

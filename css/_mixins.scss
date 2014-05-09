@@ -11,15 +11,15 @@
 
 @mixin background-size($size) {
   -webkit-background-size: $size;
-  -moz-background-size: $size;
-  -o-background-size: $size;
-  background-size: $size;
+     -moz-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
 }
 
 @mixin font-smoothing {
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+           font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
