@@ -8,3 +8,34 @@
   font-size: $px + px;
   font-size: #{$px / $base-font-size}rem;
 }
+
+@mixin background-size($size) {
+	-webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+	  @content; 
+	}
+
+	:-moz-placeholder {
+	  @content; 
+	}
+
+	::-moz-placeholder {
+	  @content; 
+	}
+
+	:-ms-input-placeholder {  
+	  @content; 
+	}
+}
