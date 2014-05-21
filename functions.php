@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 if ( function_exists( 'register_nav_menus' ) )
   register_nav_menus(array(
-    'main'   => 'Main',
+    'header' => 'Header',
     'footer' => 'Footer'
   ));
 
