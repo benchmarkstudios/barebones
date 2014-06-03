@@ -16,13 +16,6 @@
           background-size: $size;
 }
 
-@mixin font-smoothing {
-  -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-           font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
 @mixin placeholder {
   ::-webkit-input-placeholder {
     @content; 
