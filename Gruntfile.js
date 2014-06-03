@@ -69,7 +69,6 @@ module.exports = function(grunt) {
  
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
