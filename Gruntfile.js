@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      all: ['js/*.js']
+      all: ['js/script.js']
     },
     uglify: {
       all: {
