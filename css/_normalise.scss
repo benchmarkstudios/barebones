@@ -1,12 +1,15 @@
+* {
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+           font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   background-color: $base-background-colour;
   color: $base-colour;
   font: #{($base-font-size * 6.25) * 1%}/#{$base-line-height} $base-font-stack;
   min-height: 100%;
-  -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-           font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 a {
