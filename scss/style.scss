@@ -1,0 +1,16 @@
+/*
+Theme Name: Bare Bones
+Theme URI: http://github.com/mikefrancis/barebones
+Author: Mike Francis
+*/
+
+@import 'vars';
+
+@import 'generic/reset';
+@import 'generic/utilities';
+@import 'generic/mixins';
+@import 'base/normalise';
+@import 'base/forms';
+
+@import 'modules/nav';
+@import 'modules/buttons';

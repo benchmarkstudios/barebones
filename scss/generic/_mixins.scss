@@ -1,4 +1,10 @@
-@mixin media($size) {
+@mixin resp-min($size) {
+  @media screen and (min-width: $size) { 
+    @content; 
+  }
+}
+
+@mixin resp-max($size) {
   @media screen and (max-width: $size) { 
     @content; 
   }

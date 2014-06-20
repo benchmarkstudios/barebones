@@ -21,8 +21,6 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 ### Dependencies
 
-* Bourbon gem
-* Neat gem
 * Node.js
 * Grunt.js
 
@@ -30,20 +28,9 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 * [LiveReload Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
-Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory, then open /barebones/ in a command line tool, such as Mac Terminal, then first install the bourbon/neat gems if you haven't already:
+Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install all of this project's Grunt dependencies:
 
-    $ gem install bourbon
-    $ gem install neat
-
-Then install bourbon/neat to the theme's css folder
-
-    $ cd css
-    $ bourbon install
-    $ neat install
-
- and run the following to install all of this project's Grunt dependencies:
-
-    $ npm install --save-dev
+    $ npm install
 
 Then run `grunt`:
 
@@ -62,4 +49,4 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 
 ## Roadmap
 
-* Organisation of Sass folders
+* -[Organisation of Sass folders]

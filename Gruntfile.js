@@ -1,14 +1,26 @@
 module.exports = function(grunt) {
+
+  var paths = {
+    img: 'img/'
+  };
  
   grunt.initConfig({
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'img/',
-          src: ['*.{png,jpg,gif}'],
-          dest: 'img/'
-        }]
+    compass: {
+      options: {
+        config: 'config.rb',  
+        bundleExec: true
+      },
+      dev: {
+        options: {
+          specify: 'scss/style.scss',
+        }
+      },
+      prod: {}
+    },
+    imageoptim: {
+      src: [paths.img],
+      options: {
+        quitAfter: true
       }
     },
     sass: {
@@ -16,7 +28,7 @@ module.exports = function(grunt) {
         options: {
           style: 'compressed'
         },
-        files: { 'style.css': 'css/style.scss' }
+        files: { 'style.css': 'scss/style.scss' }
       }
     },
     svgmin: {
@@ -28,9 +40,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'img/',
+          cwd: paths.img,
           src: ['*.svg'],
-          dest: 'img/',
+          dest: paths.img,
           ext: '.svg'
         }],
       }
@@ -38,8 +50,8 @@ module.exports = function(grunt) {
     svg2png: {
       all: {
         files: [{ 
-          src: ['img/*.svg'], 
-          dest: 'img/' 
+          src: [paths.img + '*.svg'], 
+          dest: paths.img
         }],
       }
     },
@@ -53,7 +65,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['css/*.scss'],
+        files: ['scss/**/*.scss'],
         tasks: ['sass'],
         options: {
           livereload: true
@@ -66,15 +78,15 @@ module.exports = function(grunt) {
     }
   });
  
- 
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
  
-  grunt.registerTask('default', ['imagemin', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify', 'jshint']);
+  grunt.registerTask('default', ['imageoptim', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify', 'jshint']);
  
 };
