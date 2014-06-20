@@ -8,7 +8,6 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Sass powered - semantically named files all compiled into a single file
 * Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
-* Uses [bourbon's neat](http://neat.bourbon.io) responsive grid framework
 * Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
 * Basic index.php Loop template
@@ -49,4 +48,5 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 
 ## Roadmap
 
-* -[Organisation of Sass folders]
+* ~~Organisation of Sass folders~~
+* Simple grid framework
