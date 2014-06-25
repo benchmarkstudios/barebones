@@ -14,8 +14,16 @@ $breakpoint-small:       640px;
 $breakpoint-medium:      768px;
 $breakpoint-large:       1200px;
 
+$breakpoints-list: (
+    'sd' '(max-width:' + $breakpoint-small + ')',
+    'md' '(min-width:' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-large - 1) + ')',
+    'ld' '(min-width:' + $breakpoint-large + ')'
+);
+
 // Scaffolding
 
-
+$max-width:              1200px;
+$grid-columns:           12;
+$gutter:                 20px;
 
 // Custom colours etc.
