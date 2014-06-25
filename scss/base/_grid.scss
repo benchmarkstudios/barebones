@@ -1,0 +1,37 @@
+.row {
+  @extend .clearfix;
+  clear: both;
+  margin-left: -$gutter;
+}
+
+.col {
+  float: left;
+  padding-left: $gutter;
+  margin-bottom: $gutter;
+  .col & {
+    margin-bottom: 0;
+  }
+}
+
+@each $breakpoint in $breakpoints-list {
+  $name: nth($breakpoint, 1);
+  $declaration: nth($breakpoint, 2);
+  @media only screen and #{$declaration}{
+    @for $i from 1 through $grid-columns {
+      .col--#{$name}-#{$i} {
+        width: percentage($i/$grid-columns);
+        @if $name == sd {
+          .col {
+            margin-bottom: $gutter;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .col--#{$name}-offset-#{$i} {
+        margin-left: percentage($i/$grid-columns);
+      }
+    }
+  }
+}
