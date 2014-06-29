@@ -1,3 +1,9 @@
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  clear: both;
+}
+
 .row {
   @extend .clearfix;
   clear: both;
@@ -8,8 +14,8 @@
   float: left;
   padding-left: $gutter;
   margin-bottom: $gutter;
-  .col & {
-    margin-bottom: 0;
+  .row {
+    margin-top: $gutter;
   }
 }
 
@@ -17,17 +23,17 @@
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
   @media only screen and #{$declaration}{
+    @if $name == sd {
+      .col .col {
+        margin-bottom: $gutter;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
     @for $i from 1 through $grid-columns {
       .col--#{$name}-#{$i} {
         width: percentage($i/$grid-columns);
-        @if $name == sd {
-          .col {
-            margin-bottom: $gutter;
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
       }
       .col--#{$name}-offset-#{$i} {
         margin-left: percentage($i/$grid-columns);
