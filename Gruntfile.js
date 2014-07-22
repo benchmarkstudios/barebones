@@ -5,18 +5,6 @@ module.exports = function(grunt) {
   };
  
   grunt.initConfig({
-    compass: {
-      options: {
-        config: 'config.rb',  
-        bundleExec: true
-      },
-      dev: {
-        options: {
-          specify: 'scss/style.scss',
-        }
-      },
-      prod: {}
-    },
     imageoptim: {
       src: [paths.img],
       options: {
@@ -78,7 +66,6 @@ module.exports = function(grunt) {
     }
   });
  
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
