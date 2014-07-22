@@ -1,6 +1,4 @@
 {
-  "name": "barebones",
-  "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-sass": "~0.7.3",
