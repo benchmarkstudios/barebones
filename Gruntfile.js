@@ -5,6 +5,14 @@ module.exports = function(grunt) {
   };
  
   grunt.initConfig({
+    autoprefixer: {
+      single_file: {
+        options: {
+          browsers: ['last 10 version']
+        },
+        files: { 'style.css': 'style.css' }
+      }
+    },
     imageoptim: {
       src: [paths.img],
       options: {
@@ -14,7 +22,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed'
+          style: 'expanded'
         },
         files: { 'style.css': 'scss/style.scss' }
       }
@@ -48,13 +56,13 @@ module.exports = function(grunt) {
     },
     uglify: {
       all: {
-        files: { 'script.js': 'js/*.js' }
+        files: { 'script.js': 'script.js' }
       }
     },
     watch: {
       css: {
         files: ['scss/**/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           livereload: true
         }
@@ -66,6 +74,7 @@ module.exports = function(grunt) {
     }
   });
  
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -74,6 +83,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
  
-  grunt.registerTask('default', ['imageoptim', 'sass', 'svgmin', 'svg2png', 'watch', 'uglify', 'jshint']);
+  grunt.registerTask('default', ['imageoptim', 'svgmin', 'svg2png', 'watch']);
  
 };
