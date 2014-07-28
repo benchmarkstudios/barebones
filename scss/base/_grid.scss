@@ -1,22 +1,17 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  clear: both;
+  @extend .clearfix;
 }
 
 .row {
   @extend .clearfix;
-  clear: both;
   margin-left: -$gutter;
 }
 
 .col {
   float: left;
   padding-left: $gutter;
-  margin-bottom: $gutter;
-  .row {
-    margin-top: $gutter;
-  }
 }
 
 @each $breakpoint in $breakpoints-list {
