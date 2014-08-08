@@ -1,29 +1,39 @@
-// Base
+/*
+ * Base values
+ */
 
 $base-colour:            #444;
 $base-background-colour: #fff;
-
 $base-font-stack:        'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size:         16;
 $base-line-height:       1.5;
 $base-margin-bottom:     ($base-font-size * $base-line-height) * 1px;
 
-// Breakpoints
 
-$breakpoint-small:       640px;
-$breakpoint-medium:      768px;
-$breakpoint-large:       1200px;
+/*
+ * Breakpoints
+ */
+
+$breakpoint-sd: 640px;
+$breakpoint-md: 768px;
+$breakpoint-ld: 1200px;
 
 $breakpoints-list: (
-    'sd' '(max-width:' + $breakpoint-small + ')',
-    'md' '(min-width:' + ($breakpoint-small + 1) + ') and (max-width:' + ($breakpoint-large - 1) + ')',
-    'ld' '(min-width:' + $breakpoint-large + ')'
+    'sd' '(max-width:' + $breakpoint-sm + ')',
+    'md' '(min-width:' + ($breakpoint-md + 1) + ') and (max-width:' + ($breakpoint-ld - 1) + ')',
+    'ld' '(min-width:' + $breakpoint-ld + ')'
 );
 
-// Scaffolding
 
-$max-width:              1200px;
-$grid-columns:           12;
-$gutter:                 20px;
+/*
+ * Scaffolding
+ */
 
-// Custom colours etc.
+$max-width:    1200px;
+$grid-columns: 12;
+$gutter:       20px;
+
+
+/*
+ * Custom variables
+ */
