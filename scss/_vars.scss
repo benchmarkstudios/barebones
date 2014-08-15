@@ -19,7 +19,7 @@ $breakpoint-md: 768px;
 $breakpoint-ld: 1200px;
 
 $breakpoints-list: (
-    'sd' '(max-width:' + $breakpoint-sm + ')',
+    'sd' '(max-width:' + $breakpoint-sd + ')',
     'md' '(min-width:' + ($breakpoint-md + 1) + ') and (max-width:' + ($breakpoint-ld - 1) + ')',
     'ld' '(min-width:' + $breakpoint-ld + ')'
 );

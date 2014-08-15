@@ -14,14 +14,15 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
-* Grunt.js integration - automatic image optimisation, Sass compiling and watching, css minification and live reload support
+* Grunt integration - automatic image optimisation, Sass compiling and watching, css minification and live reload support
 
 ## Installation
 
 ### Dependencies
 
-* Node.js
-* Grunt.js
+* [Node.js](http://nodejs.org)
+* [Grunt](http://gruntjs.com)
+* [Browserify](http://browserify.org)
 
 #### Optional
 
@@ -31,7 +32,13 @@ Clone/download the barebones repositories into your WordPress /wp-content/themes
 
     $ npm install
 
-Then run `grunt`:
+Then run `grunt` to execute the default tasks: compiling sass/js and creating the watcher.
+
+To aid performance, the image-centric tasks aren't run by default and can be executed by running:
+
+    $ grunt svgmin
+    $ grunt svg2png
+    $ grunt imageoptim
 
 ## WordPress Support
 
@@ -50,3 +57,4 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 
 * ~~Organisation of Sass folders~~
 * ~~Simple grid framework~~
+* ~~Organisation of JS~~
