@@ -1,3 +1,7 @@
+/*
+ * WordPress specific classes
+ */
+
 .alignleft {
   float: left;
 }
@@ -26,6 +30,11 @@ img.aligncenter {
   margin-bottom: $base-margin-bottom;
 }
 
+
+/*
+ * Clear fix for floats
+ */
+ 
 .clearfix {
   &:before,
   &:after{
