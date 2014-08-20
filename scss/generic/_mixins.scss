@@ -1,8 +1,17 @@
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+
 @mixin resp-min($size) {
   @media screen and (min-width: $size) { 
     @content; 
   }
 }
+
+
+/*
+ * Media query to respond to a maximum size
+ */
 
 @mixin resp-max($size) {
   @media screen and (max-width: $size) { 
@@ -10,10 +19,20 @@
   }
 }
 
+
+/*
+ * Output font size in px/rem
+ */
+
 @mixin font-size($px) {
   font-size: $px + px;
   font-size: #{$px / $base-font-size}rem;
 }
+
+
+/*
+ * Placeholder mixin for <input>
+ */
 
 @mixin placeholder {
   ::-webkit-input-placeholder {
