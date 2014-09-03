@@ -88,6 +88,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
  
+  grunt.registerTask('img', ['svgmin', 'svg2png', 'imageoptim']);
   grunt.registerTask('default', ['sass', 'browserify', 'jshint', 'uglify', 'watch']);
  
 };
