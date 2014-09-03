@@ -57,3 +57,4 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 * ~~Organisation of Sass folders~~
 * ~~Simple grid framework~~
 * ~~Organisation of JS~~
+* Investigate browserify issue
