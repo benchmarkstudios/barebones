@@ -37,9 +37,7 @@ Then run `grunt` to execute the default tasks: compiling sass/js and creating th
 
 To aid performance, the image-centric tasks aren't run by default and can be executed by running:
 
-    $ grunt svgmin
-    $ grunt svg2png
-    $ grunt imageoptim
+    $ grunt img
 
 ## WordPress Support
 
