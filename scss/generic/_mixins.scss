@@ -35,16 +35,10 @@
  */
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {
-    @content; 
-  }
-  :-moz-placeholder {
-    @content; 
-  }
-  ::-moz-placeholder {
-    @content; 
-  }
-  :-ms-input-placeholder {  
-    @content; 
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
   }
 }
