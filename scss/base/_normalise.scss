@@ -40,27 +40,6 @@ h6 {
   line-height: $base-margin-bottom;
 }
 
-h1 {
-  @include font-size($base-font-size * 2);
-}
-
-h2 {
-  @include font-size($base-font-size * 1.75);
-}
-
-h3 {
-  @include font-size($base-font-size * 1.5);
-}
-
-h4 {
-  @include font-size($base-font-size * 1.25);
-}
-
-h5,
-h6 {
-  @include font-size($base-font-size);
-}
-
 ul, 
 ol {
   margin-left: $base-margin-bottom;
