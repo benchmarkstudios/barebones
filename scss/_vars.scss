@@ -19,9 +19,9 @@ $breakpoint-md: 768px;
 $breakpoint-ld: 1200px;
 
 $breakpoints-list: (
-    'sd' '(max-width:' + $breakpoint-sd + ')',
-    'md' '(min-width:' + ($breakpoint-md + 1) + ') and (max-width:' + ($breakpoint-ld - 1) + ')',
-    'ld' '(min-width:' + $breakpoint-ld + ')'
+  'ld' null,
+  'md' '(min-width:' + ($small-device + 1) + ') and (max-width:' + ($large-device - 1) + ')',
+  'sd' '(max-width:' + $small-device + ')' 
 );
 
 
