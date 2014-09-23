@@ -1,4 +1,4 @@
-/*
+/**
  * Base values
  */
 
@@ -10,7 +10,7 @@ $base-line-height:       1.5;
 $base-margin-bottom:     ($base-font-size * $base-line-height) * 1px;
 
 
-/*
+/**
  * Breakpoints
  */
 
@@ -20,20 +20,20 @@ $breakpoint-ld: 1200px;
 
 $breakpoints-list: (
   'ld' null,
-  'md' '(min-width:' + ($small-device + 1) + ') and (max-width:' + ($large-device - 1) + ')',
-  'sd' '(max-width:' + $small-device + ')' 
+  'md' '(min-width:' + ($breakpoint-sd + 1) + ') and (max-width:' + ($breakpoint-ld - 1) + ')',
+  'sd' '(max-width:' + $breakpoint-sd + ')' 
 );
 
 
-/*
+/**
  * Scaffolding
  */
 
 $max-width:    1200px;
 $grid-columns: 12;
-$gutter:       20px;
+$gutter:       $base-margin-bottom;
 
 
-/*
+/**
  * Custom variables
  */
