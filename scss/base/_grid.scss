@@ -21,35 +21,25 @@
 @mixin grid-loop($name){
   @for $i from 1 through $grid-columns {
     .col--#{$name}-#{$i} {
-      width: percentage($i/$grid-columns);
+      width: percentage($i / $grid-columns);
     }
     .col--#{$name}-offset-#{$i} {
-      margin-left: percentage($i/$grid-columns);
+      margin-left: percentage($i / $grid-columns);
     }
   }
 }
 
 @each $breakpoint in $breakpoints-list {
-
   $name: nth($breakpoint, 1);
   $declaration: nth($breakpoint, 2);
-
+  
   @if $name == ld {
     @include grid-loop($name);
   }
   
   @else {
     @media only screen and #{$declaration} {
-      @if $name == sd {
-        .col .col {
-          margin-bottom: $gutter;
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
       @include grid-loop($name);
     }
   } 
-
 }
