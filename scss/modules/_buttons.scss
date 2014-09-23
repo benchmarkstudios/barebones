@@ -11,4 +11,8 @@
   padding: 0 $base-margin-bottom;
   text-align: center;
   width: auto;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }
