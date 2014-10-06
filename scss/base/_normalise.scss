@@ -40,6 +40,17 @@ h6 {
   line-height: $base-margin-bottom;
 }
 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+strong,
+th {
+  font-weight: bold;
+}
+
 ul, 
 ol {
   margin-left: $base-margin-bottom;
@@ -70,17 +81,6 @@ hr {
   border: 0;
   color: $base-colour;
   height: 1px;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-strong,
-th {
-  font-weight: bold;
 }
 
 table {
