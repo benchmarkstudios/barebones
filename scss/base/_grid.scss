@@ -5,6 +5,7 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
+  padding: 0 $gutter;
   @extend .clearfix;
 }
 
