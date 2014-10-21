@@ -6,9 +6,9 @@ Author: Mike Francis
 
 @import 'vars';
 
+@import 'generic/mixins';
 @import 'generic/reset';
 @import 'generic/utilities';
-@import 'generic/mixins';
 
 @import 'base/normalise';
 @import 'base/forms';
