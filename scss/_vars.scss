@@ -29,9 +29,9 @@ $breakpoints-list: (
  * Scaffolding
  */
 
-$max-width:    1200px;
-$grid-columns: 12;
 $gutter:       $base-margin-bottom;
+$max-width:    1200px + ($gutter * 2);
+$grid-columns: 12;
 
 
 /**
