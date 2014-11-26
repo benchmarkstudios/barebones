@@ -27,7 +27,7 @@
         'base'    => str_replace( 99999999, '%#%', esc_url( get_pagenum_link( 99999999 ) ) ),
         'format'  => '?paged=%#%',
         'current' => max( 1, get_query_var('paged') ),
-        'total'   => $jobs->max_num_pages
+        'total'   => $wp_query->max_num_pages
       )); 
       ?>
 
