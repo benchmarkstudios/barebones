@@ -1,4 +1,4 @@
-/*
+/**
 Theme Name: Bare Bones
 Theme URI: http://github.com/mikefrancis/barebones
 Author: Mike Francis
@@ -12,7 +12,7 @@ Author: Mike Francis
 
 @import 'base/normalise';
 @import 'base/forms';
-@import 'base/grid';
+@import 'simple-grid/simple-grid';
 
 @import 'modules/nav';
 @import 'modules/buttons';
