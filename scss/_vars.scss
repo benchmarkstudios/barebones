@@ -16,22 +16,16 @@ $base-margin-bottom:     ($base-font-size * $base-line-height) * 1px;
 
 $breakpoint-sd: 640px;
 $breakpoint-md: 768px;
-$breakpoint-ld: 1200px;
-
-$breakpoints-list: (
-  'ld' null,
-  'md' '(min-width:' + ($breakpoint-sd + 1) + ') and (max-width:' + ($breakpoint-ld - 1) + ')',
-  'sd' '(max-width:' + $breakpoint-sd + ')' 
-);
+$breakpoint-ld: 2000px;
 
 
 /**
- * Scaffolding
+ * Grid
  */
 
-$max-width:    1200px;
-$grid-columns: 12;
-$gutter:       $base-margin-bottom;
+$grid-max-width:    1200px;
+$grid-grid-columns: 12;
+$grid-gutter:       $base-margin-bottom;
 
 
 /**
