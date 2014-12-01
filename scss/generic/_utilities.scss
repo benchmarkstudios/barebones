@@ -7,7 +7,7 @@
 }
 
 img.alignleft {
-  margin-right: $base-margin-bottom;
+  margin-right: $base-spacing-unit;
 }
 
 .alignright {
@@ -15,7 +15,7 @@ img.alignleft {
 }
 
 img.alignright {
-  margin-left : $base-margin-bottom;
+  margin-left : $base-spacing-unit;
 }
 
 .aligncenter {
@@ -27,7 +27,7 @@ img.alignright {
 }
 
 img.aligncenter {
-  margin-bottom: $base-margin-bottom;
+  margin-bottom: $base-spacing-unit;
 }
 
 

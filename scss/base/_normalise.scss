@@ -1,11 +1,3 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
 html {
   background-color: $base-background-colour;
   color: $base-colour;
@@ -28,7 +20,7 @@ p,
 hr, 
 ul, 
 ol {
-  margin-bottom: $base-margin-bottom;
+  margin-bottom: $base-spacing-unit;
 }
 
 h1, 
@@ -37,7 +29,7 @@ h3,
 h4, 
 h5, 
 h6 {
-  line-height: $base-margin-bottom;
+  line-height: $base-spacing-unit;
 }
 
 h1, 
@@ -53,7 +45,7 @@ th {
 
 ul, 
 ol {
-  margin-left: $base-margin-bottom;
+  margin-left: $base-spacing-unit;
 }
 
 ul ul, 
@@ -69,7 +61,7 @@ img {
 
 blockquote {
   font-family: serif;
-  padding-left: $base-margin-bottom;
+  padding-left: $base-spacing-unit;
 }
 
 em {
@@ -87,7 +79,7 @@ table {
   width: 100%;
   th,
   td {
-    padding: ($base-margin-bottom / 4);
+    padding: ($base-spacing-unit / 4);
     text-align: left;
   }
 }

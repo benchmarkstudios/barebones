@@ -6,8 +6,8 @@ textarea {
   color: $base-colour;
   display: inline-block;
   font: inherit;
-  line-height: $base-margin-bottom;
-  padding: ($base-margin-bottom / 4);
+  line-height: $base-spacing-unit;
+  padding: ($base-spacing-unit / 4);
   width: 100%;
 }
 
@@ -24,15 +24,15 @@ label {
 }
 
 select {
-  height: ($base-margin-bottom * 1.5);
+  height: ($base-spacing-unit * 1.5);
 }
 
 textarea {
-  min-height: ($base-margin-bottom * 4);
+  min-height: ($base-spacing-unit * 4);
 }
 
 .form__group {
-  margin-bottom: $base-margin-bottom;
+  margin-bottom: $base-spacing-unit;
   .form__group__controls {
     @extend .clearfix;
     label {
