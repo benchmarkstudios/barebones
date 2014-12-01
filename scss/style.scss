@@ -6,13 +6,14 @@ Author: Mike Francis
 
 @import 'vars';
 
+@import 'simple-grid/simple-grid';
+
 @import 'generic/mixins';
 @import 'generic/reset';
 @import 'generic/utilities';
 
 @import 'base/normalise';
 @import 'base/forms';
-@import 'simple-grid/simple-grid';
 
 @import 'modules/nav';
 @import 'modules/buttons';
