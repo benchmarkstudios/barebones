@@ -1,8 +1,4 @@
 module.exports = function(grunt) {
-
-  var paths = {
-    img: 'img/'
-  };
  
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -14,11 +10,8 @@ module.exports = function(grunt) {
         files: { 'style.css': 'style.css' }
       }
     },
-    browserify: {
-      'js/script.js': ['js/main.js']
-    },
     imageoptim: {
-      src: [paths.img],
+      src: ['img/'],
       options: {
         quitAfter: true
       }
@@ -40,9 +33,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: paths.img,
+          cwd: 'img/',
           src: ['*.svg'],
-          dest: paths.img,
+          dest: 'img/',
           ext: '.svg'
         }],
       }
@@ -50,17 +43,21 @@ module.exports = function(grunt) {
     svg2png: {
       all: {
         files: [{ 
-          src: [paths.img + '*.svg'], 
+          src: ['img/*.svg'], 
           dest: '.'
         }],
       }
     },
-    jshint: {
-      all: ['js/main.js']
-    },
     uglify: {
-      all: {
-        files: { 'js/script.js': 'js/script.js' }
+      options: {
+        mangle: false
+      },
+      my_target: {
+        files: {
+          'js/script.min.js': [
+            'js/script.js'
+          ]
+        }
       }
     },
     watch: {
@@ -72,23 +69,24 @@ module.exports = function(grunt) {
         }
       },
       js: {
-        files: ['js/main.js'],
-        tasks: ['browserify', 'jshint', 'uglify']
+        files: ['js/**/*.js'],
+        tasks: ['uglify'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
  
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-browserify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
  
   grunt.registerTask('img', ['svgmin', 'svg2png', 'imageoptim']);
-  grunt.registerTask('default', ['sass', 'browserify', 'jshint', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uglify', 'watch']);
  
 };
