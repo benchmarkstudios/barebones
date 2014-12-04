@@ -1,5 +1,11 @@
 module.exports = function(grunt) {
  
+ // Add your script files here in order of precedence
+ 
+ var scripts = [
+  'js/script.js'
+ ];
+ 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     autoprefixer: {
@@ -54,9 +60,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'js/script.min.js': [
-            'js/script.js'
-          ]
+          'js/script.min.js': scripts
         }
       }
     },
@@ -69,7 +73,7 @@ module.exports = function(grunt) {
         }
       },
       js: {
-        files: ['js/**/*.js'],
+        files: scripts,
         tasks: ['uglify'],
         options: {
           livereload: true
