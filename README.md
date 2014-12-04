@@ -23,7 +23,6 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 * [Node.js](http://nodejs.org)
 * [Grunt](http://gruntjs.com)
-* [Browserify](http://browserify.org)
 
 #### Optional
 
