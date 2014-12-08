@@ -15,7 +15,6 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
 * Grunt automatic image optimisation, Sass compiling and watching, css minification and live reload support
-* Use of Browserify to modularise the JavaScript structure and stop those huge, spaghetti script files!
 
 ## Installation
 
