@@ -58,7 +58,7 @@ module.exports = function(grunt) {
       options: {
         mangle: false
       },
-      my_target: {
+      all: {
         files: {
           'js/script.min.js': scripts
         }
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
   });
  
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-imageoptim');
