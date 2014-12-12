@@ -3,7 +3,7 @@ module.exports = function(grunt) {
  // Add your script files here in order of precedence
  
  var scripts = [
-  'js/main.js'
+  'js/script.js'
  ];
  
   grunt.initConfig({
