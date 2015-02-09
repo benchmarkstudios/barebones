@@ -93,6 +93,7 @@ function barebones_mail_from_name( $name ) {
 
 add_filter( 'wp_mail_from_name', 'barebones_mail_from_name' );
 
+
 /**
  * Shortcodes ([button] shortcode included)
  */
