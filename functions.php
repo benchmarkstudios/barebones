@@ -109,15 +109,15 @@ add_shortcode( 'button', 'button_shortcode' );
  * TinyMCE
  */
 
-function my_mce_buttons_2( $buttons ) {
+function barebones_mce_buttons_2( $buttons ) {
   array_unshift( $buttons, 'styleselect' );
   $buttons[] = 'hr';
   return $buttons;
 }
 
-add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+add_filter( 'mce_buttons_2', 'barebones_mce_buttons_2' );
 
-function my_mce_before_init( $settings ) {
+function barebones_tiny_mce_before_init( $settings ) {
   $style_formats = array(
     /* 
      * Example 
@@ -132,4 +132,4 @@ function my_mce_before_init( $settings ) {
   return $settings;
 }
 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'barebones_tiny_mce_before_init' );
