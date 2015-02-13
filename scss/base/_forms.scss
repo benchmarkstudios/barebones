@@ -15,6 +15,11 @@ textarea {
   width: 100%;
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 input[type="checkbox"], 
 input[type="radio"] {
   background: transparent;
