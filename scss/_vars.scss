@@ -14,9 +14,15 @@ $base-spacing-unit:      ($base-font-size * $base-line-height) * 1px;
  * Breakpoints
  */
 
-$breakpoint-sd: 750px;
-$breakpoint-md: 768px;
-$breakpoint-ld: 1024px;
+$breakpoint-sd: 768px;
+$breakpoint-md: 992px;
+$breakpoint-ld: 1200px;
+
+$breakpoints: (
+  'ld' '(min-width:' + $breakpoint-ld + ')',
+  'md' '(min-width:' + $breakpoint-sd + ') and (max-width:' + ($breakpoint-md - 1) + ')',
+  'sd' '(max-width:' + ($breakpoint-sd - 1) + ')'
+);
 
 
 /**
