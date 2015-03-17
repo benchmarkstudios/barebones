@@ -18,6 +18,10 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 ## Installation
 
+Run the following to include barebones and all it's submodules:
+
+    git clone --recursive git@github.com:benchmarkstudios/barebones.git
+
 ### Dependencies
 
 * [Node.js](http://nodejs.org)
