@@ -19,7 +19,9 @@ h6,
 p, 
 hr, 
 ul, 
-ol {
+ol,
+dl,
+address {
   margin-bottom: $base-spacing-unit;
 }
 
