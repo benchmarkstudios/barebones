@@ -1,0 +1,27 @@
+.alignleft {
+  float: left;
+}
+
+img.alignleft {
+  margin-right: $base-spacing-unit;
+}
+
+.alignright {
+  float: right;
+}
+
+img.alignright {
+  margin-left : $base-spacing-unit;
+}
+
+.aligncenter {
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+img.aligncenter {
+  margin-bottom: $base-spacing-unit;
+}

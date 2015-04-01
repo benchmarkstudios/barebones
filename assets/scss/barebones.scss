@@ -1,0 +1,22 @@
+/**
+Theme Name: Bare Bones
+Theme URI: http://github.com/benchmarkstudios/barebones
+Author: Benchmark
+*/
+
+@import 'defaults';
+
+@import 'utilities/mixins';
+@import 'utilities/reset';
+@import 'utilities/a11y';
+@import 'utilities/responsive';
+@import 'utilities/wordpress';
+
+@import 'vendor/simple-grid/simple-grid';
+
+@import 'base/normalise';
+@import 'base/forms';
+@import 'base/lists';
+
+@import 'modules/nav';
+@import 'modules/buttons';
