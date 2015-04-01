@@ -1,0 +1,21 @@
+body {
+  padding: 4rem 0;
+}
+
+.section {
+  margin-bottom: 4.5rem;
+}
+
+  .section__title {
+    border-bottom: solid 1px #eee;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+  }
+
+.col span {
+  background-color: #eee;
+  display: block;
+  margin-bottom: 24px;
+  padding: 24px;
+  text-align: center;
+}
