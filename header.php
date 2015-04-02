@@ -20,11 +20,10 @@
     <![endif]-->
   </head>
   <body <?php body_class(); ?>>
-<!--     <header class="header" role="banner">
+     <header class="header" role="banner">
       <div class="container">
         <nav role="navigation">
           <?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
         </nav>
       </div>
     </header>
- -->
