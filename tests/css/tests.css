@@ -1,5 +1,17 @@
+/**
+ * Generic
+ */
+
 body {
-  padding: 4rem 0;
+  padding: 3rem 0;
+}
+
+a {
+  color: purple;
+}
+
+.header, .footer {
+  display: none;
 }
 
 .section {
@@ -8,14 +20,40 @@ body {
 
   .section__title {
     border-bottom: solid 1px #eee;
-    font-weight: bold;
-    padding-bottom: 1.5rem;
+    font-size: 2em;
+    padding-bottom: 1rem;
   }
 
-.col span {
-  background-color: #eee;
+
+/**
+ * Grid
+ */
+
+.col-inner {
+  background-color: whitesmoke;
   display: block;
-  margin-bottom: 24px;
-  padding: 24px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
   text-align: center;
+}
+
+  .col-inner .col-inner {
+    background-color: blue;
+    color: white;
+    margin-top: 1.5rem;
+  }
+
+.row--gutterless .col:nth-child(2) .col-inner {
+  background-color: yellow;
+}
+
+/**
+ * Responsive
+ */
+
+[class*="hidden"],
+[class*="visible"] {
+  background-color: whitesmoke;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
 }
