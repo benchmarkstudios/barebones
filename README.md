@@ -1,6 +1,6 @@
 # barebones
 
-A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. There's lots of these out there but most themes include lots of bloat and files which you might not necessarily need, so I thought I'd create my own which is great as a starting point with powerful features to encourage rapid development for most projects.
+A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. There's lots of these out there but most themes include lots of bloat and files which you might not necessarily need, so we thought we would create my own which is great as a starting point with powerful features to encourage rapid development for most projects.
 
 ## Features
 
@@ -10,22 +10,22 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * WAI-ARIA role ready
 * Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
+* Browserify for modular JavaScript in the browser, stop those spaghetti files!
 * Basic index.php Loop template
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
-* Grunt automatic image optimisation, Sass compiling and watching, css minification and live reload support
+* Sass compiling and watching, css minification and live reload support
 
 ## Installation
 
 Run the following to include barebones and all it's submodules:
 
-    git clone --recursive git@github.com:benchmarkstudios/barebones.git
+    git clone git@github.com:benchmarkstudios/barebones.git
 
 ### Dependencies
 
 * [Node.js](http://nodejs.org)
-* [Grunt](http://gruntjs.com)
 
 #### Optional
 
@@ -35,11 +35,7 @@ Clone/download the barebones repositories into your WordPress /wp-content/themes
 
     $ npm install
 
-Then run `grunt` to execute the default tasks: compiling sass/js and creating the watcher.
-
-To aid performance, the image-centric tasks aren't run by default and can be executed by running:
-
-    $ grunt img
+Then run `npm run watch` to execute the default tasks: compiling sass/js and creating the watcher.
 
 ## WordPress Support
 
@@ -52,11 +48,3 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 * Safari 4.0+
 * Chrome 14.0+
 * Opera 10.0+
-
-
-## Roadmap
-
-* ~~Organisation of Sass folders~~
-* ~~Simple grid framework~~
-* ~~Organisation of JS~~
-* Investigate browserify issue
