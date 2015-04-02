@@ -1,11 +1,7 @@
 .btn {
   background-color: $base-colour;
-  border: 0;
   color: $base-background-colour;
-  cursor: pointer;
   display: inline-block;
-  font: inherit;
-  font-weight: bold;
   height: ($base-spacing-unit * 1.5);
   line-height: ($base-spacing-unit * 1.5);
   padding: 0 $base-spacing-unit;
@@ -15,4 +11,14 @@
     border: 0;
     padding: 0;
   }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--link {
+  background-color: transparent;
+  color: $base-colour;
 }

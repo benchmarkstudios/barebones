@@ -1,0 +1,7 @@
+img {
+  max-width: 100%;
+  &[width],
+  &[height] {
+    max-width: none;
+  }
+}

@@ -34,11 +34,27 @@
  * Placeholder mixin for <input>
  */
 
-@mixin placeholder {
+@mixin placeholder() {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
   @each $placeholder in $placeholders {
     &:#{$placeholder}-placeholder {
       @content;
     }
+  }
+}
+
+
+/**
+ * Clearfix
+ */
+
+@mixin clearfix() {
+  &:before,
+  &:after{
+    content: " ";
+    display: table;
+  }
+  &:after{
+    clear: both;
   }
 }

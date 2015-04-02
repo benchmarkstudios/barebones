@@ -1,0 +1,7 @@
+// var $ = require('jquery');
+
+(function() {
+
+  
+
+})($);
