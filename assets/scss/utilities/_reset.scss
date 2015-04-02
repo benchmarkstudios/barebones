@@ -2,6 +2,7 @@
   background-color: transparent;
   border: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -42,14 +43,13 @@ button {
 button {
   cursor: pointer;
   &[disabled] {
-    cursor: default;
+    cursor: not-allowed;
   }
 }
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
   th,
   td {
     text-align: left;
