@@ -14,7 +14,7 @@
   },
   "scripts": {
     "compile-sass": "node-sass --output-style=compressed assets/scss/barebones.scss style.css",
-    "autoprefix-sass": "autoprefixer -b 'last 10 versions' --map style.css",
+    "autoprefix-sass": "autoprefixer -b 'last 10 versions' style.css",
     "process-sass": "npm run compile-sass && npm run autoprefix-sass",
     "watch-sass": "fsmonitor -d 'assets/scss' -s '+*.scss' npm run process-sass",
     "browserify-js": "browserify assets/js/script.js -o js/script.min.js",
