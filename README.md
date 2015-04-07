@@ -33,7 +33,7 @@ Run the following to include barebones and all it's submodules:
 
 Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install all of this project's Grunt dependencies:
 
-    $ npm install
+    npm install
 
 Then run `npm run watch` to execute the default tasks: compiling sass/js and creating the watcher.
 
