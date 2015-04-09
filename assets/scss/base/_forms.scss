@@ -51,11 +51,20 @@ textarea {
  * Form utility classes
  */
 
+.form--inline {
+  .form__group {
+    display: inline-block;
+  }
+}
+
 .checkbox,
 .radio {
   display: block;
   padding-left: $base-spacing-unit;
-  input {
+  &.inline {
+    display: inline-block;
+  }
+  > input {
     float: left;
     margin-left: -($base-spacing-unit);
     margin-top: 4px;
@@ -63,6 +72,7 @@ textarea {
 }
 
 .form__group {
+  display: block;
   margin-bottom: $base-spacing-unit;
 }
 
