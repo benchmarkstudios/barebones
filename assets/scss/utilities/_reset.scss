@@ -2,33 +2,19 @@
   background-color: transparent;
   border: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+  font: inherit;
   margin: 0;
   padding: 0;
-  text-rendering: optimizeLegibility;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
 }
 
 html {
   background-color: white;
   font-size: 100%;
-  min-height: 100%;
-  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 input, 
@@ -37,14 +23,13 @@ textarea,
 button {
   color: inherit;
   display: inline-block;
-  font: inherit;
+  &[disabled] {
+    cursor: not-allowed;
+  }
 }
 
 button {
   cursor: pointer;
-  &[disabled] {
-    cursor: not-allowed;
-  }
 }
 
 table {
@@ -54,10 +39,4 @@ table {
   td {
     text-align: left;
   }
-}
-
-b,
-strong,
-th {
-  font-weight: bold;
 }
