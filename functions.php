@@ -131,3 +131,13 @@ function barebones_tiny_mce_before_init( $settings ) {
 }
 
 add_filter( 'tiny_mce_before_init', 'barebones_tiny_mce_before_init' );
+
+
+/**
+ * Get image URL for whatever size.
+ */
+
+function wp_get_attachment_image_url( $id, $size = 'full', $attrs = []) {
+  $image = wp_get_attachment_image_src( $id, $size, $attrs );
+  return $image[0];
+}
