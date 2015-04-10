@@ -42,10 +42,8 @@ add_filter( 'post_comments_feed_link', 'barebones_remove_comments_rss' );
 function barebones_scripts() {
   /*
    * For IE8 to play nice, you'll need to include your CSS here, for example:
-   *
-   * wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
-   * wp_enqueue_style( 'icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', null, '4.3.0' );
    */
+  // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
   wp_deregister_script( 'jquery' );
   wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', false, '1.11.2', true );
   wp_enqueue_script( 'jquery' );
