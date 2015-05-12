@@ -35,7 +35,11 @@ Clone/download the barebones repositories into your WordPress /wp-content/themes
 
     npm install
 
-Then run `npm run watch` to execute the default tasks: compiling sass/js and creating the watcher.
+Then run:
+
+    npm run watch
+
+This will execute the default tasks: compiling sass/js and spawning the file watcher.
 
 ## WordPress Support
 
