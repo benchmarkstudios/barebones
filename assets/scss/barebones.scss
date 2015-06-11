@@ -6,7 +6,7 @@ Author: Benchmark
 
 // 1. Vendors
 @import
-  'vendor/simple-grid/simple-grid';
+    'vendor/simple-grid/simple-grid';
 
 // 2. Configuration and helpers
 @import
@@ -28,14 +28,15 @@ Author: Benchmark
 
 // 4. Layout-related sections
 @import
-  'layout/header',
-  'layout/footer';
+    'layout/main',
+    'layout/header',
+    'layout/footer';
 
 // 5. Components
 @import
-  'modules/buttons',
-  'modules/nav';
+    'modules/buttons',
+    'modules/nav';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+    'pages/home';
