@@ -4,22 +4,38 @@ Theme URI: http://github.com/benchmarkstudios/barebones
 Author: Benchmark
 */
 
-@import 'defaults';
+// 1. Vendors
+@import
+  'vendor/simple-grid/simple-grid';
 
-@import 'utilities/mixins';
-@import 'utilities/reset';
-@import 'utilities/a11y';
-@import 'utilities/responsive';
-@import 'utilities/wordpress';
+// 2. Configuration and helpers
+@import
+    'utilities/variables',
+    'utilities/mixins',
+    'utilities/reset',
+    'utilities/a11y',
+    'utilities/responsive',
+    'utilities/wordpress';
 
-@import 'vendor/simple-grid/simple-grid';
+// 3. Base stuff
+@import
+    'base/shared',
+    'base/images',
+    'base/forms',
+    'base/lists',
+    'base/headings',
+    'base/links';
 
-@import 'base/shared';
-@import 'base/images';
-@import 'base/forms';
-@import 'base/lists';
-@import 'base/headings';
-@import 'base/links';
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
 
-@import 'modules/nav';
-@import 'modules/buttons';;
+// 5. Components
+@import
+  'modules/buttons',
+  'modules/nav';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
