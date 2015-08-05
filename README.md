@@ -21,7 +21,8 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 Run the following commands to include barebones and all it's submodules:
 
-    git clone git@github.com:benchmarkstudios/barebones.git
+    git clone https://github.com/benchmarkstudios/barebones
+    cd barebones
     git submodule init
     git submodule update
 
