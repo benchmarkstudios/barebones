@@ -1,5 +1,6 @@
 img {
   max-width: 100%;
+  vertical-align: top;
   &[width],
   &[height] {
     max-width: none;
