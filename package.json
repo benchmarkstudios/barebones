@@ -1,7 +1,7 @@
 {
   "name": "barebones",
   "description": "A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and beyond.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "author": {
     "name": "Benchmark",
@@ -18,8 +18,9 @@
     "process-sass": "npm run compile-sass && npm run autoprefix-sass",
     "watch-sass": "fsmonitor -d 'assets/scss' -s '+*.scss' npm run process-sass",
     "browserify-js": "browserify assets/js/script.js -o js/script.min.js",
+    "babelify-js": "browserify -t [babelify] assets/js/script.js | uglifyjs -o js/script.min.js",
     "uglify-js": "uglifyjs js/script.min.js -o js/script.min.js -c",
-    "process-js": "npm run browserify-js && npm run uglify-js",
+    "process-js": "npm run babelify-js && npm run uglify-js",
     "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run process-js",
     "watch": "livereload & npm run watch-sass & npm run watch-js"
   },
@@ -29,16 +30,21 @@
     ]
   },
   "browserify-global-shim": {
-      "jquery": "$"
+    "jquery": "$"
   },
   "devDependencies": {
-    "browserify": "~9.0.4",
-    "browserify-shim": "~3.8.3",
-    "uglify-js": "~2.4.19",
     "autoprefixer": "~5.1.0",
-    "node-sass": "~2.1.1",
+    "babel-eslint": "^4.1.1",
+    "babelify": "^6.3.0",
+    "browserify": "~9.0.4",
+    "browserify-global-shim": "~1.0.0",
+    "browserify-shim": "~3.8.3",
+    "eslint": "^1.3.1",
+    "eslint-config-airbnb": "0.0.8",
+    "eslint-plugin-react": "^3.3.2",
     "fsmonitor": "~0.2.4",
     "livereload": "~0.3.6",
-    "browserify-global-shim": "~1.0.0"
+    "node-sass": "~2.1.1",
+    "uglify-js": "~2.4.19"
   }
 }

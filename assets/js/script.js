@@ -1,7 +1,5 @@
-// var $ = require('jquery');
+const $ = require('jquery');
 
-(function() {
-
-  
+(function barebones() {
 
 })($);
