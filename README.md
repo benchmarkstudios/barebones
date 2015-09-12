@@ -16,6 +16,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
 * Sass compiling and watching, css minification and live reload support
+* Babel JavaScript compiler for ES6 JavaScript
 
 ## Installation
 
