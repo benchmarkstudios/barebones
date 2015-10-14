@@ -19,7 +19,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 ## Installation
 
-Run the following commands to include barebones:
+Clone the barebones repositories into your WordPress /wp-content/themes/ directory:
 
     git clone https://github.com/benchmarkstudios/barebones
     cd barebones
@@ -34,13 +34,13 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
 * [Node.js](http://nodejs.org)
 * [Gulp](http://gulpjs.com)
 
-#### Using Gulp
+#### Using Gulp and Laravel Elixir
 
 Install Gulp as a global NPM package, if you don't have it already on your machine:
 
     npm install --global gulp
 
-Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install [Laravel Elixir](http://laravel.com/docs/master/elixir):
+Install Laravel Elixir:
 
     npm install
 
