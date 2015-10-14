@@ -40,7 +40,7 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
 
 #### Using Gulp
 
-Install Gulp as a global NPM package, if don't have it already:
+Install Gulp as a global NPM package, if you don't have it already:
 
     npm install --global gulp
 
