@@ -56,21 +56,21 @@
  * Elements visibility
  */
 
-.visible-mobile {
+.visible-on-mobile {
     display: none !important;
     @include resp-max($breakpoint-sm) {
         display: block !important;
     }
 }
 
-.visible-tablet {
+.visible-on-tablet {
     display: none !important;
     @include resp-max($breakpoint-md) {
         display: block !important;
     }
 }
 
-.visible-desktop {  
+.visible-on-desktop {  
     @include resp-max($breakpoint-md) {
         display: none !important;
     }

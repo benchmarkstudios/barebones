@@ -1,24 +1,41 @@
 .btn {
-  background-color: $base-colour;
-  color: $base-background-colour;
-  display: inline-block;
-  height: ($base-spacing-unit * 1.5);
-  line-height: ($base-spacing-unit * 1.5);
-  padding: 0 $base-spacing-unit;
-  text-align: center;
-  width: auto;
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
+    background-color: $brand-colour;
+    color: $base-background-colour;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: ($base-spacing-unit / 4) $base-spacing-unit;
+    text-align: center;
+    width: auto;
+    transition: all .5s;
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    &:hover {
+        text-decoration: none;
+        background-color: $base-background-colour;
+        color: $brand-colour;
+        border: 1px solid $brand-colour;    
+    }
+}
+
+.btn--inverse {
+    background-color: $base-background-colour;
+    color: $brand-colour;
+    border: 1px solid $brand-colour;
+    &:hover {
+        background-color: $brand-colour;
+        color: $base-background-colour;
+        border: 1px solid transparent;
+    }
 }
 
 .btn--block {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .btn--link {
-  background-color: transparent;
-  color: $base-colour;
+    background-color: transparent;
+    color: $brand-colour;
 }

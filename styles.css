@@ -409,20 +409,20 @@ table {
 /**
  * Elements visibility
  */
-.visible-mobile {
+.visible-on-mobile {
   display: none !important; }
   @media screen and (max-width: 767px) {
-    .visible-mobile {
+    .visible-on-mobile {
       display: block !important; } }
 
-.visible-tablet {
+.visible-on-tablet {
   display: none !important; }
   @media screen and (max-width: 992px) {
-    .visible-tablet {
+    .visible-on-tablet {
       display: block !important; } }
 
 @media screen and (max-width: 992px) {
-  .visible-desktop {
+  .visible-on-desktop {
     display: none !important; } }
 
 body {
@@ -455,6 +455,13 @@ a {
   a:hover {
     color: #444;
     text-decoration: underline; }
+
+/**
+ * Rulers
+ */
+hr {
+  background-color: #444;
+  height: 1px; }
 
 img {
   max-width: 100%;
@@ -562,18 +569,35 @@ h5,
 h6 {
   font-weight: bold; }
 
+small {
+  font-size: .75em; }
+
 .btn {
   background-color: #444;
   color: #fff;
+  border: 1px solid transparent;
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 24px;
+  padding: 6px 24px;
   text-align: center;
-  width: auto; }
+  width: auto;
+  transition: all 0.5s; }
   .btn::-moz-focus-inner {
     border: 0;
     padding: 0; }
+  .btn:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #444; }
+
+.btn--inverse {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #444; }
+  .btn--inverse:hover {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid transparent; }
 
 .btn--block {
   display: block;

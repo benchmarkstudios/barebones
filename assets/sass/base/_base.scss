@@ -33,3 +33,13 @@ a {
         text-decoration: underline;
     }
 }
+
+
+/**
+ * Rulers
+ */
+
+hr {
+    background-color: $base-colour;
+    height: 1px;
+}
