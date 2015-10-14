@@ -40,7 +40,7 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
 
 #### Using Gulp
 
-Install Gulp as a global NPM package, if you don't have it already:
+Install Gulp as a global NPM package, if you don't have it already on your machine:
 
     npm install --global gulp
 
@@ -48,24 +48,21 @@ Clone/download the barebones repositories into your WordPress /wp-content/themes
 
     npm install
 
-Edit your gulpfile.js adding the required tasks (check the [Laravel Elixir](http://laravel.com/docs/master/elixir) documentation for further information and more tasks).
+Edit your gulpfile.js adding the required tasks (check the [Laravel Elixir](http://laravel.com/docs/master/elixir) documentation for further information).
 
 Then run:
 
-*to compile:*
-
     gulp
 
-
-*to watch:*
+*to compile*
 
     gulp watch 
 
-
-*to minify:*
+*to watch*
 
     gulp --production 
 
+*to minify*
 
 This will execute all the Gulp tasks on the gulpfile.js.
 
