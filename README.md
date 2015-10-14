@@ -34,10 +34,6 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
 * [Node.js](http://nodejs.org)
 * [Gulp](http://gulpjs.com)
 
-##### Optional
-
-* [LiveReload Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-
 #### Using Gulp
 
 Install Gulp as a global NPM package, if you don't have it already on your machine:
