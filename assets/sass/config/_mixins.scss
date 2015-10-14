@@ -3,9 +3,9 @@
  */
 
 @mixin resp-min($size) {
-  @media screen and (min-width: $size) { 
-    @content; 
-  }
+    @media screen and (min-width: $size) { 
+        @content; 
+    }
 }
 
 
@@ -14,9 +14,9 @@
  */
 
 @mixin resp-max($size) {
-  @media screen and (max-width: $size) { 
-    @content; 
-  }
+    @media screen and (max-width: $size) { 
+        @content; 
+    }
 }
 
 
@@ -25,8 +25,8 @@
  */
 
 @mixin font-size($px) {
-  font-size: $px + px;
-  font-size: #{$px / 16}rem;
+    font-size: $px + px;
+    font-size: #{$px / 16}rem;
 }
 
 
@@ -34,13 +34,13 @@
  * Placeholder mixin for <input>
  */
 
-@mixin placeholder() {
-  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
-  @each $placeholder in $placeholders {
-    &:#{$placeholder}-placeholder {
-      @content;
+@mixin placeholder {
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+    @each $placeholder in $placeholders {
+        &:#{$placeholder}-placeholder {
+            @content;
+        }
     }
-  }
 }
 
 
@@ -48,13 +48,13 @@
  * Clearfix
  */
 
-@mixin clearfix() {
-  &:before,
-  &:after{
-    content: " ";
-    display: table;
-  }
-  &:after{
-    clear: both;
-  }
+@mixin clearfix {
+    &:before,
+    &:after{
+        content: " ";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
 }
