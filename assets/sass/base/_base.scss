@@ -1,0 +1,35 @@
+body {
+    color: $base-colour;
+    font-family: $base-font-stack;
+    @include font-size($base-font-size);
+    line-height: $base-line-height;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+hr, 
+ul, 
+ol,
+dl,
+address {
+    margin-bottom: $base-spacing-unit;
+}
+
+
+/**
+ * Basic styles for links
+ */
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}

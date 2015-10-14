@@ -1,44 +1,9 @@
 {
-  "name": "barebones",
-  "description": "A lightweight, skeletal, responsive WordPress boilerplate theme for HTML5 and beyond.",
-  "version": "2.0.0",
-  "license": "MIT",
-  "author": {
-    "name": "Benchmark",
-    "email": "hello@benchmark.co.uk",
-    "url": "http://www.benchmark.co.uk"
-  },
-  "repository": {
-    "type": "git",
-    "url": "benchmarkstudios/barebones"
-  },
-  "scripts": {
-    "compile-sass": "node-sass --output-style=compressed assets/scss/barebones.scss style.css",
-    "autoprefix-sass": "autoprefixer -b 'last 10 versions' style.css",
-    "process-sass": "npm run compile-sass && npm run autoprefix-sass",
-    "watch-sass": "fsmonitor -d 'assets/scss' -s '+*.scss' npm run process-sass",
-    "browserify-js": "browserify assets/js/script.js -o js/script.min.js",
-    "uglify-js": "uglifyjs js/script.min.js -o js/script.min.js -c",
-    "process-js": "npm run browserify-js && npm run uglify-js",
-    "watch-js": "fsmonitor -d 'assets/js' -s '+*.js' npm run process-js",
-    "watch": "livereload & npm run watch-sass & npm run watch-js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-global-shim"
-    ]
-  },
-  "browserify-global-shim": {
-      "jquery": "$"
-  },
-  "devDependencies": {
-    "browserify": "~9.0.4",
-    "browserify-shim": "~3.8.3",
-    "uglify-js": "~2.4.19",
-    "autoprefixer": "~5.1.0",
-    "node-sass": "~2.1.1",
-    "fsmonitor": "~0.2.4",
-    "livereload": "~0.3.6",
-    "browserify-global-shim": "~1.0.0"
-  }
+    "private": true,
+    "devDependencies": {
+      "gulp": "^3.8.8"
+    },
+    "dependencies": {
+      "laravel-elixir": "^3.3.1"
+    }
 }
