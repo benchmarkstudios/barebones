@@ -34,15 +34,17 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
 * [Node.js](http://nodejs.org)
 * [Gulp](http://gulpjs.com)
 
-#### Optional
+##### Optional
 
 * [LiveReload Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+
+### Gulp
 
 Install Gulp as a global NPM package, if don't have it already:
 
     npm install --global gulp
 
-Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install all [Laravel Elixir](http://laravel.com/docs/master/elixir) dependencies:
+Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install [Laravel Elixir](http://laravel.com/docs/master/elixir):
 
     npm install
 
