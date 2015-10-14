@@ -29,12 +29,12 @@ To include all its optional submodules ([Simple Grid](https://github.com/pdcreis
     git submodule init
     git submodule update
 
-### Dependencies
+#### Dependencies
 
 * [Node.js](http://nodejs.org)
 * [Gulp](http://gulpjs.com)
 
-#### Using Gulp and Laravel Elixir
+### Using Gulp and Laravel Elixir
 
 Install Gulp as a global NPM package, if you don't have it already on your machine:
 
