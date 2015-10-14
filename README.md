@@ -45,9 +45,14 @@ Edit your gulpfile.js adding the required tasks (check the [Laravel Elixir](http
 
 Then run:
 
-    gulp *to compile*
-	gulp watch *to watch*
-	gulp --production *to minify*
+*to compile:*    
+    gulp
+
+*to watch:* 
+    gulp watch 
+
+*to minify:*	
+    gulp --production 
 
 This will execute all the Gulp tasks on the gulpfile.js.
 
