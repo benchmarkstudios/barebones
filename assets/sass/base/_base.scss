@@ -26,10 +26,10 @@ address {
  */
 
 a {
-    color: $brand-color;
+    color: $brand-colour;
     text-decoration: none;
     &:hover {
-        color: $text-color;
+        color: $base-colour;
         text-decoration: underline;
     }
 }

@@ -2,5 +2,8 @@ npm-debug.log
 .sass-cache
 node_modules
 bower_components
-assets/scss/vendor
+assets/sass/vendor
 tests
+
+*.map
+**/*.map

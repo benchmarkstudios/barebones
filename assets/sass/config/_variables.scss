@@ -1,10 +1,4 @@
 /**
- * Custom variables
- */
-
-
-
-/**
  * Base values
  */
 
@@ -25,10 +19,10 @@ $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 
 $breakpoints: (
-  'lg' '(min-width: ' + $breakpoint-lg + ')',
-  'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
-  'sm' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width:'  + ($breakpoint-md - 1) + ')',
-  'xs' '(max-width: ' + $breakpoint-sm + ')'
+    'lg' '(min-width: ' + $breakpoint-lg + ')',
+    'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
+    'sm' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width:'  + ($breakpoint-md - 1) + ')',
+    'xs' '(max-width: ' + $breakpoint-sm + ')'
 );
 
 
@@ -36,6 +30,13 @@ $breakpoints: (
  * Grid
  */
 
-$grid-max-width:    1200px;
-$grid-columns:      12;
-$grid-gutter:       $base-spacing-unit;
+$grid-max-width: 1200px;
+$grid-columns:   12;
+$grid-gutter:    $base-spacing-unit;
+
+
+/**
+ * Custom variables
+ */
+
+$brand-colour: #444; // Example
