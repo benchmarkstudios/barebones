@@ -374,25 +374,56 @@ table {
   .hidden-xs {
     display: none !important; } }
 
-.alignleft {
+/**
+ * Clearing and floating
+ */
+.float-left {
   float: left; }
+  img .float-left {
+    margin-right: 24px; }
 
-img.alignleft {
-  margin-right: 24px; }
-
-.alignright {
+.float-right {
   float: right; }
+  img .float-right {
+    margin-left: 24px; }
 
-img.alignright {
-  margin-left: 24px; }
-
-.aligncenter {
+.float-center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+  img .float-center {
+    margin-bottom: 24px; }
 
-img.aligncenter {
-  margin-bottom: 24px; }
+/**
+ * Text aligments
+ */
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: right; }
+
+/**
+ * Elements visibility
+ */
+.visible-mobile {
+  display: none !important; }
+  @media screen and (max-width: 767px) {
+    .visible-mobile {
+      display: block !important; } }
+
+.visible-tablet {
+  display: none !important; }
+  @media screen and (max-width: 992px) {
+    .visible-tablet {
+      display: block !important; } }
+
+@media screen and (max-width: 992px) {
+  .visible-desktop {
+    display: none !important; } }
 
 body {
   color: #444;

@@ -1,27 +1,77 @@
-.alignleft {
-  float: left;
+/**
+ * Clearing and floating
+ */
+
+.float-left {
+    float: left;
+    img & {
+        margin-right: $base-spacing-unit;
+    }
 }
 
-img.alignleft {
-  margin-right: $base-spacing-unit;
+
+.float-right {
+    float: right;
+    img & {
+        margin-left : $base-spacing-unit;
+    }
 }
 
-.alignright {
-  float: right;
+
+.float-center {
+    display: block;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    img & {
+        margin-bottom: $base-spacing-unit;
+    }
 }
 
-img.alignright {
-  margin-left : $base-spacing-unit;
+.clearfix {
+    @extend clearfix;
 }
 
-.aligncenter {
-  display: block;
-  margin: {
-    left: auto;
-    right: auto;
-  }
+
+
+/**
+ * Text aligments
+ */
+
+.align-left { 
+    text-align: left; 
 }
 
-img.aligncenter {
-  margin-bottom: $base-spacing-unit;
+.align-right { 
+    text-align: right; 
+}
+
+.align-center { 
+    text-align: right; 
+}
+
+
+/**
+ * Elements visibility
+ */
+
+.visible-mobile {
+    display: none !important;
+    @include resp-max($breakpoint-sm) {
+        display: block !important;
+    }
+}
+
+.visible-tablet {
+    display: none !important;
+    @include resp-max($breakpoint-md) {
+        display: block !important;
+    }
+}
+
+.visible-desktop {  
+    @include resp-max($breakpoint-md) {
+        display: none !important;
+    }
 }
