@@ -1,14 +1,14 @@
 .nav {
-  list-style: none;
-  margin: 0;
-  > li {
-      display: inline-block;
-      margin-right: $base-spacing-unit;
-      &:last-child {
-        margin-right: 0;
-      }
-    > a {
-      display: block;
+    list-style: none;
+    margin: 0;
+    > li {
+        display: inline-block;
+        margin-right: $base-spacing-unit;
+        &:last-child {
+            margin-right: 0;
+        }
+        > a {
+            display: block;
+        }
     }
-  }
 }

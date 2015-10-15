@@ -7,7 +7,6 @@
         <title><?php wp_title( '' ); ?></title>
         <link rel="dns-prefetch" href="//google-analytics.com">
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
-        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
         <?php wp_head(); ?>
         <!--[if lt IE 10]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>

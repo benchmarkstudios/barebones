@@ -6,3 +6,14 @@ img {
         max-width: none;
     }
 }
+
+
+/**
+ * Responsive images
+ */
+
+.is-fluid {
+    display: block;
+    width: 100%;
+    height: auto;
+}

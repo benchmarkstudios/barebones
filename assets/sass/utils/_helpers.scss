@@ -2,6 +2,7 @@
  * Clearing and floating
  */
 
+.alignleft,
 .float-left {
     float: left;
     img & {
@@ -9,7 +10,7 @@
     }
 }
 
-
+.alignright,
 .float-right {
     float: right;
     img & {
@@ -17,7 +18,7 @@
     }
 }
 
-
+.aligncenter,
 .float-center {
     display: block;
     margin: {
@@ -39,15 +40,15 @@
  * Text aligments
  */
 
-.align-left { 
+.align-text-left { 
     text-align: left; 
 }
 
-.align-right { 
+.align-text-right { 
     text-align: right; 
 }
 
-.align-center { 
+.align-text-center { 
     text-align: right; 
 }
 

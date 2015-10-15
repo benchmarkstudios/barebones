@@ -1,13 +1,28 @@
 /**
- * Base values
+ * Colours
  */
 
 $base-colour:            #444;
 $base-background-colour: #fff;
-$base-font-stack:        'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size:         16;
-$base-line-height:       1.5;
-$base-spacing-unit:      ($base-font-size * $base-line-height) * 1px;
+
+$brand-colour:           #444; // Example
+$success-colour:         #5CB85C;
+$info-colour:            $brand-colour;
+$warning-colour:         #F0AD4E;
+$danger-colour:          #D9534F;
+
+
+/**
+ * Typography
+ */
+
+$sans-serif-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif-font-family:       Georgia, "Times New Roman", Times, serif;
+$base-font-family:        $sans-serif-font-family;
+
+$base-font-size:          16;
+$base-line-height:        1.5;
+$base-spacing-unit:       ($base-font-size * $base-line-height) * 1px;
 
 
 /**
@@ -36,7 +51,7 @@ $grid-gutter:    $base-spacing-unit;
 
 
 /**
- * Custom variables
+ * Components
  */
 
-$brand-colour: #444; // Example
+$border-radius: 3px;
