@@ -4,7 +4,8 @@
  * Custom functions / External files
  */
 
-require get_template_directory() . '/functions/example.php';
+require_once 'functions/example.php';
+
 
 
 /**
@@ -18,12 +19,13 @@ if ( function_exists( 'add_theme_support' ) )
     add_image_size( 'custom-size', 700, 200, true );
 
     // Add Support for post formats
-    add_theme_support( 'post-formats', ['post'] ); 
-    add_post_type_support( 'page', 'excerpt' );
+    // add_theme_support( 'post-formats', ['post'] ); 
+    // add_post_type_support( 'page', 'excerpt' );
 
     // Localisation Support
     load_theme_textdomain( 'barebones', get_template_directory() . '/languages' );
 }
+
 
 
 /**
@@ -53,21 +55,22 @@ function barebones_remove_comments_rss( $for_comments )
 add_filter( 'post_comments_feed_link', 'barebones_remove_comments_rss' );
 
 
+
 /**
  * jQuery the right way
  */
 
 function barebones_scripts() 
 {
-  /*
-   * For IE8 to play nice, you'll need to include your CSS here, for example:
-   */
-  // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
-  // wp_enqueue_style( 'icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
-  wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4', true );
-  wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.min.js', ['jquery'], null, true );
+    /*
+     * For IE8 to play nice, you'll need to include your CSS here, for example:
+     */
+    // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
+    // wp_enqueue_style( 'icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4', true );
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.min.js', ['jquery'], null, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'barebones_scripts' );
@@ -175,7 +178,7 @@ add_filter( 'tiny_mce_before_init', 'barebones_tiny_mce_before_init' );
  * Get image URL for whatever size.
  */
 
-function wp_get_attachment_image_url( $id, $size = 'full', $attrs = []) 
+function wp_get_attachment_image_url( $id, $size = 'full', $attrs = [] ) 
 {
     $image = wp_get_attachment_image_src( $id, $size, $attrs );
 
