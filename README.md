@@ -11,7 +11,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
 * Laravel Elixir to define/customize and run basic Gulp tasks
-* Basic index.php Loop template
+* Basic template files
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
@@ -24,7 +24,7 @@ Clone the barebones repositories into your WordPress /wp-content/themes/ directo
     git clone https://github.com/benchmarkstudios/barebones
     cd barebones
 
-To include all its optional submodules ([Simple Grid](https://github.com/pdcreis/simple-grid) included):
+To include all its optional submodules ([Simple Grid](https://github.com/benchmarkstudios/simple-grid) included):
 
     git submodule init
     git submodule update
