@@ -4,7 +4,6 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <title><?php wp_title( '' ); ?></title>
         <link rel="dns-prefetch" href="//google-analytics.com">
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
         <?php wp_head(); ?>

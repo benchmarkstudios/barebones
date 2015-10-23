@@ -466,6 +466,13 @@ a {
     color: #444;
     text-decoration: underline; }
 
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit; }
+
 /**
  * Rulers
  */

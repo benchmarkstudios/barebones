@@ -14,6 +14,9 @@ require_once 'functions/example.php';
 
 if ( function_exists( 'add_theme_support' ) )
 {
+    // Add support for document title tag
+    add_theme_support( 'title-tag' );
+
     // Add Thumbnail Theme Support
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'custom-size', 700, 200, true );
@@ -184,3 +187,5 @@ function wp_get_attachment_image_url( $id, $size = 'full', $attrs = [] )
 
     return $image[0];
 }
+
+    
