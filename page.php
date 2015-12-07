@@ -1,4 +1,4 @@
-<?php  get_header(); ?>
+<?php get_header(); ?>
 
 <main class="main" role="main">
     <div class="container">
