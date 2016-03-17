@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="dns-prefetch" href="//google-analytics.com">
-        <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+        <link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_url' ) . '?' . time(); ?>">
         <?php wp_head(); ?>
         <!--[if lt IE 10]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
