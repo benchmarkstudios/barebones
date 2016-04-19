@@ -174,3 +174,17 @@ function barebones_tiny_mce_before_init( $settings )
 }
 
 add_filter( 'tiny_mce_before_init', 'barebones_tiny_mce_before_init' );
+
+
+
+/**
+ * Get post thumbnail url
+ * 
+ * @param  int $post_id
+ * @return string
+ */
+
+function get_post_thumbnail_url( $post_id )
+{
+    return wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
+}
