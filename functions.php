@@ -22,7 +22,7 @@ if ( function_exists( 'add_theme_support' ) )
     add_image_size( 'custom-size', 700, 200, true );
 
     // Add Support for post formats
-    // add_theme_support( 'post-formats', ['post'] ); 
+    // add_theme_support( 'post-formats', ['post'] );
     // add_post_type_support( 'page', 'excerpt' );
 
     // Localisation Support
@@ -34,7 +34,7 @@ if ( function_exists( 'add_theme_support' ) )
 /**
  * Remove junk
  */
- 
+
 define( 'ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true );
 define( 'ICL_DONT_LOAD_LANGUAGES_JS', true );
 
@@ -50,7 +50,7 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-function barebones_remove_comments_rss( $for_comments ) 
+function barebones_remove_comments_rss( $for_comments )
 {
     return;
 }
@@ -63,7 +63,7 @@ add_filter( 'post_comments_feed_link', 'barebones_remove_comments_rss' );
  * jQuery the right way
  */
 
-function barebones_scripts() 
+function barebones_scripts()
 {
     /*
      * For IE8 to play nice, you'll need to include your CSS here, for example:
@@ -84,7 +84,7 @@ add_action( 'wp_enqueue_scripts', 'barebones_scripts' );
  * Nav menus
  */
 
-if ( function_exists( 'register_nav_menus' ) ) 
+if ( function_exists( 'register_nav_menus' ) )
 {
     register_nav_menus([
         'header' => 'Header',
@@ -92,7 +92,7 @@ if ( function_exists( 'register_nav_menus' ) )
     ]);
 }
 
-function barebones_nav_menu_args( $args = '' ) 
+function barebones_nav_menu_args( $args = '' )
 {
     $args['container']       = false;
     $args['container_class'] = false;
@@ -110,7 +110,7 @@ add_filter( 'wp_nav_menu_args', 'barebones_nav_menu_args' );
  * Email
  */
 
-function barebones_mail_from( $email ) 
+function barebones_mail_from( $email )
 {
     return get_option( 'admin_email' );
 }
@@ -118,7 +118,7 @@ function barebones_mail_from( $email )
 add_filter( 'wp_mail_from', 'barebones_mail_from' );
 
 
-function barebones_mail_from_name( $name ) 
+function barebones_mail_from_name( $name )
 {
     return get_bloginfo( 'name' );
 }
@@ -131,9 +131,9 @@ add_filter( 'wp_mail_from_name', 'barebones_mail_from_name' );
  * Shortcodes ([button] shortcode included)
  */
 
-function button_shortcode( $atts, $content = null ) 
+function button_shortcode( $atts, $content = null )
 {
-    $atts['class']  = $atts['class'] ? $atts['class'] : 'btn';
+    $atts['class']  = isset($atts['class']) ? $atts['class'] : 'btn';
 
     return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
 }
@@ -146,7 +146,7 @@ add_shortcode( 'button', 'button_shortcode' );
  * TinyMCE
  */
 
-function barebones_mce_buttons_2( $buttons ) 
+function barebones_mce_buttons_2( $buttons )
 {
     array_unshift( $buttons, 'styleselect' );
     $buttons[] = 'hr';
@@ -157,7 +157,7 @@ function barebones_mce_buttons_2( $buttons )
 add_filter( 'mce_buttons_2', 'barebones_mce_buttons_2' );
 
 
-function barebones_tiny_mce_before_init( $settings ) 
+function barebones_tiny_mce_before_init( $settings )
 {
     $style_formats = [
         // [
@@ -174,4 +174,3 @@ function barebones_tiny_mce_before_init( $settings )
 }
 
 add_filter( 'tiny_mce_before_init', 'barebones_tiny_mce_before_init' );
-    
