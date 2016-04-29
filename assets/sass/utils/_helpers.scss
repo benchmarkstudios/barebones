@@ -31,7 +31,7 @@
 }
 
 .clearfix {
-    @extend clearfix;
+    @include clearfix();
 }
 
 
@@ -40,16 +40,16 @@
  * Text aligments
  */
 
-.align-text-left { 
-    text-align: left; 
+.align-text-left {
+    text-align: left;
 }
 
-.align-text-right { 
-    text-align: right; 
+.align-text-right {
+    text-align: right;
 }
 
-.align-text-center { 
-    text-align: center; 
+.align-text-center {
+    text-align: center;
 }
 
 
@@ -74,7 +74,7 @@
     }
 }
 
-.visible-on-desktop {  
+.visible-on-desktop {
     @include resp-max($breakpoint-md) {
         display: none !important;
     }
