@@ -1,6 +1,3 @@
-// config - desktop notifications
-process.env.DISABLE_NOTIFIER = false;
-
 var gulp = require('gulp');
 var gulpImagemin = require('gulp-imagemin');
 var elixir = require('laravel-elixir');
