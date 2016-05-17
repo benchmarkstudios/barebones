@@ -15,7 +15,7 @@ elixir.extend('imagemin', function(config) {
     return gulp.src(elixir.config.assetsPath + '/images/**/*')
         .pipe(gulpImagemin(config))
         .pipe(gulp.dest('./images'));
-  }).watch('./assets/images/**/*');
+  }).watch(elixir.config.assetsPath + '/images/**/*');
 });
 
 // Run elixir tasks
