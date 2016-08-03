@@ -9,7 +9,7 @@ var elixir = require('laravel-elixir');
 elixir.config.assetsPath = 'assets';
 
 // Make autoprefixer support older browsers
-config.css.autoprefix.options.browsers =  ['last 15 versions'];
+elixir.config.css.autoprefix.options.browsers =  ['last 15 versions'];
 
 // Imagemin
 var Task = elixir.Task;
