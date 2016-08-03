@@ -1,5 +1,5 @@
-// Disable notifications
-// +process.env.DISABLE_NOTIFIER = false;
+// Notifications (comment out to disable notifications)
+// process.env.DISABLE_NOTIFIER = true;
 
 var gulp = require('gulp');
 var gulpImagemin = require('gulp-imagemin');
@@ -7,6 +7,9 @@ var elixir = require('laravel-elixir');
 
 // Assets path
 elixir.config.assetsPath = 'assets';
+
+// Make autoprefixer support older browsers
+config.css.autoprefix.options.browsers =  ['last 15 versions'];
 
 // Imagemin
 var Task = elixir.Task;
