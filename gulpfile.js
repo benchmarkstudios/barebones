@@ -25,5 +25,5 @@ elixir.extend('imagemin', function(src, dest) {
 elixir(function(mix) {
     mix.sass('barebones.scss', 'style.css')
        .scripts(['script.js'], 'js/script.min.js')
-       .imagemin('/img/**/*', './img');
+       .imagemin('/images/**/*', './img');
 });
