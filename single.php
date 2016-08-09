@@ -3,7 +3,7 @@
 <main class="main" role="main">
     <div class="container">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); ?>
 
             <article <?php post_class(); ?>>
 
@@ -14,8 +14,8 @@
                 <?php the_content(); ?>
 
                 <footer class="post__footer">
-                    <p class="post__date"><time><?php echo human_time_diff( strtotime( $post->post_date ) ) . ' ' . __( 'ago' ); ?></time></p>
-                    <p class="post__comments"><?php comments_popup_link( __( 'No comments yet' ), __( '1 comment' ), __( '% comments' ) ); ?></p>
+                    <p class="post__date"><time><?php echo human_time_diff(strtotime($post->post_date)) . ' ' . __('ago'); ?></time></p>
+                    <p class="post__comments"><?php comments_popup_link(__('No comments yet'), __('1 comment'), __('% comments')); ?></p>
                 </footer>
 
             </article>

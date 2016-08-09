@@ -4,14 +4,14 @@
      * Template Name: Demo page template
      */
 
-    get_header(); 
+    get_header();
 
 ?>
 
 <main class="main" role="main">
     <div class="container">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); ?>
 
             <article <?php post_class(); ?>>
 
