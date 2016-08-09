@@ -5,13 +5,13 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 ## Features
 
 * Reset, normalisation and base font/form styles
-* Sass powered - semantically named files all compiled into a single file
+* Sass Boilerplate - semantically named files, organised by folders, all compiled into a single file
 * Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
 * Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
-* Browserify for modular JavaScript in the browser, stop those spaghetti files!
-* Basic index.php Loop template
+* Laravel Elixir to define/customize and run basic Gulp tasks
+* Basic template files
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
@@ -19,30 +19,48 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 
 ## Installation
 
-Run the following commands to include barebones and all it's submodules:
+Clone the barebones repositories into your WordPress /wp-content/themes/ directory:
 
     git clone https://github.com/benchmarkstudios/barebones
     cd barebones
+
+To include all its optional submodules ([Simple Grid](https://github.com/benchmarkstudios/simple-grid) included):
+
     git submodule init
     git submodule update
 
-### Dependencies
+#### Dependencies
 
 * [Node.js](http://nodejs.org)
+* [Gulp](http://gulpjs.com)
 
-#### Optional
+### Using Gulp and Laravel Elixir
 
-* [LiveReload Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+Install Gulp as a global NPM package, if you don't have it already on your machine:
 
-Clone/download the barebones repositories into your WordPress /wp-content/themes/ directory and run the following to install all of this project's Grunt dependencies:
+    npm install --global gulp
+
+Install Laravel Elixir:
 
     npm install
 
+Edit your gulpfile.js adding the required tasks (check the [Laravel Elixir](http://laravel.com/docs/master/elixir) documentation for further information).
+
 Then run:
 
-    npm run watch
+    gulp
 
-This will execute the default tasks: compiling sass/js and spawning the file watcher.
+*to compile*
+
+    gulp watch 
+
+*to watch*
+
+    gulp --production 
+
+*to minify*
+
+This will execute all the Gulp tasks on the gulpfile.js.
 
 ## WordPress Support
 
