@@ -33,6 +33,8 @@ To include all its optional submodules ([Simple Grid](https://github.com/benchma
 
 * [Node.js](http://nodejs.org)
 * [Gulp](http://gulpjs.com)
+* [Gulp Imagemin](https://github.com/sindresorhus/gulp-imagemin)
+* [Laravel Elixir](https://github.com/laravel/elixir)
 
 ### Using Gulp and Laravel Elixir
 
@@ -52,11 +54,11 @@ Then run:
 
 *to compile*
 
-    gulp watch 
+    gulp watch
 
 *to watch*
 
-    gulp --production 
+    gulp --production
 
 *to minify*
 
