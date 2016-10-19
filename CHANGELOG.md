@@ -1,5 +1,8 @@
 # barebones changelog
 
+## 2.0.2
+* Add dependencies that were missing while using yarn
+
 ## 2.0.1
 
 * Comment out example "add_image_size" as it can be easily forgotten which leaves you with extra unused image size.
