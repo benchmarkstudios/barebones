@@ -1,6 +1,6 @@
 {
   "name": "barebones",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Benchmark Studios",
   "description": "A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond",
   "license": "MIT",
@@ -19,6 +19,10 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-imagemin": "^3.0.1",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.0",
     "laravel-elixir": "^4.2.1"
   },
   "dependencies": {}
