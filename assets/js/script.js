@@ -1,7 +1,3 @@
-// var $ = require('jquery');
+require('./bootstrap');
 
-(function() {
-
-  
-
-})($);
+console.log( 'Barebones rocks! You are running jQuery version: ' + $.fn.jquery );

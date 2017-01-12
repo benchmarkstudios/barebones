@@ -1,6 +1,6 @@
 {
   "name": "barebones",
-  "version": "2.0.2",
+  "version": "3.0.0beta",
   "author": "Benchmark Studios",
   "description": "A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond",
   "license": "MIT",
@@ -13,17 +13,18 @@
     "url": "https://github.com/benchmarkstudios/barebones/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
+    "hmr": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-imagemin": "^3.0.1",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-svgo": "^5.2.0",
-    "laravel-elixir": "^4.2.1"
+    "cross-env": "^3.1.4",
+    "laravel-mix": "^0.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }

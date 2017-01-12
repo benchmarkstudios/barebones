@@ -1,0 +1,4 @@
+<?php
+/**
+ * Project specific functions
+ */
