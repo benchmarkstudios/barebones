@@ -177,12 +177,16 @@ add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
 
 /**
  * Get post thumbnail url
- *
- * @param  int $post_id
- * @return string
+ * @param   string    $size    Size of the returned image
+ * @param   int       $post_id post id
+ * @param   boolean   $icon    if no image found, display icon
  */
-
-function get_post_thumbnail_url($post_id)
+function get_post_thumbnail_url( $size = 'full', $post_id, $icon = false )
 {
-    return wp_get_attachment_url(get_post_thumbnail_id($post_id));
+    if(!$post_id) {
+        $post_id = get_the_ID();
+    }
+
+    $thumb_url_array = wp_get_attachment_image_src(get_post_thumbnail_id( $post_id ), $size, $icon);
+    return $thumb_url_array[0];
 }
