@@ -1,4 +1,6 @@
 # barebones changelog
+## 2.0.3
+* update get_post_thumbnail_url function and add ability to get specific size.
 
 ## 2.0.2
 * Add dependencies that were missing while using yarn
