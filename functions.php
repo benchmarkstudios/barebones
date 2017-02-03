@@ -181,7 +181,7 @@ add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
  * @param   int       $post_id post id
  * @param   boolean   $icon    if no image found, display icon
  */
-function get_post_thumbnail_url( $size = 'full', $post_id, $icon = false )
+function get_post_thumbnail_url( $size = 'full', $post_id = false, $icon = false )
 {
     if(!$post_id) {
         $post_id = get_the_ID();
