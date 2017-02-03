@@ -1,4 +1,7 @@
 # barebones changelog
+## 2.0.4
+* Better static asset revisioning using randomly generated hash when running gulp tasks.
+
 ## 2.0.3
 * update get_post_thumbnail_url function and add ability to get specific size.
 
