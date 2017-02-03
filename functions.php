@@ -72,7 +72,7 @@ function barebones_scripts()
     wp_deregister_script('jquery');
     wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
     wp_enqueue_script('jquery');
-    wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.min.js?' . time(), ['jquery'], null, true);
+    wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.min.js?' . getPackageHash(), ['jquery'], null, true);
 }
 
 add_action('wp_enqueue_scripts', 'barebones_scripts');
@@ -173,7 +173,18 @@ function barebones_tiny_mce_before_init($settings)
 
 add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
 
+/**
+ * Get hash from package.json used for assets url hash
+ * @return string
+ */
+function getPackageHash()
+{
+  $package = file_get_contents(get_bloginfo( 'stylesheet_directory' ) . "/package.json");
+  $packageJson = json_decode($package, true);
 
+  // if there is problem, fallback to time.
+  return isset($packageJson['hash']) ? $packageJson['hash'] : time();
+}
 
 /**
  * Get post thumbnail url
