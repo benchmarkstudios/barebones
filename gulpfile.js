@@ -21,27 +21,9 @@ elixir.extend('imagemin', function(src, dest) {
   }).watch(elixir.config.assetsPath + src);
 });
 
-// Create a Hash in package.json
-elixir.extend('hash', function() {
-  new Task('hash', function() {
-    var fs = require('fs');
-    var fileName = './package.json';
-    var file = require(fileName);
-
-    // generate a new hash
-    file.hash = ( 0 | Math.random() * 9e6 ).toString(36);
-    // save to package.json
-    fs.writeFile(fileName, JSON.stringify(file, null, 2), function (err) {
-      if (err) return console.log(err);
-      console.log('writing to ' + fileName);
-    });
-  })
-});
-
 // Run elixir tasks
 elixir(function(mix) {
     mix.sass('barebones.scss', 'style.css')
        .scripts(['script.js'], 'js/script.min.js')
-       .imagemin('/images/**/*', './img')
-       .hash();
+       .imagemin('/images/**/*', './img');
 });
