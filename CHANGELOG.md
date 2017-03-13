@@ -1,4 +1,7 @@
 # barebones changelog
+## 2.0.5
+* Use filetime() for asset revisions as it's more compatible and easier to support.
+
 ## 2.0.4
 * Better static asset revisioning using randomly generated hash when running gulp tasks.
 
