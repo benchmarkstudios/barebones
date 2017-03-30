@@ -22,7 +22,7 @@
         color: $brand-colour;
         border: 1px solid $brand-colour;    
     }
-    .is-disabled,
+    &.is-disabled,
     &:disabled {
         pointer-events: none;
         opacity: .65;
