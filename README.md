@@ -73,7 +73,7 @@ This will execute all the Gulp tasks on the gulpfile.babel.js.
 
 ### Images
 
-Drop all your images into assets/imagess. When running gulp tasks, they will be automatically
+Drop all your images into assets/images. When running gulp tasks, they will be automatically
 optimised and output files will available in img folder in the root of the theme.
 
 ## WordPress Support
