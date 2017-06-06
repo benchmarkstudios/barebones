@@ -8,10 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="dns-prefetch" href="//google-analytics.com">
 
-        <?php /**
-         * For better peformance, core styles are inlined
-         */
-        get_file_contents(sprintf('%s/css/core.min.css', get_bloginfo( 'stylesheet_url' ))); ?>
+        <style>
+            <?php /**
+             * For better peformance, core styles are inlined
+             */
+            echo file_get_contents(sprintf('%s/css/core.min.css', get_stylesheet_directory())); ?>
+        </style>
         <link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_url' ) . '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
 
         <?php wp_head(); ?>

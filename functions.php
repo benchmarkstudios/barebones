@@ -3,7 +3,7 @@
 /**
  * Custom functions / External files
  */
-require_once 'includes/funcitons.php';
+require_once 'includes/functions.php';
 
 /**
  * Add support for useful stuff

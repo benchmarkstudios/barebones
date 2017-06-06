@@ -103,7 +103,7 @@ gulp.task('scripts', ['clean-scripts'], () => {
       format: 'iife',
       moduleName: 'BarebonesBundle',
       sourceMap: !production,
-      dest: `${config.public}/js/scripts.min.js`,
+      dest: `${config.public}/js/script.min.js`,
     });
   }).catch(err => log(err.stack));
 });
