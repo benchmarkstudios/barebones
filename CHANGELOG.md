@@ -1,4 +1,7 @@
 # barebones changelog
+## 2.0.6
+* Add package-lock.json to gitignore for npm 5+
+
 ## 2.0.5
 * Use filetime() for asset revisions as it's more compatible and easier to support.
 
