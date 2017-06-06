@@ -1,30 +1,51 @@
 {
   "name": "barebones",
-  "version": "3.0.0beta",
+  "version": "3.0.0",
   "author": "Benchmark Studios",
   "description": "A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond",
-  "license": "MIT",
-  "homepage": "https://github.com/benchmarkstudios/barebones#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benchmarkstudios/barebones.git"
   },
+  "keywords": [
+    "barebones",
+    "boilerplate",
+    "wordpress"
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/benchmarkstudios/barebones/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-    "dev": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
-    "hmr": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-  },
-  "private": true,
+  "homepage": "https://github.com/benchmarkstudios/barebones#readme",
   "devDependencies": {
-    "cross-env": "^3.1.4",
-    "laravel-mix": "^0.4.0"
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "rollup": "^0.42.0",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-multi-entry": "^2.0.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "run-sequence": "^1.2.2",
+    "uglify-js": "^3.0.15"
   },
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.2.1"
   }
 }

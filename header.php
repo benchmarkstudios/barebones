@@ -7,7 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="dns-prefetch" href="//google-analytics.com">
-        <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_url') . '?' . time(); ?>">
+
+        <?php /**
+         * For better peformance, core styles are inlined
+         */
+        get_file_contents(sprintf('%s/css/core.min.css', get_bloginfo( 'stylesheet_url' ))); ?>
+        <link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_url' ) . '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
+
         <?php wp_head(); ?>
         <!--[if lt IE 10]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
@@ -25,4 +31,10 @@
                     <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
                 </nav>
             </div>
+
+            <a href="<?php bloginfo('url'); ?>" class="logo logo--header">
+                <?php if(is_front_page()) { echo '<h1>'; } ?>
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.png'" alt="<?php bloginfo('title'); ?>" />
+                <?php if(is_front_page()) { echo '</h1>'; } ?>
+            </a>
         </header>

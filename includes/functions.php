@@ -1,4 +1,4 @@
 <?php
 /**
- * Project specific functions
+ * This is file for all of your custom functions for the project
  */

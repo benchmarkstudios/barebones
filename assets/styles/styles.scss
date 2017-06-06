@@ -1,0 +1,15 @@
+@import 'config/variables';
+@import 'config/mixins';
+
+// Layout-related sections
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/footer';
+
+// Components
+@import 'components/buttons';
+@import 'components/nav';
+@import 'components/alerts';
+
+// Page-specific styles
+@import 'pages/home';
