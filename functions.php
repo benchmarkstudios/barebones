@@ -94,28 +94,6 @@ function barebones_nav_menu_args($args = '')
 add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
 
 
-
-/**
- * Email
- */
-
-function barebones_mail_from($email)
-{
-    return get_option('admin_email');
-}
-
-add_filter('wp_mail_from', 'barebones_mail_from');
-
-
-function barebones_mail_from_name($name)
-{
-    return get_bloginfo('name');
-}
-
-add_filter('wp_mail_from_name', 'barebones_mail_from_name');
-
-
-
 /**
  * Shortcodes ([button] shortcode included)
  */
