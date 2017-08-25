@@ -16,6 +16,7 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Scss compiling and watching, css minification support
 * Rollup.js for js for smallest possible bundles
 * Image optimisation using imagemin.
+* Base mobile nav out of the box
 
 ## Installation
 
@@ -65,6 +66,14 @@ Then run:
 
 *to optimise images*
 
+    gulp styles
+
+*to compile styles*
+
+    gulp scripts
+
+*to compile scripts*
+
     gulp build
 
 *to create a build (minification, removes map files and comments)*
@@ -90,7 +99,9 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 
 ## Tips & Tricks
 
-### SVG Fallbacks
+### SVG Fallbacks 
+
+Most likely if you need to support IE8
 
 *CSS*
 ```

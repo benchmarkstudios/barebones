@@ -14,7 +14,7 @@
              */
             echo file_get_contents(sprintf('%s/css/core.min.css', get_stylesheet_directory())); ?>
         </style>
-        <link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_url' ) . '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_url') . '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
 
         <?php wp_head(); ?>
         <!--[if lt IE 10]>
@@ -29,14 +29,19 @@
     <body <?php body_class(); ?>>
         <header class="header" role="banner">
             <div class="container">
+                <a href="<?php bloginfo('url'); ?>" class="logo logo--header">
+                    <?php echo is_front_page() ? '<h1>' : ''; ?>
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.png'" alt="<?php bloginfo('title'); ?>" />
+                    <?php echo is_front_page() ? '</h1>' : ''; ?>
+                </a>
+
+                <a href="#" class="nav-burger js-menu-toggle">
+                    <span class="nav-burger__line"></span>
+                    <span class="nav-burger__line"></span>
+                    <span class="nav-burger__line"></span>
+                </a>
                 <nav role="navigation">
                     <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
                 </nav>
             </div>
-
-            <a href="<?php bloginfo('url'); ?>" class="logo logo--header">
-                <?php if(is_front_page()) { echo '<h1>'; } ?>
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.png'" alt="<?php bloginfo('title'); ?>" />
-                <?php if(is_front_page()) { echo '</h1>'; } ?>
-            </a>
         </header>
