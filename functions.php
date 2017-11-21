@@ -25,17 +25,14 @@ if (function_exists('add_theme_support')) {
     load_theme_textdomain('barebones', get_template_directory() . '/languages');
 }
 
-
+/**
+ * Hide admin bar
+ */
+add_filter('show_admin_bar', '__return_false');
 
 /**
  * Remove junk
  */
-
-define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
-define('ICL_DONT_LOAD_LANGUAGES_JS', true);
-
-add_filter('show_admin_bar', '__return_false');
-
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
@@ -46,73 +43,80 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
-function barebones_remove_comments_rss($for_comments)
+/**
+ * Remove comments feed
+ *
+ * @return void
+ */
+function barebones_post_comments_feed_link()
 {
     return;
 }
-
-add_filter('post_comments_feed_link', 'barebones_remove_comments_rss');
-
-
+add_filter('post_comments_feed_link', 'barebones_post_comments_feed_link');
 
 /**
- * jQuery the right way
+ * Enqueue scripts
  */
-
-function barebones_scripts()
+function barebones_enqueue_scripts()
 {
     // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
     // wp_enqueue_style( 'icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.min.js?' . filemtime(get_stylesheet_directory() . '/js/script.min.js'), [], null, true);
 }
-
-add_action('wp_enqueue_scripts', 'barebones_scripts');
-
-
+add_action('wp_enqueue_scripts', 'barebones_wnqueue_scripts');
 
 /**
- * Nav menus
+ * Register nav menus
+ *
+ * @return void
  */
-
-if (function_exists('register_nav_menus')) {
+function barebones_register_nav_menus()
+{
     register_nav_menus([
-        'header' => 'Header',
-        'footer' => 'Footer'
+        'header' => __('Header', 'barebones'),
+        'footer' => __('Footer', 'barebones'),
     ]);
 }
+add_action('after_setup_theme', 'barebones_register_nav_menus', 0);
 
-function barebones_nav_menu_args($args = '')
+/**
+ * Nav menu args
+ *
+ * @param array $args
+ * @return void
+ */
+function barebones_nav_menu_args($args)
 {
-    $args['container']       = false;
+    $args['container'] = false;
     $args['container_class'] = false;
-    $args['menu_id']         = false;
-    $args['items_wrap']      = '<ul class="%2$s">%3$s</ul>';
+    $args['menu_id'] = false;
+    $args['items_wrap'] = '<ul class="%2$s">%3$s</ul>';
 
     return $args;
 }
-
 add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
 
-
 /**
- * Shortcodes ([button] shortcode included)
+ * Button Shortcode
+ *
+ * @param array $atts
+ * @param string $content
+ * @return void
  */
-
-function button_shortcode($atts, $content = null)
+function barebones_button_shortcode($atts, $content = null)
 {
-    $atts['class']  = isset($atts['class']) ? $atts['class'] : 'btn';
+    $atts['class'] = isset($atts['class']) ? $atts['class'] : 'btn';
 
     return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
 }
-
-add_shortcode('button', 'button_shortcode');
-
-
+add_shortcode('button', 'barebones_button_shortcode');
 
 /**
  * TinyMCE
+ *
+ * @param array $buttons
+ * @return void
  */
-
 function barebones_mce_buttons_2($buttons)
 {
     array_unshift($buttons, 'styleselect');
@@ -120,10 +124,14 @@ function barebones_mce_buttons_2($buttons)
 
     return $buttons;
 }
-
 add_filter('mce_buttons_2', 'barebones_mce_buttons_2');
 
-
+/**
+ * TinyMCE styling
+ *
+ * @param array $settings
+ * @return void
+ */
 function barebones_tiny_mce_before_init($settings)
 {
     $style_formats = [
@@ -139,14 +147,15 @@ function barebones_tiny_mce_before_init($settings)
 
     return $settings;
 }
-
 add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
 
 /**
  * Get post thumbnail url
- * @param   string    $size    Size of the returned image
- * @param   int       $post_id post id
- * @param   boolean   $icon    if no image found, display icon
+ *
+ * @param string $size
+ * @param boolean $post_id
+ * @param boolean $icon
+ * @return void
  */
 function get_post_thumbnail_url($size = 'full', $post_id = false, $icon = false)
 {

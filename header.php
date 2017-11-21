@@ -9,7 +9,8 @@
         <link rel="dns-prefetch" href="//google-analytics.com">
 
         <style>
-            <?php /**
+            <?php
+            /**
              * For better peformance, core styles are inlined
              */
             echo file_get_contents(sprintf('%s/css/core.min.css', get_stylesheet_directory())); ?>
