@@ -15,7 +15,7 @@
              */
             echo file_get_contents(sprintf('%s/css/core.min.css', get_stylesheet_directory())); ?>
         </style>
-        <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_url') . '?' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_url') . '?' . filemtime(get_stylesheet_directory() . '/css/styles.min.css'); ?>">
 
         <?php wp_head(); ?>
         <!--[if lt IE 10]>
