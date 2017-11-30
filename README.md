@@ -54,35 +54,22 @@ Install Dependencies, you have haven't done yet:
 
 Then run:
 
-    gulp
-
-*to compile*
-
-    gulp watch
-
-*to watch*
-
-    gulp images
-
-*to optimise images*
-
-    gulp styles
-
-*to compile styles*
-
-    gulp scripts
-
-*to compile scripts*
-
-    gulp build
-
-*to create a build (minification, removes map files and comments)*
+| Tasks          |                                                                    |
+|----------------|--------------------------------------------------------------------|
+| `gulp`         | *to compile* (All tasks)                                           |
+| `gulp watch`   | *to watch*                                                         |
+| `gulp images`  | *to optimise images*                                               |
+| `gulp styles`  | *to compile styles*                                                |
+| `gulp scripts` | *to compile scripts*                                               |
+| `gulp build`   | *to create a build (minification, removes map files and comments)* |
 
 This will execute all the Gulp tasks on the gulpfile.babel.js.
 
 ### Configuration for Gulp
 
 Some of the configuration can be done in `config.barebones.js` file, such as base source and public paths, along with scripts file paths for multiple bundles.
+
+Of course, feel free to modify gulpfile itself.
 
 ### Images
 
