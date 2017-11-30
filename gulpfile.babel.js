@@ -59,7 +59,7 @@ gulp.task('clean', () => (
 ));
 
 gulp.task('styles', () => (
-  gulp.src(config.styles)
+  gulp.src(`${config.base.src}/styles/*.scss`)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(sass({
       outputStyle: production ? 'compressed' : 'nested',

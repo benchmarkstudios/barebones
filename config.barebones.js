@@ -31,11 +31,4 @@ export default {
   scripts: [
     '/js/scripts.js',
   ],
-
-  /**
-   * Styles
-   */
-  styles: [
-    `${config.src}/styles/*.scss`,
-  ],
 };
