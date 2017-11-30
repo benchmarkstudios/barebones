@@ -34,7 +34,7 @@ const config = {
 /**
  * Tasks - in order
  */
-const tasks = ['styles', 'scripts', 'images'];
+const tasks = ['clean', 'styles', 'scripts', 'images'];
 
 /**
  * Notification
@@ -52,16 +52,16 @@ function notification(message = '', status = 'success') {
 }
 
 /**
- * Styles
+ * Clean
  */
-gulp.task('clean-styles', () => (
-  gulp.src(`${config.public}/css`, {
+gulp.task('clean', () => (
+  gulp.src([`${config.public}/css`, `${config.public}/js`], {
     read: false,
   })
     .pipe(clean())
 ));
 
-gulp.task('styles', ['clean-styles'], () => (
+gulp.task('styles', () => (
   gulp.src([`${config.src}/styles/*.scss`])
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(sass({
@@ -81,17 +81,7 @@ gulp.task('styles', ['clean-styles'], () => (
     .pipe(gulp.dest(`${config.public}/css`))
 ));
 
-/**
- * Scripts
- */
-gulp.task('clean-scripts', () => (
-  gulp.src(`${config.public}/js`, {
-    read: false,
-  })
-    .pipe(clean())
-));
-
-gulp.task('scripts', ['clean-scripts'], () => {
+gulp.task('scripts', () => {
   let env = 'development';
   if (production) {
     env = 'production';
