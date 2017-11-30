@@ -80,6 +80,10 @@ Then run:
 
 This will execute all the Gulp tasks on the gulpfile.babel.js.
 
+### Configuration for Gulp
+
+Some of the configuration can be done in `config.barebones.js` file, such as base source and public paths, along with scripts file paths for multiple bundles.
+
 ### Images
 
 Drop all your images into assets/images. When running gulp tasks, they will be automatically
@@ -99,7 +103,7 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 
 ## Tips & Tricks
 
-### SVG Fallbacks 
+### SVG Fallbacks
 
 Most likely if you need to support IE8
 

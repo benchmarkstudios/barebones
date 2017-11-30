@@ -26,7 +26,7 @@ export default {
   /**
    * Scripts
    *
-   * Add path cotinuing after 'config.src'
+   * Add path continuing after 'config.src'
    */
   scripts: [
     '/js/scripts.js',
