@@ -19,17 +19,14 @@ import notify from 'gulp-notify';
 import runSequence from 'run-sequence';
 import path from 'path';
 
+/**
+ * Barebones config
+ */
+import config from './config.barebones';
+
 const { log } = console;
 let production = false;
 let error = false;
-
-/**
- * Config
- */
-const config = {
-  src: './assets',
-  public: './',
-};
 
 /**
  * Tasks - in order
@@ -55,14 +52,14 @@ function notification(message = '', status = 'success') {
  * Clean
  */
 gulp.task('clean', () => (
-  gulp.src([`${config.public}/css`, `${config.public}/js`], {
+  gulp.src([`${config.base.public}/css`, `${config.base.public}/js`], {
     read: false,
   })
     .pipe(clean())
 ));
 
 gulp.task('styles', () => (
-  gulp.src([`${config.src}/styles/*.scss`])
+  gulp.src(config.styles)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(sass({
       outputStyle: production ? 'compressed' : 'nested',
@@ -78,7 +75,7 @@ gulp.task('styles', () => (
       suffix: '.min',
     }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
-    .pipe(gulp.dest(`${config.public}/css`))
+    .pipe(gulp.dest(`${config.base.public}/css`))
 ));
 
 gulp.task('scripts', () => {
@@ -88,7 +85,7 @@ gulp.task('scripts', () => {
   }
 
   rollup({
-    entry: `${config.src}/scripts/scripts.js`,
+    entry: `${config.base.src}/scripts/scripts.js`,
     plugins: [
       multiEntry(),
       buble(),
@@ -100,7 +97,7 @@ gulp.task('scripts', () => {
       commonjs({
         include: [
           'node_modules/**',
-          `${config.src}/**`,
+          `${config.base.src}/**`,
         ],
       }),
       json(),
@@ -114,7 +111,7 @@ gulp.task('scripts', () => {
       format: 'iife',
       moduleName: 'BarebonesBundle',
       sourceMap: !production,
-      dest: `${config.public}/js/script.min.js`,
+      dest: `${config.base.public}/js/script.min.js`,
     });
   }).catch((err) => {
     notification('Failed to compile scripts. 😱', 'error');
@@ -127,9 +124,9 @@ gulp.task('scripts', () => {
  * Watch
  */
 gulp.task('watch-files', tasks, () => {
-  gulp.watch(`${config.src}/styles/**/*.scss`, ['styles']);
-  gulp.watch(`${config.src}/scripts/**/*.js`, ['scripts']);
-  gulp.watch(`${config.src}/images/**/*.*`, ['images']);
+  gulp.watch(`${config.base.src}/styles/**/*.scss`, ['styles']);
+  gulp.watch(`${config.base.src}/scripts/**/*.js`, ['scripts']);
+  gulp.watch(`${config.base.src}/images/**/*.*`, ['images']);
 });
 
 /**
@@ -137,14 +134,14 @@ gulp.task('watch-files', tasks, () => {
  */
 gulp.task('images', () => {
   // hadle all images that are not svg
-  gulp.src(`${config.src}/images/**/*.*`)
+  gulp.src(`${config.base.src}/images/**/*.*`)
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
         removeViewBox: false,
       }],
     }))
-    .pipe(gulp.dest(`${config.public}/img`));
+    .pipe(gulp.dest(`${config.base.public}/img`));
 });
 
 /**
