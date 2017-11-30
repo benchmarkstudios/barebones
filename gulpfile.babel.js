@@ -31,7 +31,7 @@ let error = false;
 /**
  * Tasks - in order
  */
-const tasks = ['clean', 'styles', 'scripts', 'images'];
+const tasks = ['styles', 'scripts', 'images'];
 
 /**
  * Notification
@@ -78,14 +78,14 @@ gulp.task('styles', () => (
     .pipe(gulp.dest(`${config.base.public}/css`))
 ));
 
-gulp.task('scripts', () => {
+const roll = (entry, dest) => {
   let env = 'development';
   if (production) {
     env = 'production';
   }
 
-  rollup({
-    entry: `${config.base.src}/scripts/scripts.js`,
+  return rollup({
+    entry,
     plugins: [
       multiEntry(),
       buble(),
@@ -111,13 +111,26 @@ gulp.task('scripts', () => {
       format: 'iife',
       moduleName: 'BarebonesBundle',
       sourceMap: !production,
-      dest: `${config.base.public}/js/script.min.js`,
+      dest,
     });
   }).catch((err) => {
     notification('Failed to compile scripts. 😱', 'error');
     log(err.stack);
     error = true;
   });
+};
+
+gulp.task('scripts', (cb) => {
+  if (config.scripts.length) {
+    config.scripts.forEach((filePath) => {
+      const formattedPath = filePath.replace(/^\/|\/$/g, ''); // remove leading forward slash
+      const entry = `${config.base.src}/${formattedPath}`;
+      const dest = `${config.base.public}/${formattedPath.replace('.js', '.min.js')}`;
+      // regex to remove duplicate forward slashes
+      roll(entry.replace(/([^:]\/)\/+/g, '$1'), dest.replace(/([^:]\/)\/+/g, '$1'));
+    });
+  }
+  cb();
 });
 
 /**
@@ -132,7 +145,7 @@ gulp.task('watch-files', tasks, () => {
 /**
  * Images
  */
-gulp.task('images', () => {
+gulp.task('images', (cb) => {
   // hadle all images that are not svg
   gulp.src(`${config.base.src}/images/**/*.*`)
     .pipe(imagemin({
@@ -141,29 +154,41 @@ gulp.task('images', () => {
         removeViewBox: false,
       }],
     }))
-    .pipe(gulp.dest(`${config.base.public}/img`));
+    .pipe(gulp.dest(`${config.base.public}/img`))
+    .on('end', () => cb());
 });
 
 /**
  * Main Tasks
  */
-gulp.task('watch', () => (
-  runSequence(tasks, 'watch-files', () => {
-    if (!error) {
-      notification('Watching files... 👀');
-    }
+gulp.task('watch', cb => (
+  runSequence('clean', () => {
+    runSequence(tasks, 'watch-files', () => {
+      if (!error) {
+        notification('Watching files... 👀');
+      }
+      cb();
+    });
   })
 ));
 
-gulp.task('build', () => {
+gulp.task('build', (cb) => {
   production = true;
-  runSequence(tasks, () => {
-    if (!error) {
-      notification('Build complete! 🍻');
-    }
+
+  runSequence('clean', () => {
+    runSequence(tasks, () => {
+      if (!error) {
+        notification('Build complete! 🍻');
+        cb();
+      }
+    });
   });
 });
 
-gulp.task('default', () => (
-  runSequence(tasks)
+gulp.task('default', cb => (
+  runSequence('clean', () => {
+    runSequence(tasks, () => {
+      cb();
+    });
+  })
 ));

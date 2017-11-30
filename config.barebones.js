@@ -1,8 +1,8 @@
 /**
  * Base config
  *
- * src - main assets folder
- * public - folder where assets should be compiled
+ * @param src - Main assets folder
+ * @param public - Folder where assets should be compiled
  */
 const config = {
   src: './assets',
@@ -14,8 +14,8 @@ const config = {
  *
  * For scripts and styles, each file will be a separate bundle
  *
- * base - base configuration
- * scripts - array of script files to create bundles from
+ * @param base - Base configuration
+ * @param scripts - Array of script files to create bundles from
  */
 export default {
   /**
@@ -25,9 +25,11 @@ export default {
 
   /**
    * Scripts
+   *
+   * Add path cotinuing after 'config.src'
    */
   scripts: [
-    `${config.src}/scripts/scripts.js`,
+    '/js/scripts.js',
   ],
 
   /**
