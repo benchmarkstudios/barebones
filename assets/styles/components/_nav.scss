@@ -37,18 +37,20 @@
 
 // applies to all navs
 .nav {
-  list-style: none;
-  margin: 0;
+  ul {
+    list-style: none;
+    margin: 0;
 
-  > li {
-    display: inline-block;
-    margin-right: $base-spacing-unit;
+    > li {
+      display: inline-block;
+      margin-right: $base-spacing-unit;
 
-    &:last-child {
-        margin-right: 0;
-    }
-    > a {
-        display: block;
+      &:last-child {
+          margin-right: 0;
+      }
+      > a {
+          display: block;
+      }
     }
   }
 }

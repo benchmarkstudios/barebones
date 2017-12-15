@@ -41,8 +41,8 @@
                     <span class="nav-burger__line"></span>
                     <span class="nav-burger__line"></span>
                 </a>
-                <nav role="navigation">
-                    <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
+                <nav role="navigation" class="nav nav--header">
+                    <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav__list']); ?>
                 </nav>
             </div>
         </header>
