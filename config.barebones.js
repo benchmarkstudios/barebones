@@ -1,15 +1,4 @@
 /**
- * Base config
- *
- * @param src - Main assets folder
- * @param public - Folder where assets should be compiled
- */
-const config = {
-  src: './assets',
-  public: './',
-};
-
-/**
  * Export configuration that is used in gulpfile
  *
  * For scripts and styles, each file will be a separate bundle
@@ -21,7 +10,10 @@ export default {
   /**
    * Base
    */
-  base: config,
+  base: {
+    src: './assets',
+    public: './',
+  },
 
   /**
    * Scripts
@@ -30,5 +22,14 @@ export default {
    */
   scripts: [
     '/js/scripts.js',
+  ],
+
+  /**
+   * Additional styles
+   *
+   * For external stylesheets most likely outside of assets folder
+   */
+  styles: [
+    // './example.scss', - in the root barebones folder
   ],
 };

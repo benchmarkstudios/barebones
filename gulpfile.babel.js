@@ -25,7 +25,7 @@ import path from 'path';
 import config from './config.barebones';
 
 const { log } = console;
-let production = false;
+let production = false; // = build
 let error = false;
 
 /**
@@ -58,8 +58,14 @@ gulp.task('clean', () => (
     .pipe(clean())
 ));
 
-gulp.task('styles', () => (
-  gulp.src(`${config.base.src}/styles/*.scss`)
+/**
+ * Styles
+ */
+gulp.task('styles', () => {
+  const stylesheets = config.styles;
+  stylesheets.push(`${config.base.src}/styles/*.scss`);
+
+  gulp.src(stylesheets)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(sass({
       outputStyle: production ? 'compressed' : 'nested',
@@ -75,8 +81,8 @@ gulp.task('styles', () => (
       suffix: '.min',
     }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
-    .pipe(gulp.dest(`${config.base.public}/css`))
-));
+    .pipe(gulp.dest(`${config.base.public}/css`));
+});
 
 const roll = (entry, dest) => {
   let env = 'development';
