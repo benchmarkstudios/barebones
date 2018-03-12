@@ -166,3 +166,21 @@ function get_post_thumbnail_url($size = 'full', $post_id = false, $icon = false)
     $thumb_url_array = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $size, $icon);
     return $thumb_url_array[0];
 }
+
+/**
+ * Add Front Page edit link to admin Pages menu
+ */
+function front_page_on_pages_menu() {
+  global $submenu;
+  if ( get_option( 'page_on_front' ) ) {
+    $submenu['edit.php?post_type=page'][501] = array( 
+      'Front Page', 
+      'manage_options', 
+      get_edit_post_link( get_option( 'page_on_front' ) )
+    ); 
+  }
+}
+
+add_action( 'admin_menu' , 'front_page_on_pages_menu' );
+
+add_action( 'admin_menu' , 'front_page_on_pages_menu' );
