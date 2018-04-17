@@ -3,7 +3,9 @@
 /**
  * Custom functions / External files
  */
-require_once 'includes/functions.php';
+
+require_once 'includes/custom-functions.php';
+
 
 /**
  * Add support for useful stuff
@@ -25,14 +27,18 @@ if (function_exists('add_theme_support')) {
     load_theme_textdomain('barebones', get_template_directory() . '/languages');
 }
 
+
 /**
  * Hide admin bar
  */
-add_filter('show_admin_bar', '__return_false');
+
+ add_filter('show_admin_bar', '__return_false');
+
 
 /**
  * Remove junk
  */
+
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
@@ -43,41 +49,47 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
+
 /**
  * Remove comments feed
  *
  * @return void
  */
-function barebones_post_comments_feed_link()
-{
+
+function barebones_post_comments_feed_link() {
     return;
 }
+
 add_filter('post_comments_feed_link', 'barebones_post_comments_feed_link');
+
 
 /**
  * Enqueue scripts
  */
-function barebones_enqueue_scripts()
-{
+
+function barebones_enqueue_scripts() {
     // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
     // wp_enqueue_style( 'icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js?' . filemtime(get_stylesheet_directory() . '/js/scripts.min.js'), [], null, true);
 }
+
 add_action('wp_enqueue_scripts', 'barebones_enqueue_scripts');
+
 
 /**
  * Register nav menus
  *
  * @return void
  */
-function barebones_register_nav_menus()
-{
+
+function barebones_register_nav_menus() {
     register_nav_menus([
-        'header' => __('Header', 'barebones'),
-        'footer' => __('Footer', 'barebones'),
+        'header' => 'Header'
     ]);
 }
+
 add_action('after_setup_theme', 'barebones_register_nav_menus', 0);
+
 
 /**
  * Nav menu args
@@ -85,8 +97,8 @@ add_action('after_setup_theme', 'barebones_register_nav_menus', 0);
  * @param array $args
  * @return void
  */
-function barebones_nav_menu_args($args)
-{
+
+function barebones_nav_menu_args( $args ) {
     $args['container'] = false;
     $args['container_class'] = false;
     $args['menu_id'] = false;
@@ -94,7 +106,9 @@ function barebones_nav_menu_args($args)
 
     return $args;
 }
+
 add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
+
 
 /**
  * Button Shortcode
@@ -103,13 +117,14 @@ add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
  * @param string $content
  * @return void
  */
-function barebones_button_shortcode($atts, $content = null)
-{
-    $atts['class'] = isset($atts['class']) ? $atts['class'] : 'btn';
 
+function barebones_button_shortcode( $atts, $content = null ) {
+    $atts['class'] = isset($atts['class']) ? $atts['class'] : 'btn';
     return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
 }
+
 add_shortcode('button', 'barebones_button_shortcode');
+
 
 /**
  * TinyMCE
@@ -117,14 +132,16 @@ add_shortcode('button', 'barebones_button_shortcode');
  * @param array $buttons
  * @return void
  */
-function barebones_mce_buttons_2($buttons)
-{
+
+function barebones_mce_buttons_2( $buttons ) {
     array_unshift($buttons, 'styleselect');
     $buttons[] = 'hr';
 
     return $buttons;
 }
+
 add_filter('mce_buttons_2', 'barebones_mce_buttons_2');
+
 
 /**
  * TinyMCE styling
@@ -132,8 +149,8 @@ add_filter('mce_buttons_2', 'barebones_mce_buttons_2');
  * @param array $settings
  * @return void
  */
-function barebones_tiny_mce_before_init($settings)
-{
+
+function barebones_tiny_mce_before_init( $settings ) {
     $style_formats = [
         // [
         //     'title'    => '',
@@ -147,7 +164,9 @@ function barebones_tiny_mce_before_init($settings)
 
     return $settings;
 }
+
 add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
+
 
 /**
  * Get post thumbnail url
@@ -157,30 +176,32 @@ add_filter('tiny_mce_before_init', 'barebones_tiny_mce_before_init');
  * @param boolean $icon
  * @return void
  */
-function get_post_thumbnail_url($size = 'full', $post_id = false, $icon = false)
-{
-    if (!$post_id) {
+
+function get_post_thumbnail_url( $size = 'full', $post_id = false, $icon = false ) {
+    if ( ! $post_id ) {
         $post_id = get_the_ID();
     }
 
-    $thumb_url_array = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $size, $icon);
+    $thumb_url_array = wp_get_attachment_image_src(
+        get_post_thumbnail_id( $post_id ), $size, $icon
+    );
     return $thumb_url_array[0];
 }
+
 
 /**
  * Add Front Page edit link to admin Pages menu
  */
-function front_page_on_pages_menu() {
-  global $submenu;
-  if ( get_option( 'page_on_front' ) ) {
-    $submenu['edit.php?post_type=page'][501] = array( 
-      'Front Page', 
-      'manage_options', 
-      get_edit_post_link( get_option( 'page_on_front' ) )
-    ); 
-  }
-}
 
-add_action( 'admin_menu' , 'front_page_on_pages_menu' );
+function front_page_on_pages_menu() {
+    global $submenu;
+    if ( get_option( 'page_on_front' ) ) {
+        $submenu['edit.php?post_type=page'][501] = array( 
+            'Front Page', 
+            'manage_options', 
+            get_edit_post_link( get_option( 'page_on_front' ) )
+        ); 
+    }
+}
 
 add_action( 'admin_menu' , 'front_page_on_pages_menu' );
