@@ -130,8 +130,8 @@ gulp.task('scripts', (cb) => {
   if (config.scripts.length) {
     config.scripts.forEach((filePath) => {
       const formattedPath = filePath.replace(/^\/|\/$/g, ''); // remove leading forward slash
-      const entry = `${config.base.src}/${formattedPath}`;
-      const dest = `${config.base.public}/${formattedPath.replace('.js', '.min.js')}`;
+      const entry = `${config.base.src}/scripts/${formattedPath}`;
+      const dest = `${config.base.public}/js/${formattedPath.replace('.js', '.min.js')}`;
       // regex to remove duplicate forward slashes
       roll(entry.replace(/([^:]\/)\/+/g, '$1'), dest.replace(/([^:]\/)\/+/g, '$1'));
     });
