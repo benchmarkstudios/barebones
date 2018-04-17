@@ -1,21 +1,34 @@
-/**
-*
-* Styles, containing "less" important layouts, components and pages
-*
-**/
+@charset 'UTF-8';
 
+// 1. Configuration
 @import 'config/variables';
 @import 'config/mixins';
 
-// Layout-related sections
+// 2. Vendors
+@import 'vendor/simple-grid/simple-grid';
+
+// 3. Utilities
+@import 'utils/reset';
+@import 'utils/responsive';
+@import 'utils/helpers';
+
+// 4. Base stuff
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/images';
+@import 'base/forms';
+@import 'base/lists';
+@import 'base/typography';
+
+// 5. Layout-related sections
 @import 'layout/main';
 @import 'layout/header';
 @import 'layout/footer';
 
-// Components
+// 6 .Components
 @import 'components/buttons';
 @import 'components/nav';
 @import 'components/alerts';
 
-// Page-specific styles
+// 7. Page-specific styles
 @import 'pages/home';
