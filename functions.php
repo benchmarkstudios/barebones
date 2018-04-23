@@ -156,6 +156,21 @@ function barebones_tiny_mce_before_init( $settings ) {
         //     'title'    => '',
         //     'selector' => '',
         //     'classes'  => ''
+        // ],
+        // [
+        //     'title' => 'Buttons',
+        //     'items' => [
+        //         [
+        //             'title'    => 'Primary',
+        //             'selector' => 'a',
+        //             'classes'  => 'btn btn--primary'
+        //         ],
+        //         [
+        //             'title'    => 'Secondary',
+        //             'selector' => 'a',
+        //             'classes'  => 'btn btn--secondary'
+        //         ]
+        //     ]
         // ]
     ];
 
