@@ -1,30 +1,52 @@
 {
   "name": "barebones",
-  "version": "2.0.6",
+  "version": "3.0.0",
   "author": "Benchmark Studios",
   "description": "A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond",
-  "license": "MIT",
-  "homepage": "https://github.com/benchmarkstudios/barebones#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/benchmarkstudios/barebones.git"
-  },
-  "bugs": {
-    "url": "https://github.com/benchmarkstudios/barebones/issues"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
-  "devDependencies": {
-    "fs": "^0.0.2",
-    "gulp": "^3.8.8",
-    "gulp-imagemin": "^3.0.1",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-svgo": "^5.2.0",
-    "laravel-elixir": "^4.2.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benchmarkstudios/barebones.git"
   },
-  "dependencies": {}
+  "keywords": [
+    "barebones",
+    "boilerplate",
+    "wordpress"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benchmarkstudios/barebones/issues"
+  },
+  "homepage": "https://github.com/benchmarkstudios/barebones#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "rollup": "^0.42.0",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-multi-entry": "^2.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.2.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "run-sequence": "^1.2.2",
+    "uglify-js": "^3.1.10"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
 }

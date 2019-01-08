@@ -5,17 +5,18 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 ## Features
 
 * Reset, normalisation and base font/form styles
-* Sass Boilerplate - semantically named files, organised by folders, all compiled into a single file
+* Scss Boilerplate - semantically named files, organised by folders, all compiled into a single file
 * Semantic use of HTML5 elements, includes Google HTML5 shiv
 * WAI-ARIA role ready
-* Comes pre-bundled with cached CDN version of jQuery
 * jQuery plugin agnostic
-* Laravel Elixir to define/customize and run basic Gulp tasks
 * Basic template files
 * Customised functions.php adding theme support for high customisation
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
-* Sass compiling and watching, css minification and live reload support
+* Scss compiling and watching, css minification support
+* Rollup.js for js for smallest possible bundles
+* Image optimisation using imagemin.
+* Base mobile nav out of the box
 
 ## Installation
 
@@ -31,38 +32,49 @@ To include all its optional submodules ([Simple Grid](https://github.com/benchma
 
 #### Dependencies
 
-* [Node.js](http://nodejs.org)
-* [Gulp](http://gulpjs.com)
-* [Gulp Imagemin](https://github.com/sindresorhus/gulp-imagemin)
-* [Laravel Elixir](https://github.com/laravel/elixir)
+Install Dependencies:
+```
+  npm install
+```
 
-### Using Gulp and Laravel Elixir
+.. or with yarn:
+```
+  yarn
+```
+
+### Using Gulp
 
 Install Gulp as a global NPM package, if you don't have it already on your machine:
 
     npm install --global gulp
 
-Install Laravel Elixir:
+Install Dependencies, you have haven't done yet:
 
     npm install
 
-Edit your gulpfile.js adding the required tasks (check the [Laravel Elixir](http://laravel.com/docs/master/elixir) documentation for further information).
-
 Then run:
 
-    gulp
+| Tasks          |                                                                    |
+|----------------|--------------------------------------------------------------------|
+| `gulp`         | *to compile* (All tasks)                                           |
+| `gulp watch`   | *to watch*                                                         |
+| `gulp images`  | *to optimise images*                                               |
+| `gulp styles`  | *to compile styles*                                                |
+| `gulp scripts` | *to compile scripts*                                               |
+| `gulp build`   | *to create a build (minification, removes map files and comments)* |
 
-*to compile*
+This will execute all the Gulp tasks on the gulpfile.babel.js.
 
-    gulp watch
+### Configuration for Gulp
 
-*to watch*
+Some of the configuration can be done in `config.barebones.js` file, such as base source and public paths, along with scripts file paths for multiple bundles.
 
-    gulp --production
+Of course, feel free to modify gulpfile itself.
 
-*to minify*
+### Images
 
-This will execute all the Gulp tasks on the gulpfile.js.
+Drop all your images into assets/images. When running gulp tasks, they will be automatically
+optimised and output files will available in img folder in the root of the theme.
 
 ## WordPress Support
 
@@ -75,3 +87,23 @@ Compatible with WordPress 3.2 and above, but always use the latest version.
 * Safari 4.0+
 * Chrome 14.0+
 * Opera 10.0+
+
+## Tips & Tricks
+
+### SVG Fallbacks
+
+Most likely if you need to support IE8
+
+*CSS*
+```
+...
+background-size: 120px 15px;
+background-image: url(/img/fallback.png);
+background-image: linear-gradient(transparent, transparent), url(/img/image.svg);
+...
+```
+
+*HTML*
+```
+<img src="/img/logo.svg" onerror="this.src='/img/logo.png'" alt="image" />
+```

@@ -1,0 +1,35 @@
+/**
+ * Space between columns
+ */
+
+$grid-gutter: 20px !default;
+
+
+/**
+ * Max width of container
+ */
+
+$grid-max-width: 1200px + ($grid-gutter * 2) !default;
+
+
+/**
+ * Number of total columns
+ */
+
+$grid-columns: 12 !default;
+
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-lg: 1200px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-sm: 480px !default;
+
+$breakpoints: (
+    'lg' '(min-width: ' + $breakpoint-lg + ')',
+    'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
+    'sm' '(max-width:'  + ($breakpoint-md - 1) + ')',
+    'xs' '(max-width: ' + $breakpoint-sm + ')'
+) !default;

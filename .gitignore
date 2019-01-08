@@ -1,9 +1,9 @@
+.DS_Store
 npm-debug.log
 .sass-cache
 node_modules
-bower_components
 assets/sass/vendor
-tests
 package-lock.json
 *.map
 **/*.map
+yarn.lock
