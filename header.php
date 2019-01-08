@@ -24,7 +24,7 @@
             <div class="container">
                 <a href="<?php bloginfo('url'); ?>" class="header__logo">
                     <?php echo is_front_page() ? '<h1>' : ''; ?>
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg" onerror="this.src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.png'" alt="<?php bloginfo('title'); ?>" />
+                        <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
                     <?php echo is_front_page() ? '</h1>' : ''; ?>
                 </a>
                 <a href="#" class="nav-burger js-menu-toggle">

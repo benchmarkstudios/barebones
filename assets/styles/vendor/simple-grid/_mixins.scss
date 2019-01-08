@@ -7,6 +7,12 @@
         @if $i != 0 {
             .col--#{$name}-#{$i} {
                 width: percentage($i/$grid-columns);
+                .row--flex & {
+                    flex-basis: percentage($i/$grid-columns);
+                    max-width: percentage($i/$grid-columns);
+                    width: auto;
+                    float: none;
+                }
             }
         }
         .col--#{$name}-offset-#{$i} {
