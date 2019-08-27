@@ -35,10 +35,10 @@ $breakpoint-sm: 768px;
 $breakpoint-xs: 480px;
 
 $breakpoints: (
-    'lg' '(min-width: ' + $breakpoint-lg + ')',
-    'md' '(min-width: ' + $breakpoint-md + ') and (max-width: ' + ($breakpoint-lg - 1) + ')',
-    'sm' '(max-width:'  + ($breakpoint-md - 1) + ')',
-    'xs' '(max-width: ' + $breakpoint-sm + ')'
+    'lg' '(min-width: ' + ($breakpoint-md + 1) + ')',
+    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs' '(max-width: ' + $breakpoint-xs + ')'
 );
 
 
