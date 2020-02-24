@@ -78,6 +78,32 @@ add_action( 'wp_enqueue_scripts', 'barebones_enqueue_scripts' );
 
 
 /**
+ * Remove unnecessary scripts
+ *
+ * @return void
+ */
+
+function deregister_scripts() {
+    wp_deregister_script( 'wp-embed' );
+}
+
+add_action( 'wp_footer', 'deregister_scripts' );
+
+
+/**
+ * Remove unnecessary styles
+ *
+ * @return void
+ */
+
+function deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
+
+add_action( 'wp_print_styles', 'deregister_styles', 100 );
+
+
+/**
  * Register nav menus
  *
  * @return void
