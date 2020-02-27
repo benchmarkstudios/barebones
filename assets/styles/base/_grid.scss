@@ -12,7 +12,7 @@
         @media only screen and #{$declaration} {
             @for $i from 1 through 6 {
                 &.grid--#{$name}-#{$i}x {
-                    grid-template-columns: repeat(#{$i}, 1fr);
+                    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
                 }
             }
         }
