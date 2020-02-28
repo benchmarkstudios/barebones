@@ -113,7 +113,7 @@ add_filter( 'script_loader_tag', 'defer_scripts', 10, 3 );
 function add_gtag_to_head() {
 
     // Check is staging environment
-    if ( strpos( get_bloginfo( 'url' ), '.test' ) !== false ) return
+    if ( strpos( get_bloginfo( 'url' ), '.test' ) !== false ) return;
 
     // Google Analytics
     $tracking_code = 'UA-*********-1';
