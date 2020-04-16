@@ -1,3 +1,3 @@
 [submodule "assets/styles/vendor/simple-flex"]
 	path = assets/styles/vendor/simple-flex
-	url = https://github.com/benchmarkstudios/simple-grid.flex
+	url = https://github.com/benchmarkstudios/simple-flex.git
