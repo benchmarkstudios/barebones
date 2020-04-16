@@ -16,7 +16,7 @@ import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-js';
 import imagemin from 'gulp-imagemin';
 import notify from 'gulp-notify';
-import runSequence from 'run-sequence';
+import runSequence from 'gulp4-run-sequence';
 import path from 'path';
 
 /**
@@ -54,6 +54,7 @@ function notification(message = '', status = 'success') {
 gulp.task('clean', () => (
   gulp.src([`${config.base.public}/css`, `${config.base.public}/js`], {
     read: false,
+    allowEmpty: true
   })
     .pipe(clean())
 ));
@@ -61,7 +62,7 @@ gulp.task('clean', () => (
 /**
  * Styles
  */
-gulp.task('styles', () => {
+gulp.task('styles', (cb) => {
   const stylesheets = config.styles;
   stylesheets.push(`${config.base.src}/styles/*.scss`);
 
@@ -82,6 +83,7 @@ gulp.task('styles', () => {
     }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
     .pipe(gulp.dest(`${config.base.public}/css`));
+  cb();
 });
 
 const roll = (entry, dest) => {
@@ -140,15 +142,6 @@ gulp.task('scripts', (cb) => {
 });
 
 /**
- * Watch
- */
-gulp.task('watch-files', tasks, () => {
-  gulp.watch(`${config.base.src}/styles/**/*.scss`, ['styles']);
-  gulp.watch(`${config.base.src}/scripts/**/*.js`, ['scripts']);
-  gulp.watch(`${config.base.src}/images/**/*.*`, ['images']);
-});
-
-/**
  * Images
  */
 gulp.task('images', (cb) => {
@@ -163,6 +156,15 @@ gulp.task('images', (cb) => {
     .pipe(gulp.dest(`${config.base.public}/img`))
     .on('end', () => cb());
 });
+
+/**
+ * Watch
+ */
+gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', () => {
+  gulp.watch(`${config.base.src}/styles/**/*.scss`, ['styles']);
+  gulp.watch(`${config.base.src}/scripts/**/*.js`, ['scripts']);
+  gulp.watch(`${config.base.src}/images/**/*.*`, ['images']);
+}));
 
 /**
  * Main Tasks
