@@ -161,9 +161,9 @@ gulp.task('images', (cb) => {
  * Watch
  */
 gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', () => {
-  gulp.watch(`${config.base.src}/styles/**/*.scss`, ['styles']);
-  gulp.watch(`${config.base.src}/scripts/**/*.js`, ['scripts']);
-  gulp.watch(`${config.base.src}/images/**/*.*`, ['images']);
+  gulp.watch(`${config.base.src}/styles/**/*.scss`, gulp.series('styles'));
+  gulp.watch(`${config.base.src}/scripts/**/*.js`, gulp.series('scripts'));
+  gulp.watch(`${config.base.src}/images/**/*.*`, gulp.series('images'));
 }));
 
 /**
