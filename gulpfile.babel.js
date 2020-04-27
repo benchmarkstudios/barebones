@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import clean from 'gulp-clean';
 import sass from 'gulp-sass';
 import gulpif from 'gulp-if';
-import rename from 'gulp-rename';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import { rollup } from 'rollup';
@@ -52,11 +51,11 @@ function notification(message = '', status = 'success') {
  * Clean
  */
 gulp.task('clean', () => (
-  gulp.src([`${config.base.public}/css`, `${config.base.public}/js`], {
+  gulp.src([`${config.base.public}/js`], {
     read: false,
     allowEmpty: true
   })
-    .pipe(clean())
+  .pipe(clean())
 ));
 
 /**
@@ -78,11 +77,8 @@ gulp.task('styles', (cb) => {
     .pipe(autoprefixer({
       browsers: ['last 10 versions'],
     }))
-    .pipe(rename({
-      suffix: '.min',
-    }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
-    .pipe(gulp.dest(`${config.base.public}/css`));
+    .pipe(gulp.dest(`${config.base.public}`));
   cb();
 });
 
