@@ -51,7 +51,7 @@ function notification(message = '', status = 'success') {
  * Clean
  */
 gulp.task('clean', () => (
-  gulp.src([`${config.base.public}`, `${config.base.public}/js`], {
+  gulp.src([`${config.base.public}/js`], {
     read: false,
   })
   .pipe(clean())
