@@ -17,6 +17,7 @@ import imagemin from 'gulp-imagemin';
 import notify from 'gulp-notify';
 import runSequence from 'gulp4-run-sequence';
 import path from 'path';
+import svgSprite from 'gulp-svg-sprite';
 
 /**
  * Barebones config
@@ -30,7 +31,7 @@ let error = false;
 /**
  * Tasks - in order
  */
-const tasks = ['styles', 'scripts', 'images'];
+const tasks = ['styles', 'scripts', 'images', 'svgs'];
 
 /**
  * Notification
@@ -153,13 +154,36 @@ gulp.task('images', (cb) => {
     .on('end', () => cb());
 });
 
+/** 
+ * SVGs
+ */
+gulp.task('svgs', (cb) => {
+  gulp.src(`${config.base.src}/svgs/*.svg`)
+    .pipe(svgSprite({
+      mode: {
+        symbol: { // symbol mode to build the SVG
+          render: {
+            css: false, // CSS output option for icon sizing
+            scss: false // SCSS output option for icon sizing
+          },
+          dest: '.', // destination folder
+          prefix: '.svg--%s', // BEM-style prefix if styles rendered
+          sprite: 'feather-sprite.svg', //generated sprite name
+        }
+      }
+    }))
+    .pipe(gulp.dest(`${config.base.public}/img`))
+    .on('end', () => cb());
+});
+
 /**
  * Watch
  */
-gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', () => {
+gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', 'svgs', () => {
   gulp.watch(`${config.base.src}/styles/**/*.scss`, gulp.series('styles'));
   gulp.watch(`${config.base.src}/scripts/**/*.js`, gulp.series('scripts'));
   gulp.watch(`${config.base.src}/images/**/*.*`, gulp.series('images'));
+  gulp.watch(`${config.base.src}/svgs/*.svg`, gulp.series('svgs'));
 }));
 
 /**
