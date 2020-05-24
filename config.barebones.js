@@ -7,6 +7,12 @@
  * @param scripts - Array of script files to create bundles from
  */
 export default {
+  
+  /** 
+   * Settings
+   */
+  url: 'browsersync.test',
+
   /**
    * Base
    */

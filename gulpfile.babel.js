@@ -18,6 +18,7 @@ import notify from 'gulp-notify';
 import runSequence from 'gulp4-run-sequence';
 import path from 'path';
 import svgSprite from 'gulp-svg-sprite';
+import browserSync from 'browser-sync';
 
 /**
  * Barebones config
@@ -79,7 +80,8 @@ gulp.task('styles', (cb) => {
       browsers: ['last 10 versions'],
     }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
-    .pipe(gulp.dest(`${config.base.public}`));
+    .pipe(gulp.dest(`${config.base.public}`))
+    .pipe(browserSync.stream());
   cb();
 });
 
@@ -132,7 +134,12 @@ gulp.task('scripts', (cb) => {
       const entry = `${config.base.src}/scripts/${formattedPath}`;
       const dest = `${config.base.public}/js/${formattedPath.replace('.js', '.min.js')}`;
       // regex to remove duplicate forward slashes
-      roll(entry.replace(/([^:]\/)\/+/g, '$1'), dest.replace(/([^:]\/)\/+/g, '$1'));
+      roll(
+          entry.replace(/([^:]\/)\/+/g, '$1'), 
+          dest.replace(/([^:]\/)\/+/g, '$1')
+        )
+
+      browserSync.reload();
     });
   }
   cb();
@@ -180,10 +187,18 @@ gulp.task('svgs', (cb) => {
  * Watch
  */
 gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', 'svgs', () => {
+
+  browserSync.init({
+    proxy: config.url,
+		host: config.url,
+		open: 'external',
+  });
+
   gulp.watch(`${config.base.src}/styles/**/*.scss`, gulp.series('styles'));
   gulp.watch(`${config.base.src}/scripts/**/*.js`, gulp.series('scripts'));
   gulp.watch(`${config.base.src}/images/**/*.*`, gulp.series('images'));
   gulp.watch(`${config.base.src}/svgs/*.svg`, gulp.series('svgs'));
+  gulp.watch('./**/*.php').on('change', browserSync.reload);
 }));
 
 /**
