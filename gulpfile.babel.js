@@ -64,8 +64,8 @@ gulp.task('clean', () => (
  * Styles
  */
 gulp.task('styles', (cb) => {
-  const stylesheets = config.styles;
-  stylesheets.push(`${config.base.src}/styles/*.scss`);
+  const stylesheets = config.styles
+  stylesheets.push(`${config.base.src}/styles/*.scss`)
 
   gulp.src(stylesheets)
     .pipe(gulpif(!production, sourcemaps.init()))
@@ -81,8 +81,10 @@ gulp.task('styles', (cb) => {
     }))
     .pipe(gulpif(!production, sourcemaps.write('.')))
     .pipe(gulp.dest(`${config.base.public}`))
-    .pipe(browserSync.stream());
-  cb();
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+  cb()
 });
 
 const roll = (entry, dest) => {
@@ -138,9 +140,10 @@ gulp.task('scripts', (cb) => {
           entry.replace(/([^:]\/)\/+/g, '$1'), 
           dest.replace(/([^:]\/)\/+/g, '$1')
         )
-
-      browserSync.reload();
-    });
+      })
+      browserSync.reload({
+        stream: true
+      })
   }
   cb();
 });
@@ -168,7 +171,7 @@ gulp.task('svgs', (cb) => {
   gulp.src(`${config.base.src}/svgs/*.svg`)
     .pipe(svgSprite({
       mode: {
-        symbol: { // symbol mode to build the SVG
+        symbol: {
           render: {
             css: false, // CSS output option for icon sizing
             scss: false // SCSS output option for icon sizing
@@ -184,21 +187,29 @@ gulp.task('svgs', (cb) => {
 });
 
 /**
+ * PHP
+ */
+gulp.task('php', (cb) => {
+  browserSync.reload()
+  cb()
+})
+
+/**
  * Watch
  */
-gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', 'svgs', () => {
+gulp.task('watch-files', gulp.series('styles', 'scripts', 'images', 'svgs', 'php', () => {
 
   browserSync.init({
-    proxy: config.url,
-		host: config.url,
-		open: 'external',
+    proxy: config.settings.url,
+		host: config.settings.url,
+    open: 'external'
   });
 
   gulp.watch(`${config.base.src}/styles/**/*.scss`, gulp.series('styles'));
   gulp.watch(`${config.base.src}/scripts/**/*.js`, gulp.series('scripts'));
   gulp.watch(`${config.base.src}/images/**/*.*`, gulp.series('images'));
   gulp.watch(`${config.base.src}/svgs/*.svg`, gulp.series('svgs'));
-  gulp.watch('./**/*.php').on('change', browserSync.reload);
+  gulp.watch('./**/*.php', gulp.series('php'));
 }));
 
 /**
