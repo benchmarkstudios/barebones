@@ -11,7 +11,9 @@ export default {
   /** 
    * Settings
    */
-  url: 'browsersync.test',
+  settings: {
+    url: 'browsersync.test'
+  },
 
   /**
    * Base
