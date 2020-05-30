@@ -141,11 +141,10 @@ gulp.task('scripts', (cb) => {
           dest.replace(/([^:]\/)\/+/g, '$1')
         )
       })
-      browserSync.reload({
-        stream: true
-      })
   }
-  cb();
+  
+  browserSync.reload()
+  cb()
 });
 
 /**
