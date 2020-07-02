@@ -1,0 +1,17 @@
+[class^="display--"] {
+    display: none !important;
+}
+
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+    @media only screen and #{$declaration} {
+        .display-#{$name} {
+            display: block !important;
+        }
+      
+        .hide-#{$name} {
+            display: none !important;
+        }
+    }
+}
