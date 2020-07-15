@@ -21,6 +21,17 @@
 
 
 /*
+ * Media query to respond to a range of sizes
+ */
+
+ @mixin resp-between($size-min, $size-max) {
+    @media screen and (min-width: $size-min) and (max-width: $size-max) {
+        @content;
+    }
+}
+
+
+/*
  * Output font size in px/rem
  */
 
