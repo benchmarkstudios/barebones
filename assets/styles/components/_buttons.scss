@@ -1,9 +1,9 @@
 .btn {
-    background-color: $brand-colour;
-    color: $base-background-colour;
+    background-color: map-get($colors, 'brand');
+    color: map-get($colors, 'background');
     border: 1px solid transparent;
     display: inline-block;
-    padding: #{$base-spacing-unit / 4} $base-spacing-unit;
+    padding: #{$base-spacing-unit * 0.25} $base-spacing-unit;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -20,9 +20,9 @@
 
     &:hover {
         text-decoration: none;
-        background-color: $base-background-colour;
-        color: $brand-colour;
-        border-color: $brand-colour;
+        background-color: map-get($colors, 'background');
+        color: map-get($colors, 'brand');
+        border-color: map-get($colors, 'brand');
     }
 
     &.is-disabled,
@@ -33,13 +33,13 @@
 }
 
 .btn--inverse {
-    background-color: $base-background-colour;
-    color: $brand-colour;
-    border: 1px solid $brand-colour;
+    background-color: map-get($colors, 'background');
+    color: map-get($colors, 'brand');
+    border: 1px solid map-get($colors, 'brand');
 
     &:hover {
-        background-color: $brand-colour;
-        color: $base-background-colour;
+        background-color: map-get($colors, 'brand');
+        color: map-get($colors, 'background');
         border-color: transparent;
     }
 }
@@ -49,11 +49,11 @@
     width: 100%;
 
     + .btn--block {
-        margin-top: $base-spacing-unit / 4;
+        margin-top: $base-spacing-unit * 0.25;
     }
 }
 
 .btn--link {
     background-color: transparent;
-    color: $brand-colour;
+    color: map-get($colors, 'brand');
 }

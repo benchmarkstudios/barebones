@@ -3,21 +3,18 @@
 <main class="main" role="main">
     <div class="container">
 
-        <?php while (have_posts()) : the_post(); ?>
+        <h1 class="text-2xl">Welcome to Barebones</h1>
 
-            <article <?php post_class(); ?>>
-
-                <header class="post__header" role="heading">
-                    <h3 class="post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="post__date"><time><?php echo human_time_diff(strtotime($post->post_date)) . ' ' . __('ago'); ?></time></p>
-                    <p class="post__comments"><?php comments_popup_link(__('No comments yet'), __('1 comment'), __('% comments')); ?></p>
-                </header>
-
-                <?php the_content(__('Read More')); ?>
-
-            </article>
-
-        <?php endwhile; ?>
+        <div class="row">
+            <div class="col col--lg-12 col--md-12 col--sm-12 col--xs-12">
+                <h2>Base Font / <span class="font-alt">Alternate Font</span></h2>
+                <p class="text-xl">Text XL</p>
+                <p class="text-lg">Text LG</p>
+                <p class="text-md">Text MD</p>
+                <p class="text-sm">Text SM</p>
+                <p class="text-xs">Text XS</p>
+            </div>          
+        </div>
 
     </div>
 </main>

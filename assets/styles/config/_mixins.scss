@@ -2,7 +2,9 @@
  * Media query to respond to a minimum size (mobile first)
  */
 
- @mixin resp-min($size) {
+ @use "sass:math";
+
+@mixin resp-min($size) {
     @media screen and (min-width: $size) {
         @content;
     }
@@ -26,7 +28,7 @@
 
 @mixin font-size($px) {
     font-size: $px + px;
-    font-size: #{$px / 16}rem;
+    font-size: #{math.div($px, 16)}rem;
 }
 
 

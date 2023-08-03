@@ -1,9 +1,12 @@
 body {
-    color: $base-colour;
+    color: map-get($colors, 'base');
     font-family: $base-font-family;
     line-height: $base-line-height;
     text-size-adjust: none;
     @include font-size($base-font-size);
+    &.menu-open {
+        overflow: hidden;
+    }
 }
 
 h1,
@@ -28,10 +31,10 @@ dl {
  */
 
 a {
-    color: $brand-colour;
+    color: map-get($colors, 'base');
     text-decoration: none;
     &:hover {
-        color: $base-colour;
+        color: map-get($colors, 'base');
         text-decoration: underline;
     }
 }
@@ -50,5 +53,5 @@ a[href^="tel"] {
 
 hr {
     height: 1px;
-    background-color: $base-colour;
+    background-color: map-get($colors, 'base');
 }

@@ -1,1 +1,21 @@
-
+.header {
+	padding: $base-spacing-unit 0;
+	margin-bottom: ($base-spacing-unit * 2);
+	.header__navigation {
+		@include resp-max($breakpoint-md) {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: map-get($colors, 'background');
+			nav {
+				display: flex;
+				height: 100%;				
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

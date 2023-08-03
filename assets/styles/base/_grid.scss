@@ -2,7 +2,7 @@
     display: grid;
     grid-gap: $base-spacing-unit;
     @include resp-max($breakpoint-sm) {
-        grid-gap: $base-spacing-unit / 2;
+        grid-gap: $base-spacing-unit * 0.5;
     }
     
     @each $breakpoint in $breakpoints {

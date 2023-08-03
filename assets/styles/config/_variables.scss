@@ -1,31 +1,4 @@
 /**
- * Colours
- */
-
-$base-colour:            #444;
-$base-background-colour: #fff;
-
-$brand-colour:           #444; // Example
-$success-colour:         #5CB85C;
-$info-colour:            $brand-colour;
-$warning-colour:         #F0AD4E;
-$danger-colour:          #D9534F;
-
-
-/**
- * Typography
- */
-
-$sans-serif-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif-font-family:       Georgia, "Times New Roman", Times, serif;
-$base-font-family:        $sans-serif-font-family;
-
-$base-font-size:          16;
-$base-line-height:        1.5;
-$base-spacing-unit:       ($base-font-size * $base-line-height) * 1px;
-
-
-/**
  * Breakpoints
  */
 
@@ -34,13 +7,16 @@ $breakpoint-md: 1024px;
 $breakpoint-sm: 768px;
 $breakpoint-xs: 480px;
 
-$breakpoints: (
-    'lg' '(min-width: ' + ($breakpoint-md + 1) + ')',
-    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
-    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
-    'xs' '(max-width: ' + $breakpoint-xs + ')'
-);
+/**
+ * Typography
+ */
 
+$base-font-family:        'Helvetica Neue', Helvetica, Arial, sans-serif;
+$alt-font-family:         'Georgia', 'Times New Roman', Times, serif;
+
+$base-font-size:          16;
+$base-line-height:        1.5;
+$base-spacing-unit:       ($base-font-size * $base-line-height) * 1px;
 
 /**
  * Grid
@@ -50,6 +26,44 @@ $grid-max-width: 1200px;
 $grid-columns:   12;
 $grid-gutter:    $base-spacing-unit;
 
+/**
+ * Colors
+ */
+
+$colors: (
+    'base': #444,
+    'background': #fff,
+    'brand': #444,
+    'success': #5CB85C,
+    'info': #444,
+    'warning': #F0AD4E,
+    'danger': #D9534F
+);
+
+/**
+ * Spacing
+ */
+
+ $spacings: (
+    'xl' ($base-spacing-unit * 4),
+    'lg' ($base-spacing-unit * 3),
+    'md' ($base-spacing-unit * 2),
+    'sm' ($base-spacing-unit * 1),
+    'xs' ($base-spacing-unit * 0.5),
+);
+
+ /**
+ * Font Sizes
+ */
+
+ $font-sizes: (
+    '2xl' $base-font-size + 16,
+    'xl' $base-font-size + 8,
+    'lg' $base-font-size + 6,
+    'md' $base-font-size + 2,
+    'sm' $base-font-size,
+    'xs' $base-font-size - 2,
+);
 
 /**
  * Components
@@ -60,5 +74,6 @@ $border-radius: 3px;
 /**
  * Animations
  */
+
 $animation-speed: 250ms;
 $animation: ease-in-out;

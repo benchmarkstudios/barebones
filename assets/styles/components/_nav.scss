@@ -3,17 +3,14 @@
  */
 
 .nav-burger {
-    position: fixed;
-    top: $base-spacing-unit;
-    right: $base-spacing-unit;
-    z-index: 550;
+    float: right;
     transition: all $animation-speed $animation;
 }
 
 .nav-burger__line {
     width: 35px;
     height: 3px;
-    background-color: $brand-colour;
+    background-color: map-get($colors, 'brand');
     display: none;
     margin: 8px auto;
     transition: all $animation-speed $animation;
@@ -60,48 +57,9 @@
 }
 
 .nav--header {
-
-    // mobile nav
     @include resp-max($breakpoint-md) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        width: 0;
-        height: 100%;
-        margin: 0;
-        transition: opacity 500ms ease;
-        transition: opacity .35s ease, visibility .35s ease, width .35s ease;
-        text-align: center;
-        opacity: 0;
-        background: $base-background-colour;
-        -webkit-overflow-scrolling: touch;
-
-        &.open {
-            z-index: 500;
-            visibility: visible;
-            width: 100%;
-            opacity: 1;
-
-            ul {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                overflow: auto;
-                width: 100%;
-                max-height: 100%;
-                margin: 0;
-                padding: 0;
-                user-select: none;
-                transform: translateY(-50%);
-                -webkit-touch-callout: none;
-                -webkit-overflow-scrolling: touch;
-
-                > li {
-                    width: 100%;
-                    margin: 0;
-                }
-            }
+        ul {
+            list-style: none;
         }
     }
 }

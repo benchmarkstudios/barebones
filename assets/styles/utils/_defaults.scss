@@ -1,0 +1,124 @@
+/**
+ * Breakpoints
+ */
+
+$breakpoints: (
+    'lg' '(min-width: ' + ($breakpoint-md + 1) + ')',
+    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs' '(max-width: ' + $breakpoint-xs + ')'
+);
+
+/**
+ * Spacing
+ */
+
+@each $spacing in $spacings {
+    $key   : nth($spacing, 1);
+    $value : nth($spacing, 2);
+
+    // Padding on the Y axis
+
+    .py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .pt-#{$key} {
+        padding-top: $value;
+    }
+
+    .pb-#{$key} {
+        padding-bottom: $value;
+    }
+
+    // Padding on the X axis
+
+    .px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .pl-#{$key} {
+        padding-left: $value;
+    }
+
+    .pr-#{$key} {
+        padding-right: $value;
+    }
+
+    // Margin on the Y axis
+
+    .my-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    .mt-#{$key} {
+        margin-top: $value;
+    }
+
+    .mb-#{$key} {
+        margin-bottom: $value;
+    }
+
+    // Margin on the X axis
+
+    .mx-#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .ml-#{$key} {
+        margin-left: $value;
+    }
+
+    .mr-#{$key} {
+        margin-right: $value;
+    }
+
+}
+
+/**
+ * Fonts
+ */
+
+.font-base {
+    font-family: $base-font-family;
+}
+
+.font-alt {
+    font-family: $alt-font-family;
+}
+
+/**
+ * Font Sizes
+ */
+
+@each $font-size in $font-sizes {
+    $key   : nth($font-size, 1);
+    $value : nth($font-size, 2);
+
+    .text-#{$key} {
+        @include font-size($value);
+    }
+
+}
+
+/**
+ * Colors
+ */
+
+@each $color in $colors {
+    $key   : nth($color, 1);
+    $value : nth($color, 2);
+
+    .text-#{$key} {
+        color: $value;
+    }
+
+    .bg-#{$key} {
+        background-color: $value;
+    }
+
+}

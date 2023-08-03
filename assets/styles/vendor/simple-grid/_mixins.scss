@@ -2,21 +2,23 @@
  * Grid loop mixin
  */
 
+@use "sass:math";
+
 @mixin grid-loop($name){
     @for $i from 0 through $grid-columns {
         @if $i != 0 {
             .col--#{$name}-#{$i} {
-                width: percentage($i/$grid-columns);
+                width: percentage(math.div($i, $grid-columns));
                 .row--flex & {
-                    flex-basis: percentage($i/$grid-columns);
-                    max-width: percentage($i/$grid-columns);
+                    flex-basis: percentage(math.div($i, $grid-columns));
+                    max-width: percentage(math.div($i, $grid-columns));
                     width: auto;
                     float: none;
                 }
             }
         }
         .col--#{$name}-offset-#{$i} {
-            margin-left: percentage($i/$grid-columns);
+            margin-left: percentage(math.div($i, $grid-columns));
         }
     }
 }

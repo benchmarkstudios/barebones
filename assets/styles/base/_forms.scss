@@ -5,13 +5,13 @@
 input,
 select,
 textarea {
-    background-color: $base-background-colour;
-    border: solid 1px $base-colour;
+    background-color: map-get($colors, 'background');
+    border: solid 1px map-get($colors, 'base');
     border-radius: 0;
-    color: $base-colour;
+    color: map-get($colors, 'base');
     line-height: $base-spacing-unit * 1.5;
     height: $base-spacing-unit * 1.5;
-    padding: 0 #{$base-spacing-unit / 2};
+    padding: 0 #{$base-spacing-unit * 0.5};
     width: 100%;
 }
 
@@ -27,7 +27,7 @@ input[type="radio"] {
 input[type="file"] {
     line-height: normal;
     height: auto;
-    padding: #{$base-spacing-unit / 4} #{$base-spacing-unit / 2};
+    padding: #{$base-spacing-unit * 0.25} #{$base-spacing-unit * 0.5};
 }
 
 input[type="submit"] {
@@ -42,7 +42,7 @@ input[disabled] {
 select {
     line-height: normal;
     padding: 0;
-    padding-left: $base-spacing-unit / 2;
+    padding-left: $base-spacing-unit * 0.5;
 }
 
 textarea {
@@ -70,7 +70,7 @@ textarea {
         margin-bottom: $base-spacing-unit;
         .form__label {
             display: block;
-            margin-bottom: ($base-spacing-unit / 2);
+            margin-bottom: ($base-spacing-unit * 0.5);
         }
     }
 }
