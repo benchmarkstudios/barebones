@@ -14,7 +14,6 @@ A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. The
 * Minimised HTTP requests for high Web Performance
 * Localised strings for multiple language support
 * Scss compiling and watching, css minification support
-* Image optimisation
 * Base mobile nav out of the box
 
 ## Installation
@@ -24,15 +23,7 @@ Clone the barebones repositories into your WordPress /wp-content/themes/ directo
     git clone https://github.com/benchmarkstudios/barebones
     cd barebones
 
-#### Dependencies
-
-Install Dependencies:
-```
-  npm install
-```
-```
-
-### Using Gulp
+### Using Laravel Mix
 
 Install Dependencies, you have haven't done yet:
 
