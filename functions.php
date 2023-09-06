@@ -239,26 +239,41 @@ add_filter('mce_buttons_2', 'barebones_mce_buttons_2');
 
 function barebones_tiny_mce_before_init( $settings ) {
     $style_formats = [
-        // [
-        //     'title'    => '',
-        //     'selector' => '',
-        //     'classes'  => ''
-        // ],
-        // [
-        //     'title' => 'Buttons',
-        //     'items' => [
-        //         [
-        //             'title'    => 'Primary',
-        //             'selector' => 'a',
-        //             'classes'  => 'btn btn--primary'
-        //         ],
-        //         [
-        //             'title'    => 'Secondary',
-        //             'selector' => 'a',
-        //             'classes'  => 'btn btn--secondary'
-        //         ]
-        //     ]
-        // ]
+        [
+            'title' => 'Text Sizes',
+            'items' => [
+                [
+                    'title'    => '2XL',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-2xl'
+                ],
+                [
+                    'title'    => 'XL',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-xl'
+                ],
+                [
+                    'title'    => 'LG',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-lg'
+                ],
+                [
+                    'title'    => 'MD',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-md'
+                ],
+                [
+                    'title'    => 'SM',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-sm'
+                ],
+                [
+                    'title'    => 'XD',
+                    'selector' => 'span, p',
+                    'classes'  => 'text-xs'
+                ],                
+            ]
+        ]
     ];
 
     $settings['style_formats'] = json_encode($style_formats);

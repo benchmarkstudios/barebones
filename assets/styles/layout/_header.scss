@@ -2,7 +2,7 @@
 	padding: $base-spacing-unit 0;
 	margin-bottom: ($base-spacing-unit * 2);
 	.header__navigation {
-		@include resp-max($breakpoint-md) {
+		@include resp-max($breakpoint-nav) {
 			display: none;
 			position: fixed;
 			left: 0;
