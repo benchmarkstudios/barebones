@@ -22,6 +22,14 @@ mix.
         content: [
             '*.php',
         ],
+        safelist: {
+            standard: [
+                /^text-/,
+                /^bg-/,
+                /^visible-/,
+                /^hidden-/,
+            ]
+        }
     });
 
 // JS
