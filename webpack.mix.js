@@ -18,7 +18,11 @@ mix.
     .options({
         processCssUrls: false
     })
-    .purgeCss();
+    .purgeCss({
+        content: [
+            '*.php',
+        ],
+    });
 
 // JS
 
