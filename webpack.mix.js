@@ -28,6 +28,7 @@ mix.
                 /^bg-/,
                 /^visible-/,
                 /^hidden-/,
+                /^btn/,
             ]
         }
     });
