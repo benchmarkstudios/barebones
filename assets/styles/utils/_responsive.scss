@@ -3,6 +3,7 @@
     $value : nth($breakpoint, 2);
 
     .visible-#{$key} {
+        display: none;
         @media only screen and #{$value} {
             display: block !important;
         }
