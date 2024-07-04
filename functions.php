@@ -208,7 +208,8 @@ add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
 
 function barebones_button_shortcode( $atts, $content = null ) {
     $atts['class'] = isset($atts['class']) ? $atts['class'] : 'btn';
-    return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
+    $atts['target'] = isset($atts['target']) ? $atts['target'] : '_self';
+    return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '" target="'. $atts['target'] . '">' . $content . '</a>';
 }
 
 add_shortcode('button', 'barebones_button_shortcode');
