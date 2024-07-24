@@ -19,10 +19,10 @@
         }
         .col--#{$name}-offset-#{$i} {
             margin-left: percentage(math.div($i, $grid-columns));
-        }
-        .row--reverse & {
-            margin-left: 0;
-            margin-right: percentage(math.div($i, $grid-columns));
+            .row--reverse & {
+                margin-left: 0;
+                margin-right: percentage(math.div($i, $grid-columns));
+            }
         }
     }
 }

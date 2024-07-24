@@ -120,6 +120,10 @@ Text Domain: barebones
   .col--lg-offset-0 {
     margin-left: 0%;
   }
+  .row--reverse .col--lg-offset-0 {
+    margin-left: 0;
+    margin-right: 0%;
+  }
   .col--lg-1 {
     width: 8.3333333333%;
   }
@@ -131,6 +135,10 @@ Text Domain: barebones
   }
   .col--lg-offset-1 {
     margin-left: 8.3333333333%;
+  }
+  .row--reverse .col--lg-offset-1 {
+    margin-left: 0;
+    margin-right: 8.3333333333%;
   }
   .col--lg-2 {
     width: 16.6666666667%;
@@ -144,6 +152,10 @@ Text Domain: barebones
   .col--lg-offset-2 {
     margin-left: 16.6666666667%;
   }
+  .row--reverse .col--lg-offset-2 {
+    margin-left: 0;
+    margin-right: 16.6666666667%;
+  }
   .col--lg-3 {
     width: 25%;
   }
@@ -155,6 +167,10 @@ Text Domain: barebones
   }
   .col--lg-offset-3 {
     margin-left: 25%;
+  }
+  .row--reverse .col--lg-offset-3 {
+    margin-left: 0;
+    margin-right: 25%;
   }
   .col--lg-4 {
     width: 33.3333333333%;
@@ -168,6 +184,10 @@ Text Domain: barebones
   .col--lg-offset-4 {
     margin-left: 33.3333333333%;
   }
+  .row--reverse .col--lg-offset-4 {
+    margin-left: 0;
+    margin-right: 33.3333333333%;
+  }
   .col--lg-5 {
     width: 41.6666666667%;
   }
@@ -179,6 +199,10 @@ Text Domain: barebones
   }
   .col--lg-offset-5 {
     margin-left: 41.6666666667%;
+  }
+  .row--reverse .col--lg-offset-5 {
+    margin-left: 0;
+    margin-right: 41.6666666667%;
   }
   .col--lg-6 {
     width: 50%;
@@ -192,6 +216,10 @@ Text Domain: barebones
   .col--lg-offset-6 {
     margin-left: 50%;
   }
+  .row--reverse .col--lg-offset-6 {
+    margin-left: 0;
+    margin-right: 50%;
+  }
   .col--lg-7 {
     width: 58.3333333333%;
   }
@@ -203,6 +231,10 @@ Text Domain: barebones
   }
   .col--lg-offset-7 {
     margin-left: 58.3333333333%;
+  }
+  .row--reverse .col--lg-offset-7 {
+    margin-left: 0;
+    margin-right: 58.3333333333%;
   }
   .col--lg-8 {
     width: 66.6666666667%;
@@ -216,6 +248,10 @@ Text Domain: barebones
   .col--lg-offset-8 {
     margin-left: 66.6666666667%;
   }
+  .row--reverse .col--lg-offset-8 {
+    margin-left: 0;
+    margin-right: 66.6666666667%;
+  }
   .col--lg-9 {
     width: 75%;
   }
@@ -227,6 +263,10 @@ Text Domain: barebones
   }
   .col--lg-offset-9 {
     margin-left: 75%;
+  }
+  .row--reverse .col--lg-offset-9 {
+    margin-left: 0;
+    margin-right: 75%;
   }
   .col--lg-10 {
     width: 83.3333333333%;
@@ -240,6 +280,10 @@ Text Domain: barebones
   .col--lg-offset-10 {
     margin-left: 83.3333333333%;
   }
+  .row--reverse .col--lg-offset-10 {
+    margin-left: 0;
+    margin-right: 83.3333333333%;
+  }
   .col--lg-11 {
     width: 91.6666666667%;
   }
@@ -251,6 +295,10 @@ Text Domain: barebones
   }
   .col--lg-offset-11 {
     margin-left: 91.6666666667%;
+  }
+  .row--reverse .col--lg-offset-11 {
+    margin-left: 0;
+    margin-right: 91.6666666667%;
   }
   .col--lg-12 {
     width: 100%;
@@ -264,10 +312,18 @@ Text Domain: barebones
   .col--lg-offset-12 {
     margin-left: 100%;
   }
+  .row--reverse .col--lg-offset-12 {
+    margin-left: 0;
+    margin-right: 100%;
+  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .col--md-offset-0 {
     margin-left: 0%;
+  }
+  .row--reverse .col--md-offset-0 {
+    margin-left: 0;
+    margin-right: 0%;
   }
   .col--md-1 {
     width: 8.3333333333%;
@@ -281,6 +337,10 @@ Text Domain: barebones
   .col--md-offset-1 {
     margin-left: 8.3333333333%;
   }
+  .row--reverse .col--md-offset-1 {
+    margin-left: 0;
+    margin-right: 8.3333333333%;
+  }
   .col--md-2 {
     width: 16.6666666667%;
   }
@@ -292,6 +352,10 @@ Text Domain: barebones
   }
   .col--md-offset-2 {
     margin-left: 16.6666666667%;
+  }
+  .row--reverse .col--md-offset-2 {
+    margin-left: 0;
+    margin-right: 16.6666666667%;
   }
   .col--md-3 {
     width: 25%;
@@ -305,6 +369,10 @@ Text Domain: barebones
   .col--md-offset-3 {
     margin-left: 25%;
   }
+  .row--reverse .col--md-offset-3 {
+    margin-left: 0;
+    margin-right: 25%;
+  }
   .col--md-4 {
     width: 33.3333333333%;
   }
@@ -316,6 +384,10 @@ Text Domain: barebones
   }
   .col--md-offset-4 {
     margin-left: 33.3333333333%;
+  }
+  .row--reverse .col--md-offset-4 {
+    margin-left: 0;
+    margin-right: 33.3333333333%;
   }
   .col--md-5 {
     width: 41.6666666667%;
@@ -329,6 +401,10 @@ Text Domain: barebones
   .col--md-offset-5 {
     margin-left: 41.6666666667%;
   }
+  .row--reverse .col--md-offset-5 {
+    margin-left: 0;
+    margin-right: 41.6666666667%;
+  }
   .col--md-6 {
     width: 50%;
   }
@@ -340,6 +416,10 @@ Text Domain: barebones
   }
   .col--md-offset-6 {
     margin-left: 50%;
+  }
+  .row--reverse .col--md-offset-6 {
+    margin-left: 0;
+    margin-right: 50%;
   }
   .col--md-7 {
     width: 58.3333333333%;
@@ -353,6 +433,10 @@ Text Domain: barebones
   .col--md-offset-7 {
     margin-left: 58.3333333333%;
   }
+  .row--reverse .col--md-offset-7 {
+    margin-left: 0;
+    margin-right: 58.3333333333%;
+  }
   .col--md-8 {
     width: 66.6666666667%;
   }
@@ -364,6 +448,10 @@ Text Domain: barebones
   }
   .col--md-offset-8 {
     margin-left: 66.6666666667%;
+  }
+  .row--reverse .col--md-offset-8 {
+    margin-left: 0;
+    margin-right: 66.6666666667%;
   }
   .col--md-9 {
     width: 75%;
@@ -377,6 +465,10 @@ Text Domain: barebones
   .col--md-offset-9 {
     margin-left: 75%;
   }
+  .row--reverse .col--md-offset-9 {
+    margin-left: 0;
+    margin-right: 75%;
+  }
   .col--md-10 {
     width: 83.3333333333%;
   }
@@ -388,6 +480,10 @@ Text Domain: barebones
   }
   .col--md-offset-10 {
     margin-left: 83.3333333333%;
+  }
+  .row--reverse .col--md-offset-10 {
+    margin-left: 0;
+    margin-right: 83.3333333333%;
   }
   .col--md-11 {
     width: 91.6666666667%;
@@ -401,6 +497,10 @@ Text Domain: barebones
   .col--md-offset-11 {
     margin-left: 91.6666666667%;
   }
+  .row--reverse .col--md-offset-11 {
+    margin-left: 0;
+    margin-right: 91.6666666667%;
+  }
   .col--md-12 {
     width: 100%;
   }
@@ -413,10 +513,18 @@ Text Domain: barebones
   .col--md-offset-12 {
     margin-left: 100%;
   }
+  .row--reverse .col--md-offset-12 {
+    margin-left: 0;
+    margin-right: 100%;
+  }
 }
 @media only screen and (min-width: 481px) and (max-width:768px) {
   .col--sm-offset-0 {
     margin-left: 0%;
+  }
+  .row--reverse .col--sm-offset-0 {
+    margin-left: 0;
+    margin-right: 0%;
   }
   .col--sm-1 {
     width: 8.3333333333%;
@@ -430,6 +538,10 @@ Text Domain: barebones
   .col--sm-offset-1 {
     margin-left: 8.3333333333%;
   }
+  .row--reverse .col--sm-offset-1 {
+    margin-left: 0;
+    margin-right: 8.3333333333%;
+  }
   .col--sm-2 {
     width: 16.6666666667%;
   }
@@ -441,6 +553,10 @@ Text Domain: barebones
   }
   .col--sm-offset-2 {
     margin-left: 16.6666666667%;
+  }
+  .row--reverse .col--sm-offset-2 {
+    margin-left: 0;
+    margin-right: 16.6666666667%;
   }
   .col--sm-3 {
     width: 25%;
@@ -454,6 +570,10 @@ Text Domain: barebones
   .col--sm-offset-3 {
     margin-left: 25%;
   }
+  .row--reverse .col--sm-offset-3 {
+    margin-left: 0;
+    margin-right: 25%;
+  }
   .col--sm-4 {
     width: 33.3333333333%;
   }
@@ -465,6 +585,10 @@ Text Domain: barebones
   }
   .col--sm-offset-4 {
     margin-left: 33.3333333333%;
+  }
+  .row--reverse .col--sm-offset-4 {
+    margin-left: 0;
+    margin-right: 33.3333333333%;
   }
   .col--sm-5 {
     width: 41.6666666667%;
@@ -478,6 +602,10 @@ Text Domain: barebones
   .col--sm-offset-5 {
     margin-left: 41.6666666667%;
   }
+  .row--reverse .col--sm-offset-5 {
+    margin-left: 0;
+    margin-right: 41.6666666667%;
+  }
   .col--sm-6 {
     width: 50%;
   }
@@ -489,6 +617,10 @@ Text Domain: barebones
   }
   .col--sm-offset-6 {
     margin-left: 50%;
+  }
+  .row--reverse .col--sm-offset-6 {
+    margin-left: 0;
+    margin-right: 50%;
   }
   .col--sm-7 {
     width: 58.3333333333%;
@@ -502,6 +634,10 @@ Text Domain: barebones
   .col--sm-offset-7 {
     margin-left: 58.3333333333%;
   }
+  .row--reverse .col--sm-offset-7 {
+    margin-left: 0;
+    margin-right: 58.3333333333%;
+  }
   .col--sm-8 {
     width: 66.6666666667%;
   }
@@ -513,6 +649,10 @@ Text Domain: barebones
   }
   .col--sm-offset-8 {
     margin-left: 66.6666666667%;
+  }
+  .row--reverse .col--sm-offset-8 {
+    margin-left: 0;
+    margin-right: 66.6666666667%;
   }
   .col--sm-9 {
     width: 75%;
@@ -526,6 +666,10 @@ Text Domain: barebones
   .col--sm-offset-9 {
     margin-left: 75%;
   }
+  .row--reverse .col--sm-offset-9 {
+    margin-left: 0;
+    margin-right: 75%;
+  }
   .col--sm-10 {
     width: 83.3333333333%;
   }
@@ -537,6 +681,10 @@ Text Domain: barebones
   }
   .col--sm-offset-10 {
     margin-left: 83.3333333333%;
+  }
+  .row--reverse .col--sm-offset-10 {
+    margin-left: 0;
+    margin-right: 83.3333333333%;
   }
   .col--sm-11 {
     width: 91.6666666667%;
@@ -550,6 +698,10 @@ Text Domain: barebones
   .col--sm-offset-11 {
     margin-left: 91.6666666667%;
   }
+  .row--reverse .col--sm-offset-11 {
+    margin-left: 0;
+    margin-right: 91.6666666667%;
+  }
   .col--sm-12 {
     width: 100%;
   }
@@ -562,10 +714,18 @@ Text Domain: barebones
   .col--sm-offset-12 {
     margin-left: 100%;
   }
+  .row--reverse .col--sm-offset-12 {
+    margin-left: 0;
+    margin-right: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
   .col--xs-offset-0 {
     margin-left: 0%;
+  }
+  .row--reverse .col--xs-offset-0 {
+    margin-left: 0;
+    margin-right: 0%;
   }
   .col--xs-1 {
     width: 8.3333333333%;
@@ -579,6 +739,10 @@ Text Domain: barebones
   .col--xs-offset-1 {
     margin-left: 8.3333333333%;
   }
+  .row--reverse .col--xs-offset-1 {
+    margin-left: 0;
+    margin-right: 8.3333333333%;
+  }
   .col--xs-2 {
     width: 16.6666666667%;
   }
@@ -590,6 +754,10 @@ Text Domain: barebones
   }
   .col--xs-offset-2 {
     margin-left: 16.6666666667%;
+  }
+  .row--reverse .col--xs-offset-2 {
+    margin-left: 0;
+    margin-right: 16.6666666667%;
   }
   .col--xs-3 {
     width: 25%;
@@ -603,6 +771,10 @@ Text Domain: barebones
   .col--xs-offset-3 {
     margin-left: 25%;
   }
+  .row--reverse .col--xs-offset-3 {
+    margin-left: 0;
+    margin-right: 25%;
+  }
   .col--xs-4 {
     width: 33.3333333333%;
   }
@@ -614,6 +786,10 @@ Text Domain: barebones
   }
   .col--xs-offset-4 {
     margin-left: 33.3333333333%;
+  }
+  .row--reverse .col--xs-offset-4 {
+    margin-left: 0;
+    margin-right: 33.3333333333%;
   }
   .col--xs-5 {
     width: 41.6666666667%;
@@ -627,6 +803,10 @@ Text Domain: barebones
   .col--xs-offset-5 {
     margin-left: 41.6666666667%;
   }
+  .row--reverse .col--xs-offset-5 {
+    margin-left: 0;
+    margin-right: 41.6666666667%;
+  }
   .col--xs-6 {
     width: 50%;
   }
@@ -638,6 +818,10 @@ Text Domain: barebones
   }
   .col--xs-offset-6 {
     margin-left: 50%;
+  }
+  .row--reverse .col--xs-offset-6 {
+    margin-left: 0;
+    margin-right: 50%;
   }
   .col--xs-7 {
     width: 58.3333333333%;
@@ -651,6 +835,10 @@ Text Domain: barebones
   .col--xs-offset-7 {
     margin-left: 58.3333333333%;
   }
+  .row--reverse .col--xs-offset-7 {
+    margin-left: 0;
+    margin-right: 58.3333333333%;
+  }
   .col--xs-8 {
     width: 66.6666666667%;
   }
@@ -662,6 +850,10 @@ Text Domain: barebones
   }
   .col--xs-offset-8 {
     margin-left: 66.6666666667%;
+  }
+  .row--reverse .col--xs-offset-8 {
+    margin-left: 0;
+    margin-right: 66.6666666667%;
   }
   .col--xs-9 {
     width: 75%;
@@ -675,6 +867,10 @@ Text Domain: barebones
   .col--xs-offset-9 {
     margin-left: 75%;
   }
+  .row--reverse .col--xs-offset-9 {
+    margin-left: 0;
+    margin-right: 75%;
+  }
   .col--xs-10 {
     width: 83.3333333333%;
   }
@@ -686,6 +882,10 @@ Text Domain: barebones
   }
   .col--xs-offset-10 {
     margin-left: 83.3333333333%;
+  }
+  .row--reverse .col--xs-offset-10 {
+    margin-left: 0;
+    margin-right: 83.3333333333%;
   }
   .col--xs-11 {
     width: 91.6666666667%;
@@ -699,6 +899,10 @@ Text Domain: barebones
   .col--xs-offset-11 {
     margin-left: 91.6666666667%;
   }
+  .row--reverse .col--xs-offset-11 {
+    margin-left: 0;
+    margin-right: 91.6666666667%;
+  }
   .col--xs-12 {
     width: 100%;
   }
@@ -710,6 +914,10 @@ Text Domain: barebones
   }
   .col--xs-offset-12 {
     margin-left: 100%;
+  }
+  .row--reverse .col--xs-offset-12 {
+    margin-left: 0;
+    margin-right: 100%;
   }
 }
 * {
@@ -758,6 +966,9 @@ table td {
   text-align: left;
 }
 
+.visible-lg {
+  display: none;
+}
 @media only screen and (min-width: 1025px) {
   .visible-lg {
     display: block !important;
@@ -770,6 +981,9 @@ table td {
   }
 }
 
+.visible-md {
+  display: none;
+}
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .visible-md {
     display: block !important;
@@ -782,6 +996,9 @@ table td {
   }
 }
 
+.visible-sm {
+  display: none;
+}
 @media only screen and (min-width: 481px) and (max-width:768px) {
   .visible-sm {
     display: block !important;
@@ -794,6 +1011,9 @@ table td {
   }
 }
 
+.visible-xs {
+  display: none;
+}
 @media only screen and (max-width: 480px) {
   .visible-xs {
     display: block !important;
@@ -1178,6 +1398,58 @@ img .float-center {
 
 .mr-xs {
   margin-right: 12px;
+}
+
+.py-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.pt-none {
+  padding-top: 0;
+}
+
+.pb-none {
+  padding-bottom: 0;
+}
+
+.px-none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pl-none {
+  padding-left: 0;
+}
+
+.pr-none {
+  padding-right: 0;
+}
+
+.my-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt-none {
+  margin-top: 0;
+}
+
+.mb-none {
+  margin-bottom: 0;
+}
+
+.mx-none {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ml-none {
+  margin-left: 0;
+}
+
+.mr-none {
+  margin-right: 0;
 }
 
 /**
@@ -1567,7 +1839,7 @@ small {
   padding: 24px 0;
   margin-bottom: 48px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .header .header__navigation {
     display: none;
     position: fixed;
@@ -1661,7 +1933,7 @@ small {
   margin: 8px auto;
   transition: all 250ms ease-in-out;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .nav-burger__line {
     display: block;
   }
@@ -1694,7 +1966,7 @@ small {
   display: block;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .nav--header ul {
     list-style: none;
   }
