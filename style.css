@@ -72,17 +72,17 @@ Text Domain: barebones
 /**
  * Grid scaffolding
  */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
 .container:before, .container:after {
   content: " ";
   display: table;
 }
 .container:after {
   clear: both;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .row {
