@@ -1,0 +1,23 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+options:
+  runtime:
+    cloud:
+      atlassian-ip-ranges: true
+pipelines:
+  branches:  
+    blocks:
+      - step:
+          name: 'Deploy to staging'
+          deployment: staging
+          size: 4x
+          script:
+          - pipe: atlassian/rsync-deploy:0.6.0
+            variables:
+              USER: $SFTP_USERNAME
+              SERVER: $HOST
+              REMOTE_PATH: $REMOTE_PATH
+              LOCAL_PATH: $LOCAL_PATH
