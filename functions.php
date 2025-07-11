@@ -5,6 +5,8 @@
  */
 
 require_once 'includes/custom-functions.php';
+require_once 'includes/block-functions.php';
+require_once 'includes/shortcodes.php';
 
 
 /**
@@ -19,10 +21,6 @@ if ( function_exists( 'add_theme_support' ) ) {
     // Add Thumbnail Theme Support
     add_theme_support( 'post-thumbnails' );
     // add_image_size( 'custom-size', 700, 200, true );
-
-    // Add Support for post formats
-    // add_theme_support( 'post-formats', ['post'] );
-    // add_post_type_support( 'page', 'excerpt' );
 
     // Localisation Support
     load_theme_textdomain( 'barebones', get_template_directory() . '/languages' );
@@ -69,15 +67,18 @@ add_filter('post_comments_feed_link', 'barebones_post_comments_feed_link');
  */
 
 function barebones_enqueue_scripts() {
-    // wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Font+Family' );
-    // wp_enqueue_style( 'icons', '//use.fontawesome.com/releases/v5.0.10/css/all.css' );
-    wp_deregister_script('jquery');
-    wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . '/style.css?' . filemtime( get_stylesheet_directory() . '/style.css' ) );
-    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js?' . filemtime( get_stylesheet_directory() . '/js/scripts.min.js' ), [], null, true );
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', ['jquery'], null, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'barebones_enqueue_scripts' );
 
+function bb_move_jquery_to_footer() {
+    wp_scripts()->add_data( 'jquery', 'group', 1 );
+    wp_scripts()->add_data( 'jquery-core', 'group', 1 );
+    wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+}
+add_action( 'wp_enqueue_scripts', 'bb_move_jquery_to_footer' );
 
 /**
  * Add async and defer attributes to enqueued scripts
@@ -104,37 +105,6 @@ function defer_scripts( $tag, $handle, $src ) {
 } 
 
 add_filter( 'script_loader_tag', 'defer_scripts', 10, 3 );
-
-
-/**
- * Add custom scripts to head
- *
- * @return string
- */
-
-function add_gtag_to_head() {
-
-    // Check is staging environment
-    if ( strpos( get_bloginfo( 'url' ), '.test' ) !== false ) return;
-
-    // Google Analytics
-    $tracking_code = 'UA-*********-1';
-    
-    ?>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $tracking_code; ?>"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '<?php echo $tracking_code; ?>');
-        </script>
-    <?php
-}
-
-add_action( 'wp_head', 'add_gtag_to_head' );
-
 
 
 /**
@@ -196,23 +166,6 @@ function barebones_nav_menu_args( $args ) {
 }
 
 add_filter('wp_nav_menu_args', 'barebones_nav_menu_args');
-
-
-/**
- * Button Shortcode
- *
- * @param array $atts
- * @param string $content
- * @return void
- */
-
-function barebones_button_shortcode( $atts, $content = null ) {
-    $atts['class'] = isset($atts['class']) ? $atts['class'] : 'btn';
-    $atts['target'] = isset($atts['target']) ? $atts['target'] : '_self';
-    return '<a class="' . $atts['class'] . '" href="' . $atts['link'] . '" target="'. $atts['target'] . '">' . $content . '</a>';
-}
-
-add_shortcode('button', 'barebones_button_shortcode');
 
 
 /**

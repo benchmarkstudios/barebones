@@ -1,4 +1,4 @@
-import $ from 'jquery';
+$ = jQuery;
 
 /**
  * Mobile navigation toggle

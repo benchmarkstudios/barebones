@@ -4,15 +4,23 @@ const mix = require('laravel-mix');
 const glob = require('glob');
 
 // Define the blocks directory
+
 const blocksDir = 'blocks';
 
 // Config
 
+mix.setPublicPath('./');
+
 mix.webpackConfig({
     stats: {
         children: true
+    },
+    externals: {
+      jquery: 'jQuery',
     }
 });
+
+mix.version();
 
 // CSS
 
@@ -24,21 +32,25 @@ mix.
 
 // JS
 
+mix
+    .js([          
+        'assets/scripts/scripts.js'
+    ], 'js/scripts.min.js');
+
 // Scan block subdirectories for JS files to include
 
-let jsFiles = glob.sync(`${blocksDir}/**/*.js`).filter(file => !file.endsWith('.min.js'));
+const blockScripts = glob.sync(`${blocksDir}/**/*.js`).filter(file => !file.endsWith('.min.js'));
 
-// Add main `scripts.js` to the files to be compiled
+// Compile individual JS files
 
-jsFiles.unshift('assets/scripts/scripts.js');
-
-// Compile the files into a single output file
-
-mix.js(jsFiles, 'js/scripts.min.js');
+blockScripts.forEach((filePath) => {
+    const blockName = filePath.replace(/^.*[\\/]/, '').replace(/\.[^/.]+$/, '');
+    mix.js(filePath, 'js/blocks');
+});
 
 // Compile block stylesheets to individual CSS files
 
 glob.sync(`${blocksDir}/**/*.scss`).forEach(file => {
     let output = file.replace('.scss', '.css');
-    mix.sass(file, output);
+    mix.sass(file, 'css/blocks');
 });

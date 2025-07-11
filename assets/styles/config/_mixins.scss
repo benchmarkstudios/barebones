@@ -2,7 +2,7 @@
  * Media query to respond to a minimum size (mobile first)
  */
 
- @use "sass:math";
+@use "sass:math";
 
 @mixin resp-min($size) {
     @media screen and (min-width: $size) {

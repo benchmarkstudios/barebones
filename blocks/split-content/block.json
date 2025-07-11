@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "custom-blocks/split-content",
+    "title": "Split Content",
+    "active": true,
+    "description": "Display an image and text side by side",
+    "category": "custom-blocks",
+    "icon": "star-half",
+    "post_types": ["page"],
+    "style": ["file:../../css/blocks/split-content.css"],
+    "viewScript": ["file:../../js/blocks/split-content.js"],
+    "supports": {
+        "anchor": true,
+        "align": false,
+        "align_text": false,
+        "align_content": false,
+        "full_height": false,
+        "mode": true,
+        "multiple": true,
+        "example": [],
+        "jsx": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "split-content.php"
+    },    
+    "example": {
+        "attributes": {
+            "data": {
+                "preview": "blocks/split-content/preview.jpg"
+            }
+        }
+    }    
+}

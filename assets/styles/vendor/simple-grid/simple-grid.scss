@@ -31,6 +31,9 @@
         display: flex;
         flex-wrap: wrap;
     }
+    &.row--reverse {
+        flex-direction: row-reverse;
+    }
 }
 
 .col {
