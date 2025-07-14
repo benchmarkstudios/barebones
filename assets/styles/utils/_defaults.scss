@@ -77,6 +77,78 @@ $breakpoints: (
         margin-right: $value;
     }
 
+    // Responsive spacing classes
+
+    @each $breakpoint in $breakpoints {
+        $name: nth($breakpoint, 1);
+        $declaration: nth($breakpoint, 2);
+
+        @media only screen and #{$declaration} {
+
+            // Padding on the Y axis
+
+            .#{$name}\:py-#{$key} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+
+            .#{$name}\:pt-#{$key} {
+                padding-top: $value;
+            }
+
+            .#{$name}\:pb-#{$key} {
+                padding-bottom: $value;
+            }
+
+            // Padding on the X axis
+
+            .#{$name}\:px-#{$key} {
+                padding-left: $value;
+                padding-right: $value;
+            }
+
+            .#{$name}\:pl-#{$key} {
+                padding-left: $value;
+            }
+
+            .#{$name}\:pr-#{$key} {
+                padding-right: $value;
+            }
+
+            // Margin on the Y axis
+
+            .#{$name}\:my-#{$key} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+
+            .#{$name}\:mt-#{$key} {
+                margin-top: $value;
+            }
+
+            .#{$name}\:mb-#{$key} {
+                margin-bottom: $value;
+            }
+
+            // Margin on the X axis
+
+            .#{$name}\:mx-#{$key} {
+                margin-left: $value;
+                margin-right: $value;
+            }
+
+            .#{$name}\:ml-#{$key} {
+                margin-left: $value;
+            }
+
+            .#{$name}\:mr-#{$key} {
+                margin-right: $value;
+            }
+
+        }
+
+    }
+
 }
 
 /**

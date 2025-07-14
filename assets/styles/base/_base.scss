@@ -14,11 +14,11 @@
  */
 
 .is-root-container {
-    --section-vertical-padding: 150px;
+    --section-vertical-padding: 75px;
     @include resp-max($breakpoint-sm) {
-        --section-vertical-padding: 55px;
+        --section-vertical-padding: 25px;
     }
     &.wp-block-post-content {
-        --section-vertical-padding: 75px;
+        --section-vertical-padding: 50px;
     }
 }

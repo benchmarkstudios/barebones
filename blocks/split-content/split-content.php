@@ -14,17 +14,15 @@
 
     <section class="section section--split-content section--spaced">
         <div class="container">
-            <div class="row row--flex items-center <?php echo ($alignment == 'left' ? 'row--reverse' : ''); ?>">
+            <div class="row row--flex items-center <?= ($alignment == 'left' ? 'row--reverse' : ''); ?>">
                 <?php if ($image): ?>
                     <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6">
-                        <div class="section--content-block__image">
-                            <?php echo wp_get_attachment_image($image, 'full'); ?>
-                        </div>
+                        <?php echo wp_get_attachment_image($image, 'full'); ?>
                     </div>             
                 <?php endif; ?>
                 <?php if ($content): ?>
                     <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6">
-                        <div class="section--content-block__text">
+                        <div class="<?= ($alignment == 'right' ? 'lg:pl-md' : ''); ?> sm:pt-sm">
                             <?php echo $content; ?>
                         </div>             
                     </div>           

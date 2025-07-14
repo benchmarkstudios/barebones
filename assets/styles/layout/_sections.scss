@@ -10,3 +10,11 @@
 		margin: auto;
 	}
 }
+
+.main {
+	.section--spaced {
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}
