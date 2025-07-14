@@ -30,12 +30,27 @@ mix.
         processCssUrls: false
     });
 
+// Editor styles
+
+mix.
+    sass('assets/styles/admin/_editor.scss', 'css/editor-styles.css')
+    .options({
+        processCssUrls: false
+    });
+
 // JS
 
 mix
     .js([          
         'assets/scripts/scripts.js'
     ], 'js/scripts.min.js');
+
+// Editor JS
+
+mix
+    .js([          
+        'assets/scripts/editor.js'
+    ], 'js/editor-scripts.min.js');
 
 // Scan block subdirectories for JS files to include
 

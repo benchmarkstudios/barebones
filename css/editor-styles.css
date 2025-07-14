@@ -1,0 +1,131 @@
+.block-preview img {
+  width: 100%;
+}
+
+.interface-interface-skeleton__sidebar {
+  display: none;
+}
+.interface-interface-skeleton__sidebar .interface-complementary-area, .interface-interface-skeleton__sidebar .interface-complementary-area__fill {
+  width: 100% !important;
+}
+.sidebar-open .interface-interface-skeleton__sidebar {
+  display: block;
+  width: 40%;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-resizing {
+  position: relative !important;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-n {
+  height: 2px;
+  top: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-e {
+  width: 2px;
+  right: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-s {
+  height: 2px;
+  bottom: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-w {
+  width: 2px;
+  left: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-se,
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-sw,
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-ne,
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-nw {
+  width: 7px;
+  height: 7px;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-se {
+  right: 0;
+  bottom: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-sw {
+  left: 0;
+  bottom: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-ne {
+  right: 0;
+  top: 0;
+}
+.interface-interface-skeleton__sidebar .ui-dialog .ui-resizable-nw {
+  left: 0;
+  top: 0;
+}
+.interface-interface-skeleton__sidebar .ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+}
+.interface-interface-skeleton__sidebar .ui-draggable-handle {
+  touch-action: none;
+}
+.interface-interface-skeleton__sidebar .ui-resizable {
+  position: relative;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  touch-action: none;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-disabled .ui-resizable-handle,
+.interface-interface-skeleton__sidebar .ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-n {
+  cursor: n-resize;
+  height: 30px;
+  width: 100%;
+  top: -15px;
+  left: 0;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-s {
+  cursor: s-resize;
+  height: 30px;
+  width: 100%;
+  bottom: -15px;
+  left: 0;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-e {
+  cursor: e-resize;
+  width: 30px;
+  right: -15px;
+  top: 0;
+  height: 100%;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-w {
+  cursor: w-resize;
+  width: 30px;
+  left: -15px;
+  top: 0;
+  height: 100%;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
+}
+.interface-interface-skeleton__sidebar .ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
+}

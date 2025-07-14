@@ -15,11 +15,23 @@ add_filter('block_categories_all', function ($categories) {
  */
 
 function bb_enqueue_custom_global_css_in_block_editor() {
-	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'bb-styles', get_stylesheet_directory_uri() . '/style.css' );
 }
 
 add_action( 'enqueue_block_assets', 'bb_enqueue_custom_global_css_in_block_editor' );
 
+/**
+ * Load custom assets into admin area
+ *
+ * @return void
+ */
+
+function bb_enqueue_admin_scripts() {
+    wp_enqueue_style( 'bb-editor-styles', get_stylesheet_directory_uri() . '/css/editor-styles.css' );
+    wp_enqueue_script( 'bb-editor-scripts', get_stylesheet_directory_uri() . '/js/editor-scripts.min.js' );
+}
+
+add_action( 'admin_enqueue_scripts', 'bb_enqueue_admin_scripts' );
 
 /**
  * Load block.json files programmatically
@@ -78,30 +90,38 @@ add_filter('allowed_block_types_all', function ($allowed_blocks, $editor_context
 
 function bb_block_asset_versioning( $src ) {
 
-    if( strpos( $src, 'ver' ) !== false )
-    {
-        $src = remove_query_arg( 'ver', $src );
+    try {
 
-        $file = file_get_contents( get_template_directory() . '/mix-manifest.json');
-
-        if ($file)
+        if( strpos( $src, 'ver' ) !== false )
         {
-            $manifest = json_decode($file);
-            if ($manifest)
+            $src = remove_query_arg( 'ver', $src );
+
+            $file = file_get_contents( get_template_directory() . '/mix-manifest.json');
+
+            if ($file)
             {
-                foreach($manifest as $filename => $versioned)
+                $manifest = json_decode($file);
+                if ($manifest)
                 {
-           
-                    if ( strpos($src, $filename) !== false )
+                    foreach($manifest as $filename => $versioned)
                     {
-                        $parsed = parse_url($versioned);
-                        $version = $parsed['query'];
+               
+                        if ( strpos($src, $filename) !== false )
+                        {
+                            $parsed = parse_url($versioned);
+                            $version = $parsed['query'];
+                        }
                     }
                 }
             }
+
+            return $src . '?' .$version;
+
         }
 
-        return $src . '?' .$version;
+    } catch (Exception $e) {
+
+        return $src;
 
     }
 

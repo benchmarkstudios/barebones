@@ -1,6 +1,8 @@
 {
-    "/js/scripts.min.js": "/js/scripts.min.js?id=8086d0761de4b38af79fe130d15540fc",
+    "/js/scripts.min.js": "/js/scripts.min.js?id=03eaa2c89d98f0aa3f9af72b11544127",
+    "/js/editor-scripts.min.js": "/js/editor-scripts.min.js?id=756bcaa368d061bd4807af957adfc9b2",
     "/js/blocks/split-content.js": "/js/blocks/split-content.js?id=4bca3c6cc8f97fe86af1b38b8ff00721",
     "/css/blocks/split-content.css": "/css/blocks/split-content.css?id=ead387b85f47ba9235e7135246810f3d",
-    "/style.css": "/style.css?id=c2da5f1bc9966035d18fee513bdb2e9e"
+    "/css/editor-styles.css": "/css/editor-styles.css?id=ab0a6f8d6473f2daf90fb6a5f86320f9",
+    "/style.css": "/style.css?id=e43d1d83e89a10082c2938e6fb95c559"
 }

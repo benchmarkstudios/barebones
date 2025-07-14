@@ -2800,9 +2800,6 @@ img .float-center {
   height: 1px;
   background-color: #444;
 }
-.is-root-container .block-preview img {
-  width: 100%;
-}
 .is-root-container .header {
   padding: 24px 0;
   margin-bottom: 48px;
