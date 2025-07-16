@@ -1,9 +1,11 @@
-$ = jQuery;
+(function($) {
 
-$('[data-button]').on('click', function(e) {
+	$('[data-button]').on('click', function(e) {
 
-	e.preventDefault();
+		e.preventDefault();
 
-	alert('Button clicked');
+		alert('Button clicked');
 
-});
+	});
+
+})( jQuery );
