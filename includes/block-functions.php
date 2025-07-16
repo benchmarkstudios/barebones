@@ -48,7 +48,7 @@ add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
 	{
 		foreach($blocks as $block)
 		{
-			$res = register_block_type( get_template_directory() . '/blocks/split-content/block.json' );
+			$res = register_block_type( $block );
 		}
 	}
 }

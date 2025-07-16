@@ -84,6 +84,9 @@ Text Domain: barebones
 .container:after {
   clear: both;
 }
+.editor-styles-wrapper .container {
+  padding: 0;
+}
 
 .row {
   list-style: none;

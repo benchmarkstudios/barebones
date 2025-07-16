@@ -16,6 +16,9 @@
     max-width: $grid-max-width;
     margin: 0 auto;
     padding: 0 $grid-gutter;
+    .editor-styles-wrapper & {
+        padding: 0;
+    }
 }
 
 .row {
