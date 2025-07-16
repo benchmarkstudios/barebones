@@ -127,6 +127,7 @@ add_action( 'wp_footer', 'deregister_scripts' );
  */
 
 function deregister_styles() {
+    wp_dequeue_style( 'global-styles' );
     wp_dequeue_style( 'wp-block-library' );
 }
 
