@@ -11,7 +11,7 @@
     cursor: pointer;
     user-select: none;
     width: auto;
-    transition: all .5s;
+    transition: background .5s, color .5s;
 
     &::-moz-focus-inner {
         border: 0;

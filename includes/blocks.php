@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Define block categories
+ */
+
 add_filter('block_categories_all', function ($categories) {
     $categories[] = [
         'slug'  => 'custom-blocks',
@@ -8,17 +12,17 @@ add_filter('block_categories_all', function ($categories) {
     return $categories;
 });
 
+
 /**
- * Load global stylesheet into block editor
- *
- * @return void
+ * Load frontend styles into block editor
  */
 
-function bb_enqueue_custom_global_css_in_block_editor() {
-	wp_enqueue_style( 'bb-styles', get_stylesheet_directory_uri() . '/style.css' );
+function editor_styles() {
+    add_editor_style( get_stylesheet_directory_uri() . '/style.css' );    
 }
 
-add_action( 'enqueue_block_assets', 'bb_enqueue_custom_global_css_in_block_editor' );
+add_action( 'after_setup_theme', 'editor_styles' );
+
 
 /**
  * Load custom assets into admin area
@@ -32,6 +36,7 @@ function bb_enqueue_admin_scripts() {
 }
 
 add_action( 'admin_enqueue_scripts', 'bb_enqueue_admin_scripts' );
+
 
 /**
  * Load block.json files programmatically
@@ -80,7 +85,6 @@ add_filter('allowed_block_types_all', function ($allowed_blocks, $editor_context
 
     return $allowed_blocks;
 }, 10, 2);
-
 
 /**
  * Versioning for block assets

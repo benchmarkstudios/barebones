@@ -29,26 +29,22 @@ Text Domain: barebones
 @import 'utils/helpers';
 @import 'utils/defaults';
 
-// 5. Layouts for block editor and frontend
+// 5. Layouts
 
-.is-root-container {
+// Base stuff
+@import 'base/grid';
+@import 'base/images';
+@import 'base/forms';
+@import 'base/lists';
+@import 'base/typography';
 
-	// Base stuff
-	@import 'base/grid';
-	@import 'base/images';
-	@import 'base/forms';
-	@import 'base/lists';
-	@import 'base/typography';
+// Layout-related sections
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sections';
 
-	// Layout-related sections
-	@import 'layout/main';
-	@import 'layout/header';
-	@import 'layout/footer';
-	@import 'layout/sections';
-
-	// Components
-	@import 'components/buttons';
-	@import 'components/nav';
-	@import 'components/alerts';
-
-}
+// Components
+@import 'components/buttons';
+@import 'components/nav';
+@import 'components/alerts';

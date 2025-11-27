@@ -1,4 +1,4 @@
-.is-root-container {
+html {
     color: map-get($colors, 'base');
     font-family: $base-font-family;
     line-height: $base-line-height;
@@ -13,7 +13,7 @@
  * Variables
  */
 
-.is-root-container {
+html {
     --section-vertical-padding: 75px;
     @include resp-max($breakpoint-sm) {
         --section-vertical-padding: 25px;
