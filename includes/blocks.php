@@ -18,7 +18,7 @@ add_filter('block_categories_all', function ($categories) {
  */
 
 function editor_styles() {
-    add_editor_style( get_stylesheet_directory_uri() . '/style.css' );    
+    add_editor_style( 'style.css' );    
 }
 
 add_action( 'after_setup_theme', 'editor_styles' );

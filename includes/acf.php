@@ -1,10 +1,13 @@
 <?php
 
-// Disable field editing on staging or production
-
-if ( wp_get_environment_type() !== 'development' ) {
+function acf_theme_setup() {
 
     // Only allow fields to be edited on development
-    add_filter( 'acf/settings/show_admin', '__return_false' );
+
+    if ( wp_get_environment_type() !== 'development' ) {
+        add_filter( 'acf/settings/show_admin', '__return_false' );
+    }
 
 }
+
+add_action( 'after_setup_theme', 'theme_setup' );
