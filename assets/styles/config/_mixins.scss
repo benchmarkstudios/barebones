@@ -1,22 +1,37 @@
+@use "sass:math";
+
+/*
+ * Generate breakpoint declarations
+ */
+
+@function breakpoint-declaration($size) {
+    @if ($size == 'xl') {
+        $value: map-get($screens, 'lg');
+        @return '(min-width: ' + ($value + 1) + ')';
+    } @else {
+        $value: map-get($screens, $size);
+        @return '(max-width: ' + ($value + 1) + ')';
+    }
+}
+
 /*
  * Media query to respond to a minimum size (mobile first)
  */
 
-@use "sass:math";
-
 @mixin resp-min($size) {
-    @media screen and (min-width: $size) {
+    $value: map-get($screens, $size);
+    @media screen and (min-width: $value) {
         @content;
     }
 }
-
 
 /*
  * Media query to respond to a maximum size
  */
 
 @mixin resp-max($size) {
-    @media screen and (max-width: $size) {
+    $value: map-get($screens, $size);
+    @media screen and (max-width: $value) {
         @content;
     }
 }

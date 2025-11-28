@@ -1,16 +1,16 @@
-@each $breakpoint in $breakpoints {
-    $key   : nth($breakpoint, 1);
-    $value : nth($breakpoint, 2);
+@each $screen in $screens {
+    $key   : nth($screen, 1);
+    $value : nth($screen, 2);
 
     .visible-#{$key} {
         display: none;
-        @media only screen and #{$value} {
+        @include resp-max($key) {
             display: block !important;
         }
     }
 
     .hidden-#{$key} {
-        @media only screen and #{$value} {
+        @include resp-max($key) {
             display: none !important;
         }
     }

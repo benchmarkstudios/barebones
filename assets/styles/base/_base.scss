@@ -15,7 +15,7 @@ body {
 
 body {
     --section-vertical-padding: 75px;
-    @include resp-max($breakpoint-sm) {
+    @include resp-max('sm') {
         --section-vertical-padding: 25px;
     }
 }

@@ -9,12 +9,12 @@
         <header class="header" role="banner">
             <div class="container">
                 <div class="row row--flex items-center">
-                    <div class="col col--lg-3 col--md-3 col--sm-6 col--xs-6">
+                    <div class="col col--xl-3 col--lg-3 col--md-3 col--sm-6 col--xs-6">
                         <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo">
                             <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" alt="<?php echo get_bloginfo( 'title' ); ?>" width="200" />
                         </a>
                     </div>
-                    <div class="col col--lg-8 col--lg-offset-1 col--md-8 col--md-offset-1 col--sm-6 col--xs-6 align-text-right">
+                    <div class="col col--xl-3 col--lg-8 col--xl-offset-1 col--lg-offset-1 col--md-8 col--md-offset-1 col--sm-6 col--xs-6 align-text-right">
                         <div class="header__navigation">
                             <nav role="navigation">
                                 <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>

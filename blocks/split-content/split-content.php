@@ -16,15 +16,18 @@
         <div class="container">
             <div class="row row--flex items-center <?= ($alignment == 'left' ? 'row--reverse' : ''); ?>">
                 <?php if ($image): ?>
-                    <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6">
+                    <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6 col--xl-6">
                         <?php echo wp_get_attachment_image($image, 'full'); ?>
                     </div>             
                 <?php endif; ?>
                 <?php if ($content): ?>
-                    <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6">
-                        <div class="<?= ($alignment == 'right' ? 'lg:pl-md' : ''); ?> sm:pt-sm">
+                    <div class="col col--xs-12 col--sm-12 col--md-6 col--lg-6 col--xl-6">
+                        <div class="<?= ($alignment == 'right' ? 'sm:pl-none' : ''); ?> pl-md sm:pt-sm">
                             <?php echo $content; ?>
-                        </div>             
+                        </div>  
+                        <div class="visible-sm">
+                            Only visible at 'sm' breakpoint
+                        </div>
                     </div>           
                 <?php endif; ?>
             </div>

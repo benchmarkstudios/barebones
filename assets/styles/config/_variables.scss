@@ -1,12 +1,15 @@
 /**
- * Breakpoints
+ * Screen sizes for breakpoints
  */
 
-$breakpoint-lg: 1280px;
-$breakpoint-md: 1024px;
-$breakpoint-sm: 768px;
-$breakpoint-xs: 480px;
-$breakpoint-nav: 1000px;
+$screens: (
+   'xl': null,
+   'lg': 1280px,
+   'md': 1024px,
+   'sm': 768px,
+   'xs': 480px,
+   'nav': 1000px,
+);
 
 /**
  * Typography
@@ -45,33 +48,27 @@ $colors: (
  * Spacing
  */
 
- $spacings: (
-    'xl' ($base-spacing-unit * 4),
-    'lg' ($base-spacing-unit * 3),
-    'md' ($base-spacing-unit * 2),
-    'sm' ($base-spacing-unit * 1),
-    'xs' ($base-spacing-unit * 0.5),
-    'none' 0,
+$spacings: (
+   'xl' ($base-spacing-unit * 4),
+   'lg' ($base-spacing-unit * 3),
+   'md' ($base-spacing-unit * 2),
+   'sm' ($base-spacing-unit * 1),
+   'xs' ($base-spacing-unit * 0.5),
+   'none' 0,
 );
 
  /**
  * Font Sizes
  */
 
- $font-sizes: (
-    '2xl' $base-font-size + 16,
-    'xl' $base-font-size + 8,
-    'lg' $base-font-size + 6,
-    'md' $base-font-size + 2,
-    'sm' $base-font-size,
-    'xs' $base-font-size - 2,
+$font-sizes: (
+   '2xl' $base-font-size + 16,
+   'xl' $base-font-size + 8,
+   'lg' $base-font-size + 6,
+   'md' $base-font-size + 2,
+   'sm' $base-font-size,
+   'xs' $base-font-size - 2,
 );
-
-/**
- * Components
- */
-
-$border-radius: 3px;
 
 /**
  * Animations

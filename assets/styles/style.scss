@@ -16,20 +16,17 @@ Text Domain: barebones
 @import 'config/variables';
 @import 'config/mixins';
 
-// 2. Vendors
-@import 'vendor/simple-grid/simple-grid';
-
-// 3. Base
+// 2. Base
+@import 'base/defaults';
 @import 'base/fonts';
 @import 'base/base';
 
-// 4. Utilities
+// 3. Utilities
 @import 'utils/reset';
 @import 'utils/responsive';
 @import 'utils/helpers';
-@import 'utils/defaults';
 
-// 5. Layouts
+// 4. Layouts
 
 // Base stuff
 @import 'base/grid';
@@ -39,6 +36,7 @@ Text Domain: barebones
 @import 'base/typography';
 
 // Layout-related sections
+@import 'layout/grid';
 @import 'layout/main';
 @import 'layout/header';
 @import 'layout/footer';

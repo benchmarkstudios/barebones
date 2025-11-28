@@ -1,13 +1,13 @@
 .grid {
     display: grid;
     grid-gap: $base-spacing-unit;
-    @include resp-max($breakpoint-sm) {
+    @include resp-max('sm') {
         grid-gap: $base-spacing-unit * 0.5;
     }
     
-    @each $breakpoint in $breakpoints {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
+    @each $screen in $screens {
+        $name: nth($screen, 1);
+        $declaration: breakpoint-declaration($name);
     
         @media only screen and #{$declaration} {
             @for $i from 1 through 6 {

@@ -1,0 +1,99 @@
+@use "sass:math";
+
+/**
+ * Mixins
+ */
+
+@mixin grid-loop($name){
+    @for $i from 0 through $grid-columns {
+        @if $i != 0 {
+            .col--#{$name}-#{$i} {
+                width: percentage(math.div($i, $grid-columns));
+                .row--flex & {
+                    flex-basis: percentage(math.div($i, $grid-columns));
+                    max-width: percentage(math.div($i, $grid-columns));
+                    width: auto;
+                    float: none;
+                }
+            }
+        }
+        .col--#{$name}-offset-#{$i} {
+            margin-left: percentage(math.div($i, $grid-columns));
+            .row--reverse & {
+                margin-left: 0;
+                margin-right: percentage(math.div($i, $grid-columns));
+            }
+        }
+    }
+}
+
+/**
+ * Clearfix
+ */
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/**
+ * Grid scaffolding
+ */
+
+.container {
+    @include clearfix;
+    max-width: $grid-max-width;
+    margin: 0 auto;
+    padding: 0 $grid-gutter;
+    .editor-styles-wrapper & {
+        padding: 0;
+    }
+}
+
+.row {
+    list-style: none;
+    margin-left: -$grid-gutter;
+    &:not(.row--flex) {
+        @include clearfix;
+    }
+    &.row--gutterless {
+        margin-left: 0;
+    }
+    &.row--flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &.row--reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.col {
+    float: left;
+    padding-left: $grid-gutter;
+    box-sizing: border-box;
+    .row--gutterless & {
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Columns generator
+ */
+
+@each $screen in $screens {
+    $name: nth($screen, 1);
+    $declaration: breakpoint-declaration($name);
+
+    @media only screen and #{$declaration} {
+        @include grid-loop($name);
+    }
+}

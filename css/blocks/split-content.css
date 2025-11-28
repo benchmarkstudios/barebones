@@ -1,5 +1,5 @@
 /**
- * Breakpoints
+ * Screen sizes for breakpoints
  */
 /**
  * Typography
@@ -17,10 +17,10 @@
 * Font Sizes
 */
 /**
- * Components
- */
-/**
  * Animations
+ */
+/*
+ * Generate breakpoint declarations
  */
 /*
  * Media query to respond to a minimum size (mobile first)

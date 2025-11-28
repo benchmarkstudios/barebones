@@ -17,7 +17,7 @@
     margin: 5px auto;
     transition: all $animation-speed $animation;
 
-    @include resp-max($breakpoint-nav) {
+    @include resp-max('nav') {
         display: block;
     }
 
@@ -59,7 +59,7 @@
 }
 
 .nav--header {
-    @include resp-max($breakpoint-nav) {
+    @include resp-max('nav') {
         ul {
             list-style: none;
         }
