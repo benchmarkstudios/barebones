@@ -1,4 +1,4 @@
-html {
+body {
     color: map-get($colors, 'base');
     font-family: $base-font-family;
     line-height: $base-line-height;
@@ -13,12 +13,9 @@ html {
  * Variables
  */
 
-html {
+body {
     --section-vertical-padding: 75px;
     @include resp-max($breakpoint-sm) {
         --section-vertical-padding: 25px;
-    }
-    &.wp-block-post-content {
-        --section-vertical-padding: 50px;
     }
 }

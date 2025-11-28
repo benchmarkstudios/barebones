@@ -929,7 +929,7 @@ Text Domain: barebones
 /**
  * This file contains all @font-face declarations, if any.
  */
-html {
+body {
   color: #444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -939,23 +939,20 @@ html {
   font-size: 16px;
   font-size: 1rem;
 }
-html.menu-open {
+body.menu-open {
   overflow: hidden;
 }
 
 /**
  * Variables
  */
-html {
+body {
   --section-vertical-padding: 75px;
 }
 @media screen and (max-width: 768px) {
-  html {
+  body {
     --section-vertical-padding: 25px;
   }
-}
-html.wp-block-post-content {
-  --section-vertical-padding: 50px;
 }
 
 * {
