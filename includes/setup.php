@@ -37,6 +37,8 @@ function theme_setup() {
     remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_footer', 'wp_enqueue_global_styles', 1);    
 
 }
 
