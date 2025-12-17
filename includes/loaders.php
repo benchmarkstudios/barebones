@@ -8,7 +8,7 @@
 
 function barebones_enqueue_scripts() {
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', ['jquery'], null, true );
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', ['jquery'], '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'barebones_enqueue_scripts' );
