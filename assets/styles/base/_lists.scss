@@ -1,3 +1,5 @@
+@use '../config' as *;
+
 ul,
 ol {
     margin-left: $base-spacing-unit;

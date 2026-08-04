@@ -1,3 +1,6 @@
+@use "sass:map";
+@use '../config' as *;
+
 .alert {
     padding: $base-spacing-unit;
     margin-bottom: $base-spacing-unit;
@@ -13,22 +16,22 @@
     }
 
     &.alert--success {
-        color: map-get($colors, 'success');
-        border-color: map-get($colors, 'success');
+        color: map.get($colors, 'success');
+        border-color: map.get($colors, 'success');
     }
 
     &.alert--info {
-        color: map-get($colors, 'info');
-        border-color: map-get($colors, 'info');
+        color: map.get($colors, 'info');
+        border-color: map.get($colors, 'info');
     }
 
     &.alert--warning {
-        color: map-get($colors, 'warning');
-        border-color: map-get($colors, 'warning');
+        color: map.get($colors, 'warning');
+        border-color: map.get($colors, 'warning');
     }
 
     &.alert--danger {
-        color: map-get($colors, 'danger');
-        border-color: map-get($colors, 'danger');
+        color: map.get($colors, 'danger');
+        border-color: map.get($colors, 'danger');
     }
 }

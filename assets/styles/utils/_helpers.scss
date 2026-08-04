@@ -2,6 +2,8 @@
 * Clearing and floating
 */
 
+@use '../config' as *;
+
 .alignleft,
 .float-left {
     float: left;
@@ -61,50 +63,4 @@
 
 .items-center {
     align-items: center;
-}
-
-/**
- * Elements visibility
- */
-
-.visible-on-mobile {
-    display: none !important;
-
-    @include resp-max($breakpoint-sm) {
-        display: block !important;
-    }
-}
-
-.visible-on-tablet {
-    display: none !important;
-
-    @include resp-max($breakpoint-md) {
-        display: block !important;
-    }
-
-    @include resp-max($breakpoint-sm) {
-        display: none !important;
-    }
-}
-
-.visible-on-desktop {
-    @include resp-max($breakpoint-md) {
-        display: none !important;
-    }
-}
-
-
-/**
- * Accessibility
- */
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
 }

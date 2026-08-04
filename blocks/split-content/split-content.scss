@@ -1,0 +1,10 @@
+@use '../../assets/styles/config' as *;
+
+.section--split-content {
+	background: #fff;
+	img {
+		@include resp-max($breakpoint-md) {
+			margin-bottom: ($base-spacing-unit * 0.5);
+		}
+	}
+}

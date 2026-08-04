@@ -18,7 +18,7 @@ name, e.g.:
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-            <div class="row flex">
+            <div class="row">
                 <div class="col col--xs-12 col--sm-12 col--md-8 col--lg-8">
                     <div class="content <?php the_field('colour'); ?>">
                         <?php the_content(); ?>
