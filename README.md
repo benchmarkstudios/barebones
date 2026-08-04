@@ -10,7 +10,7 @@ Our objective with Barebones is to help developers move quickly from setup to be
 
 ## Documentation
 
-For installation and documentation, visit barebones.dev.
+For installation and documentation, visit [barebones.dev](https://barebones.dev/).
 
 ## License
 
