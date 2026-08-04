@@ -4,46 +4,43 @@ Theme URI: https://benchmark.co.uk/barebones
 Author: Benchmark Studios
 Author URI: https://benchmark.co.uk/
 Description: A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond
-Version: 3.X
-License: MIT
-License URI: https://mit-license.org/
+Version: 4.X
+License: GNU General Public License v2.0 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: barebones
 */
 
 @charset 'UTF-8';
 
-// 1. Configuration
-@import 'config/variables';
-@import 'config/mixins';
+// 2. Grid
+@use 'base/grid';
 
-// 2. Vendors
-@import 'vendor/simple-grid/simple-grid';
+// 3. Base
+@use 'base/fonts';
+@use 'base/base';
 
-// 3. Utilities
-@import 'utils/reset';
-@import 'utils/responsive';
-@import 'utils/helpers';
-@import 'utils/defaults';
+// 4. Utilities
+@use 'utils/reset';
+@use 'utils/responsive';
+@use 'utils/helpers';
+@use 'utils/defaults';
 
-// 4. Base stuff
-@import 'base/base';
-@import 'base/grid';
-@import 'base/fonts';
-@import 'base/images';
-@import 'base/forms';
-@import 'base/lists';
-@import 'base/typography';
+// 5. Layouts
 
-// 5. Layout-related sections
-@import 'layout/main';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sections';
+// Base stuff
+@use 'base/layouts';
+@use 'base/images';
+@use 'base/forms';
+@use 'base/lists';
+@use 'base/typography';
 
-// 6 .Components
-@import 'components/buttons';
-@import 'components/nav';
-@import 'components/alerts';
+// Layout-related sections
+@use 'layout/main';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/sections';
 
-// 7. Page-specific styles
-@import 'pages/home';
+// Components
+@use 'components/buttons';
+@use 'components/nav';
+@use 'components/alerts';

@@ -1,6 +1,9 @@
+@use "sass:map";
+@use '../config' as *;
+
 .btn {
-    background-color: map-get($colors, 'brand');
-    color: map-get($colors, 'background');
+    background-color: map.get($colors, 'brand');
+    color: map.get($colors, 'background');
     border: 1px solid transparent;
     display: inline-block;
     padding: #{$base-spacing-unit * 0.25} $base-spacing-unit;
@@ -11,7 +14,7 @@
     cursor: pointer;
     user-select: none;
     width: auto;
-    transition: all .5s;
+    transition: background .5s, color .5s;
 
     &::-moz-focus-inner {
         border: 0;
@@ -20,9 +23,9 @@
 
     &:hover {
         text-decoration: none;
-        background-color: map-get($colors, 'background');
-        color: map-get($colors, 'brand');
-        border-color: map-get($colors, 'brand');
+        background-color: map.get($colors, 'background');
+        color: map.get($colors, 'brand');
+        border-color: map.get($colors, 'brand');
     }
 
     &.is-disabled,
@@ -33,13 +36,13 @@
 }
 
 .btn--inverse {
-    background-color: map-get($colors, 'background');
-    color: map-get($colors, 'brand');
-    border: 1px solid map-get($colors, 'brand');
+    background-color: map.get($colors, 'background');
+    color: map.get($colors, 'brand');
+    border: 1px solid map.get($colors, 'brand');
 
     &:hover {
-        background-color: map-get($colors, 'brand');
-        color: map-get($colors, 'background');
+        background-color: map.get($colors, 'brand');
+        color: map.get($colors, 'background');
         border-color: transparent;
     }
 }
@@ -55,5 +58,5 @@
 
 .btn--link {
     background-color: transparent;
-    color: map-get($colors, 'brand');
+    color: map.get($colors, 'brand');
 }

@@ -1,0 +1,22 @@
+@use '../config' as *;
+
+.section {
+	&.section--spaced {
+		padding: var(--section-vertical-padding) 0;
+		+.section--spaced {
+			padding-top: 0;
+		}
+	}
+	&.section--width-content {
+		max-width: $grid-max-width;
+		margin: auto;
+	}
+}
+
+.main {
+	.section--spaced {
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}

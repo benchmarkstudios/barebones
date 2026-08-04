@@ -1,0 +1,46 @@
+// Sizing the image in the block preview pane
+
+.block-preview {
+	img {
+		width: 100%;
+	}
+}
+
+.editor-styles-wrapper {
+    background-color: #ddd;  
+}
+
+// Scale down block editor
+
+.acf-block-preview {
+    --preview-scale: 0.8;
+    overflow: hidden;
+	.section {
+	    zoom: var(--preview-scale);
+	}    
+}
+
+// Space between title and block previews
+
+.editor-visual-editor__post-title-wrapper.edit-post-visual-editor__post-title-wrapper {
+    margin-bottom: 24px !important;
+}
+
+// Wider default sidebar in block editor
+
+.interface-interface-skeleton__sidebar {
+	.interface-complementary-area,
+	.interface-complementary-area__fill {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.interface-interface-skeleton__sidebar {
+		.interface-complementary-area,
+		.interface-complementary-area__fill {
+			width: 420px !important;
+			max-width: 50vw;
+		}
+	}
+}

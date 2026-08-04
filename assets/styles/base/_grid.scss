@@ -1,20 +1,52 @@
-.grid {
-    display: grid;
-    grid-gap: $base-spacing-unit;
-    @include resp-max($breakpoint-sm) {
-        grid-gap: $base-spacing-unit * 0.5;
-    }
-    
-    @each $breakpoint in $breakpoints {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
-    
-        @media only screen and #{$declaration} {
-            @for $i from 1 through 6 {
-                &.grid--#{$name}-#{$i}x {
-                    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
-                }
-            }
+/**
+ * CSS Grid scaffolding
+ */
+
+@use "sass:list";
+@use '../config' as *;
+
+@mixin -grid-loop($name) {
+    @for $i from 1 through $grid-columns {
+        .col--#{$name}-#{$i} {
+            grid-column-end: span $i;
         }
+
+        .col--#{$name}-start-#{$i} {
+            grid-column-start: $i;
+        }
+    }
+}
+
+.container {
+    max-width: $grid-max-width;
+    margin: 0 auto;
+    padding: 0 $grid-gutter;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+    column-gap: $grid-gutter;
+    list-style: none;
+}
+
+.row--gutterless {
+    column-gap: 0;
+}
+
+.col {
+    min-width: 0;
+}
+
+.col--last {
+    order: 1;
+}
+
+@each $breakpoint in $breakpoints {
+    $name: list.nth($breakpoint, 1);
+    $declaration: list.nth($breakpoint, 2);
+
+    @media only screen and #{$declaration} {
+        @include -grid-loop($name);
     }
 }

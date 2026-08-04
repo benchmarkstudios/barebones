@@ -1,37 +1,19 @@
-# barebones
+# Barebones
 
-A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. There's lots of these out there but most themes include lots of bloat and files which you might not necessarily need, so we thought we would create our own which is great as a starting point with powerful features to encourage rapid development for most projects.
+Barebones is a lightweight WordPress starter theme. It serves as a foundation for developers who are building bespoke WordPress websites.
 
-## Features
+Barebones includes the building blocks commonly required by custom WordPress development including theme setup, asset loading, editor styles, menu management, Sass organisation, responsive utilities and custom block support.
 
-* Reset, normalisation and base font/form styles
-* Scss Boilerplate - semantically named files, organised by folders, all compiled into a single file
-* Semantic use of HTML5 elements, includes Google HTML5 shiv
-* WAI-ARIA role ready
-* jQuery plugin agnostic
-* Basic template files
-* Customised functions.php adding theme support for high customisation
-* Minimised HTTP requests for high Web Performance
-* Localised strings for multiple language support
-* Scss compiling and watching, css minification support
-* Base mobile nav out of the box
+The theme stays intentionally small so each project can define its own design system, content structure and frontend behaviour. It remains close to conventional WordPress architecture whilst including a helpful file structure for templates, functions and frontend assets. All of these tools are ready to be expanded upon as you implement your own custom design and functionality.
 
-## Installation
+Our objective with Barebones is to help developers move quickly from setup to bespoke development in a framework that delivers scalable, manageable code for long-lasting websites.
 
-Clone the barebones repositories into your WordPress /wp-content/themes/ directory:
+## Documentation
 
-    git clone https://github.com/benchmarkstudios/barebones
-    cd barebones
+For installation and documentation, visit barebones.dev.
 
-### Using Laravel Mix
+## License
 
-Install Dependencies, you have haven't done yet:
+Copyright (C) 2012–2026 Benchmark Studios.
 
-    npm install
-
-Then run:
-
-| Tasks                     |                                                                    |
-|---------------------------|--------------------------------------------------------------------|
-| `npx mix watch`           | *watch assets for changes*                                         |
-| `npx mix --production`    | *compile for production*                                           |
+Barebones is licensed under the GNU General Public License v2.0 or later. See [LICENSE.txt](LICENSE.txt) for the full license text.

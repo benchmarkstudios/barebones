@@ -2,9 +2,10 @@
   "name": "barebones",
   "version": "4.0.0",
   "description": "A lightweight and skeletal WordPress boilerplate theme for HTML5 and beyond. There's lots of these out there but most themes include lots of bloat and files which you might not necessarily need, so we thought we would create our own which is great as a starting point with powerful features to encourage rapid development for most projects.",
-  "main": "gulpfile.babel.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite build --watch --mode development",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -12,18 +13,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/benchmarkstudios/barebones/issues"
   },
   "homepage": "https://github.com/benchmarkstudios/barebones#readme",
   "devDependencies": {
-    "laravel-mix": "^6.0.49",
-    "laravel-mix-purgecss": "^6.0.0",
     "sass": "^1.64.2",
-    "sass-loader": "^12.6.0"
+    "vite": "^8.1.4"
   },
-  "dependencies": {
-    "jquery": "^3.7.0"
+  "engines": {
+    "node": ">=20.19.0"
   }
 }

@@ -1,0 +1,47 @@
+/**
+ * Breakpoints
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid
+ */
+/**
+ * Colors
+ */
+/**
+ * Spacing
+ */
+/**
+* Font Sizes
+*/
+/**
+ * Components
+ */
+/**
+ * Animations
+ */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/*
+ * Media query to respond to a maximum size
+ */
+/*
+ * Output font size in px/rem
+ */
+/*
+ * Placeholder mixin for <input>
+ */
+/**
+ * Clearfix
+ */
+.section--split-content {
+  background: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .section--split-content img {
+    margin-bottom: 12px;
+  }
+}

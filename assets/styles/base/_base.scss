@@ -1,5 +1,8 @@
+@use "sass:map";
+@use '../config' as *;
+
 body {
-    color: map-get($colors, 'base');
+    color: map.get($colors, 'base');
     font-family: $base-font-family;
     line-height: $base-line-height;
     text-size-adjust: none;
@@ -9,49 +12,13 @@ body {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-hr,
-ul,
-ol,
-dl {
-    margin-bottom: $base-spacing-unit;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 /**
- * Basic styles for links
+ * Variables
  */
 
-a {
-    color: map-get($colors, 'base');
-    text-decoration: none;
-    &:hover {
-        color: map-get($colors, 'base');
-        text-decoration: underline;
+body {
+    --section-vertical-padding: 75px;
+    @include resp-max($breakpoint-sm) {
+        --section-vertical-padding: 25px;
     }
-}
-
-a[href^="tel"] {
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-    text-decoration: none;
-    font-style: inherit;
-}
-
-/**
- * Rules
- */
-
-hr {
-    height: 1px;
-    background-color: map-get($colors, 'base');
 }

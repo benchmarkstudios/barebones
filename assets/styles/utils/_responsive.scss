@@ -1,6 +1,9 @@
+@use "sass:list";
+@use '../config' as *;
+
 @each $breakpoint in $breakpoints {
-    $key   : nth($breakpoint, 1);
-    $value : nth($breakpoint, 2);
+    $key   : list.nth($breakpoint, 1);
+    $value : list.nth($breakpoint, 2);
 
     .visible-#{$key} {
         display: none;
