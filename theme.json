@@ -1,6 +1,6 @@
 {
-    "$schema": "https://schemas.wp.org/wp/x.x/theme.json",
-    "version": 1,
+    "$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+    "version": 3,
     "settings": {
         "layout": {
             "contentSize": "960px",
@@ -19,21 +19,6 @@
     "styles": {
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--helvetica-neue)"
-        },
-        "elements": {
-            "heading": {
-                "typography": {
-                    "fontWeight": "700",
-                    "fontSize": "36px",
-                    "lineHeight": "1.5em",
-                    "padding": "0 20px"
-                },
-                "spacing": {
-                    "margin": {
-                        "bottom": "24px"
-                    }
-                }                
-            }
-        }              
+        }            
     }    
 }
