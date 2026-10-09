@@ -18,6 +18,13 @@ body {
 
 body {
     --section-vertical-padding: 75px;
+    --grid-margin: 48px;
+    @include resp-max($breakpoint-lg) {
+        --grid-margin: 24px;
+    }
+    @include resp-max($breakpoint-sm) {
+        --grid-margin: 12px;
+    }    
     @include resp-max($breakpoint-sm) {
         --section-vertical-padding: 25px;
     }
