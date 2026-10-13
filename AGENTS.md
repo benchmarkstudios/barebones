@@ -46,6 +46,8 @@ npm run build
 
 Use `npm run dev` when watch mode is useful.
 
+Vite may rewrite all compiled files in `css/`, `js/`, and the root `style.css` during a build, even when most source files are unchanged. This is expected behaviour for this repository. Keep the complete generated output from a successful build; do not restore or selectively revert compiled files merely to reduce the diff.
+
 ## SCSS conventions
 
 Use modern Sass modules with `@use`. Shared configuration should normally be imported with:
