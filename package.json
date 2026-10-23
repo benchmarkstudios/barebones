@@ -20,7 +20,7 @@
   "homepage": "https://github.com/benchmarkstudios/barebones#readme",
   "devDependencies": {
     "sass": "^1.64.2",
-    "vite": "^8.1.4"
+    "vite": "^8.1.6"
   },
   "engines": {
     "node": ">=20.19.0"
